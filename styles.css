@@ -47,7 +47,7 @@ a {
   justify-content: center;
   align-items: center;
   width: min(100% - 48px, 1520px);
-  min-height: 100svh;
+  min-height: calc(100svh - 80px);
   margin: 0 auto;
 }
 
@@ -61,29 +61,14 @@ a {
   text-align: center;
 }
 
-/* Ilustração / Logo */
-.hub-avatar {
-  width: 72px;
-  height: auto;
-  margin-bottom: 12px;
-}
-
-.hub-avatar img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
 .hub-header {
   width: 100%;
 }
 
-/* thigre — DM Serif Display em Minúsculo */
 .hub-header h1 {
   margin: 0;
   font-family: 'DM Serif Display', serif;
-  font-weight: 400; /* Regular */
+  font-weight: 400;
   font-style: normal;
   font-size: clamp(3.5rem, 7vw, 5.2rem);
   line-height: 0.95;
@@ -92,7 +77,6 @@ a {
   color: var(--ink);
 }
 
-/* Subtítulos */
 .hub-bio {
   display: flex;
   flex-direction: column;
@@ -116,7 +100,6 @@ a {
   color: var(--leaf);
 }
 
-/* Bloco de Links */
 .hub-links {
   display: grid;
   width: 100%;
@@ -158,9 +141,8 @@ button.hub-link:focus-visible {
   align-self: start;
   margin-top: 6px;
   color: var(--leaf);
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
 }
 
 a.hub-link:hover .hub-link-number,
@@ -182,20 +164,11 @@ button.hub-link:focus-visible .hub-link-number {
   line-height: 1.1;
 }
 
-.hub-link-copy small {
-  font-size: 0.61rem;
-  font-weight: 500;
-  letter-spacing: 0.045em;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
 .hub-link-arrow {
   font-size: 1rem;
   transition: transform 220ms ease;
 }
 
-/* Accordions */
 .accordion-toggle[aria-expanded="true"] .hub-link-arrow {
   transform: rotate(180deg);
 }
@@ -207,8 +180,66 @@ button.hub-link:focus-visible .hub-link-number {
   transition: max-height 350ms ease-out, padding 350ms ease-out;
 }
 
+/* Linhagem Grega & Sequence Content */
+.accordion-toggle[aria-expanded="true"] + .accordion-content.linhagem-content {
+  max-height: 2000px;
+  padding: 28px 32px;
+}
+
+.linhagem-content p {
+  margin: 0 0 16px;
+  font-size: clamp(0.88rem, 1.4vw, 0.96rem);
+  line-height: 1.7;
+  color: var(--ink);
+  text-align: left;
+}
+
+.sequence-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.sub-toggle-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.sub-toggle-btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.sequence-box {
+  display: none;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px stroke var(--line);
+  text-align: left;
+}
+
+.sequence-box.active {
+  display: block;
+}
+
+.sequence-box h4 {
+  margin: 0 0 12px;
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* Cacau Cerimonial */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
-  max-height: 400px;
+  max-height: 500px;
   padding: 28px 32px;
 }
 
@@ -220,35 +251,271 @@ button.hub-link:focus-visible .hub-link-number {
   text-align: left;
 }
 
-.accordion-toggle[aria-expanded="true"] + .accordion-content.ebook-content {
-  max-height: 250px;
-  padding: 24px 28px;
+.cacau-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.cacau-action-btn {
+  padding: 8px 14px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.75rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 180ms ease;
+}
+
+.cacau-action-btn:hover {
+  background: var(--leaf);
+}
+
+/* Loja Content */
+.accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
+  max-height: 3000px;
+  padding: 28px 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.product-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-thumb {
+  width: 50px;
+  height: 50px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.product-card h3 {
+  font-size: 0.9rem;
+  margin: 6px 0 4px;
+  font-weight: 600;
+}
+
+.product-card .price-range {
+  font-size: 0.75rem;
+  color: var(--leaf);
+  margin: 0 0 10px;
+}
+
+.open-modal-btn {
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid var(--ink);
+  font-size: 0.7rem;
+  cursor: pointer;
+  margin-top: auto;
+  transition: all 180ms ease;
+}
+
+.open-modal-btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Mini Carrinho */
+.cart-summary-box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 20px;
   text-align: left;
 }
 
-.ebook-content p {
-  margin: 0 0 16px;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--ink);
+.cart-summary-box h4 {
+  margin: 0 0 12px;
+  font-family: var(--display);
+  font-size: 1.2rem;
 }
 
-.ebook-buy-btn {
-  display: inline-block;
-  padding: 10px 18px;
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 4px;
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin: 12px 0 20px;
+  border-top: 1px solid var(--ink);
+  padding-top: 8px;
+}
+
+.checkout-form h5 {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+}
+
+.checkout-submit-btn {
+  width: 100%;
+  padding: 10px;
   background: var(--ink);
   color: var(--paper);
-  font-size: 0.68rem;
+  border: none;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 180ms ease, color 180ms ease;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 180ms ease;
 }
 
-.ebook-buy-btn:hover {
-  background: var(--acid);
+.checkout-submit-btn:hover {
+  background: var(--leaf);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-body {
+  background: var(--paper);
+  padding: 24px;
+  width: min(90%, 400px);
+  position: relative;
+  text-align: left;
+  border: 1px solid var(--ink);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.variants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.variant-opt {
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.variant-opt.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Footer */
+.hub-footer {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-icons a {
   color: var(--ink);
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+  transition: opacity 180ms ease;
+}
+
+.footer-icons a:hover {
+  opacity: 0.7;
+}
+
+.footer-icons svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.6rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
 :focus-visible {
@@ -265,11 +532,8 @@ button.hub-link:focus-visible .hub-link-number {
     padding: 36px 0 52px;
   }
 
+  .accordion-toggle[aria-expanded="true"] + .accordion-content.linhagem-content,
   .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
     padding: 22px 20px;
-  }
-
-  .accordion-toggle[aria-expanded="true"] + .accordion-content.ebook-content {
-    padding: 20px 18px;
   }
 }
