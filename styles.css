@@ -2,10 +2,8 @@
   --ink: #24271d;
   --paper: #f2eddf;
   --paper-deep: #e4dcc8;
-  --brand-green: #ADEBB3; /* Cor padrão verde unificada */
-  --cherry-accent: #d32f2f; /* Destaque vivo tom cereja */
-  --greek-blue-bg: rgba(235, 243, 250, 0.85); /* Tom suave azul Grécia */
-  --greek-blue-border: #2a6f97;
+  --brand-green: #ADEBB3; /* Nova cor verde padrão */
+  --cherry-accent: #d32f2f; /* Cor cereja em destaque */
   --line: rgba(36, 39, 29, 0.22);
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "DM Serif Display", serif;
@@ -23,7 +21,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 72% 18%, rgba(1, 130, 1, 0.08), transparent 26rem),
+    radial-gradient(circle at 72% 18%, rgba(173, 235, 179, 0.15), transparent 26rem),
     var(--paper);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
@@ -99,7 +97,7 @@ a {
   margin: 0;
   font-size: clamp(0.8rem, 1.3vw, 0.88rem);
   font-weight: 500;
-  color: var(--brand-green);
+  color: var(--ink);
 }
 
 .hub-links {
@@ -139,11 +137,10 @@ button.hub-link:focus-visible {
   background: var(--ink);
 }
 
-/* O símbolo # agora utiliza a cor verde padrão */
 .hub-link-number {
   align-self: start;
   margin-top: 6px;
-  color: var(--brand-green);
+  color: var(--ink);
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -152,7 +149,7 @@ a.hub-link:hover .hub-link-number,
 a.hub-link:focus-visible .hub-link-number,
 button.hub-link:hover .hub-link-number,
 button.hub-link:focus-visible .hub-link-number {
-  color: #ffffff;
+  color: var(--brand-green);
 }
 
 .hub-link-copy {
@@ -196,15 +193,6 @@ button.hub-link:focus-visible .hub-link-number {
   text-align: left;
 }
 
-/* 3.1 Personalização do Box Grécia */
-.theobroma-box {
-  background: var(--greek-blue-bg);
-  border-left: 4px solid var(--greek-blue-border);
-  padding: 16px 20px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
 .sequence-nav, .cacau-actions {
   display: flex;
   gap: 10px;
@@ -212,7 +200,6 @@ button.hub-link:focus-visible .hub-link-number {
   flex-wrap: wrap;
 }
 
-/* 1. Botões de navegação/sub-toggles unificados com o tom #018201 quando ativos */
 .sub-toggle-btn, .cacau-action-btn {
   padding: 10px 18px;
   background: transparent;
@@ -228,28 +215,24 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .sub-toggle-btn:hover, .cacau-action-btn:hover {
-  background: rgba(1, 130, 1, 0.1);
+  background: rgba(173, 235, 179, 0.3);
 }
 
 .sub-toggle-btn.active, .cacau-action-btn.active {
   background: var(--brand-green);
-  color: #ffffff;
-  border-color: var(--brand-green);
+  color: var(--ink);
+  border-color: var(--ink);
 }
 
-/* 3.2 Botão "Compre seu Cacau" com destaque vibrante e brilho */
+/* Botão "Compre seu Cacau" estilizado no padrão com bordas e texto em tom Cereja */
 .cacau-action-btn.btn-highlight {
-  background: linear-gradient(135deg, #018201 0%, #15b015 100%);
-  color: #ffffff;
-  border: none;
-  box-shadow: 0 0 12px rgba(1, 130, 1, 0.4);
-  animation: pulse-glow 2.5s infinite;
+  background: transparent;
+  color: var(--cherry-accent);
+  border: 1px solid var(--cherry-accent);
 }
 
-@keyframes pulse-glow {
-  0% { box-shadow: 0 0 0 0 rgba(1, 130, 1, 0.6); }
-  70% { box-shadow: 0 0 0 10px rgba(1, 130, 1, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(1, 130, 1, 0); }
+.cacau-action-btn.btn-highlight:hover {
+  background: rgba(211, 47, 47, 0.08);
 }
 
 .sequence-box {
@@ -269,7 +252,7 @@ button.hub-link:focus-visible .hub-link-number {
   font-family: var(--display);
   font-size: 1.55rem;
   font-weight: 400;
-  color: var(--brand-green);
+  color: var(--ink);
 }
 
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
@@ -311,7 +294,7 @@ button.hub-link:focus-visible .hub-link-number {
 .product-thumb {
   width: 46px;
   height: 46px;
-  color: var(--brand-green);
+  color: var(--ink);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -331,7 +314,8 @@ button.hub-link:focus-visible .hub-link-number {
 
 .product-card .price-range {
   font-size: 0.75rem;
-  color: var(--brand-green);
+  color: var(--ink);
+  opacity: 0.8;
   margin: 0 0 12px;
 }
 
@@ -349,26 +333,24 @@ button.hub-link:focus-visible .hub-link-number {
 
 .open-modal-btn:hover {
   background: var(--brand-green);
-  color: #ffffff;
-  border-color: var(--brand-green);
+  color: var(--ink);
 }
 
-/* 4. Reformulação Visual do Box "Seu Carrinho" para Verde #018201 */
+/* Box "Seu Carrinho" estilizado conforme a caixa "Sugestão de Uso" */
 .cart-summary-box {
-  background: var(--brand-green);
-  color: #ffffff;
-  border-radius: 16px;
-  padding: 28px 24px;
+  margin: 32px 0 16px;
+  padding: 20px;
+  background: rgba(173, 235, 179, 0.15);
+  border-left: 4px solid var(--brand-green);
+  border-radius: 6px;
   text-align: left;
-  margin-top: 48px;
-  box-shadow: 0 6px 20px rgba(1, 130, 1, 0.25);
 }
 
 .cart-summary-box h4 {
   margin: 0 0 16px;
   font-family: var(--display);
-  font-size: 1.45rem;
-  color: #ffffff;
+  font-size: 1.35rem;
+  color: var(--ink);
   letter-spacing: -0.01em;
 }
 
@@ -377,27 +359,29 @@ button.hub-link:focus-visible .hub-link-number {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 12px;
+  padding: 20px 12px;
   text-align: center;
 }
 
 .cart-empty-icon {
-  width: 48px;
-  height: 48px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 12px;
+  width: 40px;
+  height: 40px;
+  color: var(--ink);
+  opacity: 0.6;
+  margin-bottom: 10px;
 }
 
 .cart-empty-title {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--ink);
   margin: 0 0 4px;
 }
 
 .cart-empty-sub {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--ink);
+  opacity: 0.7;
   margin: 0;
 }
 
@@ -413,15 +397,15 @@ button.hub-link:focus-visible .hub-link-number {
   justify-content: space-between;
   align-items: center;
   font-size: 0.82rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--line);
   padding-bottom: 8px;
-  color: #ffffff;
+  color: var(--ink);
 }
 
 .cart-item button {
   background: none;
   border: none;
-  color: #ff8a8a;
+  color: var(--cherry-accent);
   cursor: pointer;
   font-size: 1.1rem;
   margin-left: 8px;
@@ -433,49 +417,55 @@ button.hub-link:focus-visible .hub-link-number {
   justify-content: space-between;
   font-weight: 600;
   margin: 16px 0 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid var(--line);
   padding-top: 12px;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: var(--ink);
 }
 
 .checkout-form h5 {
   margin: 0 0 12px;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .checkout-form input {
   width: 100%;
   padding: 10px 14px;
   margin-bottom: 10px;
-  border: 1px solid transparent;
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--paper);
   font-family: var(--sans);
   font-size: 0.8rem;
   color: var(--ink);
 }
 
-/* 4. Destaque Especial para o Botão Enviar para WhatsApp no Carrinho Verde */
+.checkout-form input:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
 .checkout-submit-btn {
   width: 100%;
-  padding: 13px;
-  background: #ffffff;
-  color: var(--brand-green);
-  border: none;
+  padding: 12px;
+  background: var(--brand-green);
+  color: var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 20px;
   font-weight: 700;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: all 180ms ease;
   margin-top: 6px;
 }
 
 .checkout-submit-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 /* Modal e Carrossel */
@@ -590,7 +580,7 @@ button.hub-link:focus-visible .hub-link-number {
 .product-usage-box {
   margin: 16px 0;
   padding: 12px;
-  background: rgba(1, 130, 1, 0.08);
+  background: rgba(173, 235, 179, 0.15);
   border-left: 3px solid var(--brand-green);
   border-radius: 4px;
 }
@@ -600,7 +590,7 @@ button.hub-link:focus-visible .hub-link-number {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--brand-green);
+  color: var(--ink);
   margin-bottom: 4px;
 }
 
@@ -634,8 +624,8 @@ button.hub-link:focus-visible .hub-link-number {
   width: 100%;
   padding: 12px;
   background: var(--brand-green);
-  color: #ffffff;
-  border: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
@@ -644,7 +634,7 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .add-to-cart-btn:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* Footer */
@@ -689,7 +679,6 @@ button.hub-link:focus-visible .hub-link-number {
   height: 100%;
 }
 
-/* 5. Círculo contador de produtos do carrinho em tom Vivo Cereja */
 .cart-badge {
   position: absolute;
   top: -6px;
