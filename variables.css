@@ -2,22 +2,27 @@
   /* ==========================================================================
      1. PALETA BASE (Consolidação de Tons Próximos)
      ========================================================================== */
-  --color-ink: #24271D;          /* Tom escuro principal (textos e elementos base) */
-  --color-paper: #F2EDDF;        /* Tom claro de fundo */
-  --color-green: #e8edd9;        /* Verde padrão do site */
+  --color-ink: #24271D;          /* Tom escuro principal */
+  --color-paper: #F2EDDF;        /* Tom claro de fundo (paper/off-white padrão) */
+  --color-paper-light: #F9F6EE;  /* Off-white mais claro e suave para botões/cards */
+  --color-ocean: #1A5F7A;        /* Azul Oceano / Azul Mar */
+  --color-ocean-light: #2C88AD;  /* Azul Oceano claro (hover) */
+  --color-whatsapp: #25D366;     /* Verde padrão WhatsApp */
+  --color-whatsapp-hover: #1EBE5D;/* Verde WhatsApp hover */
   --color-cherry: #D32F2F;       /* Cor Cereja de destaque */
   --color-white: #FFFFFF;        /* Branco puro */
   --color-black: #000000;        /* Preto puro */
-  --color-card-bg: #E0D8C3;      /* Fundo neutro de imagens/cards */
+  --color-card-bg: #EAE4D3;      /* Fundo suavizado para os cards da loja */
+  --color-loja-bg: rgba(26, 95, 122, 0.04); /* Fundo sutil do container da loja */
 
   /* ==========================================================================
      2. TRANSPARÊNCIAS E OPACIDADES UNIFICADAS
      ========================================================================== */
-  --alpha-subtle: 0.04;          /* 4% - Fundos ultra suaves (Accordions) */
-  --alpha-hover: 0.10;           /* 10% - Destaque leve ao passar o mouse */
-  --alpha-soft: 0.15;            /* 15% - Caixas de destaque e glows */
-  --alpha-line: 0.22;            /* 22% - Linhas de divisão e bordas suaves */
-  --alpha-overlay: 0.65;         /* 65% - Fundo escuro de modais */
+  --alpha-subtle: 0.04;          
+  --alpha-hover: 0.10;           
+  --alpha-soft: 0.15;            
+  --alpha-line: 0.22;            
+  --alpha-overlay: 0.65;         
 
   /* ==========================================================================
      3. CONFIGURAÇÕES DE COR POR COMPONENTE / SEÇÃO
@@ -26,64 +31,64 @@
   /* 3.1. CONFIGURAÇÕES GERAIS DA PÁGINA */
   --page-bg: var(--color-paper);
   --page-text-color: var(--color-ink);
-  --page-radial-glow: rgba(173, 235, 179, var(--alpha-soft));
+  --page-radial-glow: rgba(26, 95, 122, 0.08); /* Glow suave sintonizado com o azul oceano */
   --page-border-lines: rgba(36, 39, 29, var(--alpha-line));
 
   /* 3.2. ACCORDION PRINCIPAL (MENU DE LINKS) */
   --accordion-header-text: var(--color-ink);
   --accordion-number-text: var(--color-ink);
-  --accordion-number-hover-text: var(--color-green);
+  --accordion-number-hover-text: var(--color-ocean-light);
   --accordion-hover-bg: var(--color-ink);
   --accordion-hover-text: var(--color-paper);
   --accordion-content-bg: rgba(36, 39, 29, var(--alpha-subtle));
 
-  /* 3.3. BOTÕES DOS SUBMENUS (LINHAGEM & CACAU CERIMONIAL) */
-  --btn-sub-text: var(--color-ink);
-  --btn-sub-border: var(--color-ink);
+  /* 3.3. BOTÕES DOS SUBMENUS (ALTERAÇÃO 1: AZUL OCEANO / AZUL MAR) */
+  --btn-sub-text: var(--color-ocean);
+  --btn-sub-border: var(--color-ocean);
   --btn-sub-bg: transparent;
-  --btn-sub-hover-bg: rgba(232, 237, 217, var(--alpha-soft));
-  --btn-sub-active-bg: var(--color-green);
-  --btn-sub-active-text: var(--color-ink);
-  --btn-sub-active-border: var(--color-ink);
+  --btn-sub-hover-bg: rgba(26, 95, 122, 0.1);
+  --btn-sub-active-bg: var(--color-ocean);
+  --btn-sub-active-text: var(--color-white);
+  --btn-sub-active-border: var(--color-ocean);
 
-  /* 3.4. BOTÃO DE DESTAQUE "COMPRE SEU CACAU" (COR CEREJA) */
-  --btn-cherry-text: var(--color-cherry);
-  --btn-cherry-border: var(--color-cherry);
-  --btn-cherry-bg: transparent;
-  --btn-cherry-hover-bg: rgba(211, 47, 47, var(--alpha-hover));
+  /* 3.4. BOTÃO DE DESTAQUE "COMPRE SEU CACAU" (ALTERAÇÃO 2: FUNDO OFF-WHITE) */
+  --btn-cherry-text: var(--color-ink);
+  --btn-cherry-border: var(--color-ink);
+  --btn-cherry-bg: var(--color-paper-light);
+  --btn-cherry-hover-bg: #E5DFC9;
 
-  /* 3.5. CARD DE PRODUTO (VITRINE) */
-  --card-bg: var(--color-paper);
-  --card-border: var(--page-border-lines);
+  /* 3.5. CARD DE PRODUTO (VITRINE - ALTERAÇÃO 4) */
+  --card-bg: var(--color-card-bg);
+  --card-border: rgba(36, 39, 29, 0.12);
   --card-title-text: var(--color-ink);
   --card-price-text: var(--color-ink);
-  --card-icon-color: var(--color-ink);
   
-  --card-btn-text: var(--color-ink);
-  --card-btn-border: var(--color-ink);
-  --card-btn-bg: transparent;
-  --card-btn-hover-bg: var(--color-green);
-  --card-btn-hover-text: var(--color-ink);
+  --card-btn-text: var(--color-white);
+  --card-btn-border: var(--color-ocean);
+  --card-btn-bg: var(--color-ocean);
+  --card-btn-hover-bg: var(--color-ocean-light);
+  --card-btn-hover-text: var(--color-white);
 
-  /* 3.6. CAIXAS DE DESTAQUE ("SEU CARRINHO" & "SUGESTÃO DE USO") */
-  --box-highlight-bg: rgba(173, 235, 179, var(--alpha-soft));
-  --box-highlight-border-left: var(--color-green);
+  /* 3.6. CAIXAS DE DESTAQUE E CONTAINER DA LOJA (ALTERAÇÃO 3) */
+  --loja-container-bg: var(--color-loja-bg);
+  --box-highlight-bg: rgba(26, 95, 122, 0.06);
+  --box-highlight-border-left: var(--color-ocean);
   --box-highlight-title-text: var(--color-ink);
   --box-highlight-body-text: var(--color-ink);
 
-  /* 3.7. CARRINHO DE COMPRAS E CHECKOUT */
+  /* 3.7. CARRINHO DE COMPRAS E CHECKOUT (ALTERAÇÃO 5: VERDE WHATSAPP) */
   --cart-item-border: var(--page-border-lines);
   --cart-item-remove-btn: var(--color-cherry);
   --cart-input-bg: var(--color-paper);
   --cart-input-text: var(--color-ink);
   --cart-input-border: var(--page-border-lines);
-  --cart-input-focus-border: var(--color-ink);
+  --cart-input-focus-border: var(--color-ocean);
   
-  --cart-submit-btn-bg: var(--color-green);
-  --cart-submit-btn-text: var(--color-ink);
-  --cart-submit-btn-border: var(--color-ink);
-  --cart-submit-btn-hover-bg: var(--color-ink);
-  --cart-submit-btn-hover-text: var(--color-paper);
+  --cart-submit-btn-bg: var(--color-whatsapp);
+  --cart-submit-btn-text: var(--color-white);
+  --cart-submit-btn-border: var(--color-whatsapp);
+  --cart-submit-btn-hover-bg: var(--color-whatsapp-hover);
+  --cart-submit-btn-hover-text: var(--color-white);
 
   /* 3.8. MODAL E CARROSSEL DE IMAGENS */
   --modal-overlay-bg: rgba(0, 0, 0, var(--alpha-overlay));
@@ -97,9 +102,9 @@
   --carousel-dot-inactive: rgba(255, 255, 255, 0.5);
   --carousel-dot-active: var(--color-white);
 
-  --modal-add-btn-bg: var(--color-green);
-  --modal-add-btn-text: var(--color-ink);
-  --modal-add-btn-border: var(--color-ink);
+  --modal-add-btn-bg: var(--color-ocean);
+  --modal-add-btn-text: var(--color-white);
+  --modal-add-btn-border: var(--color-ocean);
 
   /* 3.9. RODAPÉ E ÍCONES */
   --footer-border: var(--page-border-lines);
