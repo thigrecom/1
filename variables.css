@@ -4,7 +4,7 @@
      ========================================================================== */
   --color-ink: #24271D;          /* Tom escuro principal */
   --color-paper: #F2EDDF;        /* Tom claro de fundo (paper/off-white padrão) */
-  --color-paper-light: #F9F6EE;  /* Off-white mais claro e suave para botões/cards */
+  --color-paper-light: #F9F6EE;  /* Off-white mais claro para botões/cards */
   --color-ocean: #1A5F7A;        /* Azul Oceano / Azul Mar */
   --color-ocean-light: #2C88AD;  /* Azul Oceano claro (hover) */
   --color-whatsapp: #25D366;     /* Verde padrão WhatsApp */
@@ -31,7 +31,7 @@
   /* 3.1. CONFIGURAÇÕES GERAIS DA PÁGINA */
   --page-bg: var(--color-paper);
   --page-text-color: var(--color-ink);
-  --page-radial-glow: rgba(26, 95, 122, 0.08); /* Glow suave sintonizado com o azul oceano */
+  --page-radial-glow: rgba(26, 95, 122, 0.08); 
   --page-border-lines: rgba(36, 39, 29, var(--alpha-line));
 
   /* 3.2. ACCORDION PRINCIPAL (MENU DE LINKS) */
@@ -42,7 +42,7 @@
   --accordion-hover-text: var(--color-paper);
   --accordion-content-bg: rgba(36, 39, 29, var(--alpha-subtle));
 
-  /* 3.3. BOTÕES DOS SUBMENUS (ALTERAÇÃO 1: AZUL OCEANO / AZUL MAR) */
+  /* 3.3. BOTÕES DOS SUBMENUS (PADRÃO AZUL OCEANO) */
   --btn-sub-text: var(--color-ocean);
   --btn-sub-border: var(--color-ocean);
   --btn-sub-bg: transparent;
@@ -51,13 +51,13 @@
   --btn-sub-active-text: var(--color-white);
   --btn-sub-active-border: var(--color-ocean);
 
-  /* 3.4. BOTÃO DE DESTAQUE "COMPRE SEU CACAU" (ALTERAÇÃO 2: FUNDO OFF-WHITE) */
-  --btn-cherry-text: var(--color-ink);
-  --btn-cherry-border: var(--color-ink);
-  --btn-cherry-bg: var(--color-paper-light);
-  --btn-cherry-hover-bg: #E5DFC9;
+  /* 3.4. BOTÃO DE DESTAQUE "COMPRE SEU CACAU" (MANTÉM DESIGN DE CORES NO MODO PADRÃO) */
+  --btn-cherry-text: var(--color-ocean);
+  --btn-cherry-border: var(--color-ocean);
+  --btn-cherry-bg: transparent;
+  --btn-cherry-hover-bg: rgba(26, 95, 122, 0.1);
 
-  /* 3.5. CARD DE PRODUTO (VITRINE - ALTERAÇÃO 4) */
+  /* 3.5. CARD DE PRODUTO (VITRINE) */
   --card-bg: var(--color-card-bg);
   --card-border: rgba(36, 39, 29, 0.12);
   --card-title-text: var(--color-ink);
@@ -69,14 +69,14 @@
   --card-btn-hover-bg: var(--color-ocean-light);
   --card-btn-hover-text: var(--color-white);
 
-  /* 3.6. CAIXAS DE DESTAQUE E CONTAINER DA LOJA (ALTERAÇÃO 3) */
+  /* 3.6. CAIXAS DE DESTAQUE E CONTAINER DA LOJA */
   --loja-container-bg: var(--color-loja-bg);
   --box-highlight-bg: rgba(26, 95, 122, 0.06);
   --box-highlight-border-left: var(--color-ocean);
   --box-highlight-title-text: var(--color-ink);
   --box-highlight-body-text: var(--color-ink);
 
-  /* 3.7. CARRINHO DE COMPRAS E CHECKOUT (ALTERAÇÃO 5: VERDE WHATSAPP) */
+  /* 3.7. CARRINHO DE COMPRAS E CHECKOUT (VERDE WHATSAPP) */
   --cart-item-border: var(--page-border-lines);
   --cart-item-remove-btn: var(--color-cherry);
   --cart-input-bg: var(--color-paper);
