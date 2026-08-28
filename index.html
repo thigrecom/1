@@ -19,11 +19,9 @@
   <body class="hub-page">
     <div class="hub-shell">
       <main class="link-hub" aria-labelledby="hub-title">
-        <div class="hub-mark" aria-hidden="true">
-          <svg viewBox="0 0 120 120" role="presentation">
-            <path d="M59 105c0-25 2-49 8-76M62 75c-18-12-29-27-34-45M65 62c19-12 31-27 38-44" />
-            <path d="M65 42c-17-4-27-14-28-28 16-4 29 7 28 28ZM68 55c17-3 28-13 30-27-16-5-30 6-30 27ZM60 72c-15-1-25-9-27-22 14-5 27 4 27 22Z" />
-          </svg>
+        <!-- Logo / Avatar Circular -->
+        <div class="hub-avatar">
+          <img src="/logo.png" alt="Logo Casa Thigre" />
         </div>
 
         <header class="hub-header">
@@ -37,55 +35,91 @@
         </header>
 
         <nav class="hub-links" aria-label="Links principais">
-          <a
-            class="hub-link"
-            href="https://wa.me/?text=Ol%C3%A1%2C%20Casa%20Thigre!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Cacau%20Cerimonial."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="hub-link-number">01</span>
-            <span class="hub-link-copy"><strong>Cacau Cerimonial</strong></span>
-            <span class="hub-link-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="hub-link" href="/loja/">
-            <span class="hub-link-number">02</span>
-            <span class="hub-link-copy">
-              <strong>Loja</strong>
-              <small>(Entregas gratuitas em Itacaré, BA)</small>
-            </span>
-            <span class="hub-link-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <div class="hub-link is-disabled" aria-disabled="true">
-            <span class="hub-link-number">03</span>
-            <span class="hub-link-copy">
-              <strong>iFood</strong>
-              <small>Em breve</small>
-            </span>
-            <span class="hub-link-status" aria-hidden="true">—</span>
+          <!-- Item 01: Cacau Cerimonial Accordion -->
+          <div class="hub-link-item">
+            <button
+              type="button"
+              class="hub-link accordion-toggle"
+              aria-expanded="false"
+              aria-controls="cacau-cerimonial-info"
+              id="cacau-btn"
+            >
+              <span class="hub-link-number">01</span>
+              <span class="hub-link-copy"><strong>Cacau Cerimonial</strong></span>
+              <span class="hub-link-arrow" aria-hidden="true">↓</span>
+            </button>
+            <div
+              id="cacau-cerimonial-info"
+              class="accordion-content"
+              role="region"
+              aria-labelledby="cacau-btn"
+            >
+              <p>
+                O Cacau Cerimonial é o cacau em sua forma mais pura, integra e ancestral. Diferente do chocolate convencional, ele passa por um processo artesanal de moagem lenta de amêndoas selecionadas de cacau 100%, preservando a manteiga natural de cacau e todos os seus compostos bioativos, antioxidantes e teobromina. É uma medicina de presença, calma e expansão do coração, ideal para momentos de pausa, meditação, criação e rituais diários de bem-estar.
+              </p>
+            </div>
           </div>
 
-          <a
-            class="hub-link"
-            href="https://instagram.com/thigre.c"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="hub-link-number">04</span>
-            <span class="hub-link-copy">
-              <strong>Instagram</strong>
-              <small>@thigre.c</small>
-            </span>
-            <span class="hub-link-arrow" aria-hidden="true">↗</span>
-          </a>
+          <!-- Item 02: Loja -->
+          <div class="hub-link-item">
+            <a class="hub-link" href="/loja/">
+              <span class="hub-link-number">02</span>
+              <span class="hub-link-copy">
+                <strong>Loja</strong>
+                <small>(Entregas gratuitas em Itacaré, BA)</small>
+              </span>
+              <span class="hub-link-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Item 03: WhatsApp -->
+          <div class="hub-link-item">
+            <a
+              class="hub-link"
+              href="https://wa.me/5573999664477"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="hub-link-number">03</span>
+              <span class="hub-link-copy">
+                <strong>WhatsApp / Atendimento</strong>
+                <small>(73) 99966-4477</small>
+              </span>
+              <span class="hub-link-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- Item 04: Instagram -->
+          <div class="hub-link-item">
+            <a
+              class="hub-link"
+              href="https://instagram.com/thigre.c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="hub-link-number">04</span>
+              <span class="hub-link-copy">
+                <strong>Instagram</strong>
+                <small>@thigre.c</small>
+              </span>
+              <span class="hub-link-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
         </nav>
       </main>
-
-      <footer class="site-footer hub-footer">
-        <p>Casa Thigre · coisas bonitas para a vida real.</p>
-        <a href="https://wa.me/?text=Ol%C3%A1%2C%20Casa%20Thigre!%20Gostaria%20de%20atendimento." target="_blank" rel="noopener noreferrer">Atendimento pelo WhatsApp <span aria-hidden="true">↗</span></a>
-      </footer>
     </div>
+
+    <!-- Script interativo para expansão do Accordion -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.querySelector('.accordion-toggle');
+        if (toggleBtn) {
+          toggleBtn.addEventListener('click', () => {
+            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            toggleBtn.setAttribute('aria-expanded', !isExpanded);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
