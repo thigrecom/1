@@ -1,0 +1,34 @@
+:root {
+  /* ==========================================================================
+     CONFIGURAÇÃO DE CORES (PALETA PRINCIPAL)
+     ========================================================================== */
+  --ink: #24271D;          /* Cor do texto principal / escuro */
+  --paper: #F2EDDF;        /* Cor do fundo / claro */
+  --paper-deep: #E4DCC8;   /* Variação de fundo mais escuro */
+  
+  --brand-green: #ADEBB3;   /* Verde destaque */
+  --cherry-accent: #D32F2F; /* Cor cereja (botões de destaque e badges) */
+  --white: #FFFFFF;         /* Branco puro */
+  --black: #000000;         /* Preto puro */
+
+  /* ==========================================================================
+     CORES DE OVERLAY, TRANSPARÊNCIAS E BORDAS (HEXADECIMAL)
+     ========================================================================== */
+  --line: #24271D38;                 /* Borda suave baseada no ink (22% opacity) */
+  --bg-radial: #ADEBB326;            /* Glow de fundo (15% opacity) */
+  --bg-accordion-content: #24271D09; /* Fundo do accordion aberto (3.5% opacity) */
+  --bg-button-hover: #ADEBB34D;      /* Hover em botões secundários (30% opacity) */
+  --bg-cherry-hover: #D32F2F14;      /* Hover no botão Cereja (8% opacity) */
+  --bg-box-highlight: #ADEBB326;     /* Fundo estilo "Sugestão de Uso" e Carrinho (15% opacity) */
+  --bg-modal-overlay: #000000A6;     /* Fundo do Modal (65% opacity) */
+  --bg-carousel-container: #E0D8C3;  /* Fundo da imagem do carrossel */
+  --bg-carousel-nav: #00000066;      /* Navegação do carrossel (40% opacity) */
+  --bg-dot-inactive: #FFFFFF80;     /* Indicador inativo do carrossel (50% opacity) */
+  --shadow-badge: #0000004D;         /* Sombra do contador do carrinho (30% opacity) */
+
+  /* ==========================================================================
+     TIPOGRAFIA
+     ========================================================================== */
+  --sans: "Plus Jakarta Sans", sans-serif;
+  --display: "DM Serif Display", serif;
+}
