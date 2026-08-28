@@ -2,7 +2,6 @@
   --ink: #24271d;
   --paper: #f2eddf;
   --paper-deep: #e4dcc8;
-  --terracotta: #a83232;
   --acid: #d6df3c;
   --leaf: #697253;
   --line: rgba(36, 39, 29, 0.3);
@@ -42,11 +41,6 @@ a {
   color: inherit;
 }
 
-.page-shell {
-  width: min(100% - 48px, 1520px);
-  margin: 0 auto;
-}
-
 .hub-shell {
   display: flex;
   flex-direction: column;
@@ -69,9 +63,9 @@ a {
 
 /* Avatar / Logo Circular */
 .hub-avatar {
-  width: 96px;
-  height: 96px;
-  margin-bottom: 20px;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 18px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid var(--ink);
@@ -89,32 +83,24 @@ a {
   width: 100%;
 }
 
-.hub-kicker {
-  margin: 0 0 8px;
-  color: var(--leaf);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-/* TÌtulo THIGRE.COM reduzido para 70% */
+/* T√≠tulo thigre.com (min√∫sculo e tamanho m√©dio) */
 .hub-header h1 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(3rem, 6.3vw, 5.25rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+  line-height: 1;
+  text-transform: lowercase;
+  letter-spacing: -0.03em;
 }
 
 .hub-bio {
-  margin: 28px auto 0;
-  font-size: clamp(0.66rem, 1.2vw, 0.76rem);
-  font-weight: 500;
-  line-height: 1.65;
-  letter-spacing: 0.075em;
+  margin: 14px auto 0;
+  font-size: clamp(0.72rem, 1.3vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--leaf);
 }
 
 .hub-bio p {
@@ -124,7 +110,7 @@ a {
 .hub-links {
   display: grid;
   width: 100%;
-  margin-top: 48px;
+  margin-top: 40px;
   border-top: 1px solid var(--line);
 }
 
@@ -181,9 +167,9 @@ button.hub-link:focus-visible .hub-link-number {
 
 .hub-link-copy strong {
   font-family: var(--display);
-  font-size: clamp(1.65rem, 4vw, 2.1rem);
+  font-size: clamp(1.5rem, 3.8vw, 1.95rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .hub-link-copy small {
@@ -199,7 +185,7 @@ button.hub-link:focus-visible .hub-link-number {
   transition: transform 220ms ease;
 }
 
-/* Accordion Cacau Cerimonial */
+/* Accordions */
 .accordion-toggle[aria-expanded="true"] .hub-link-arrow {
   transform: rotate(180deg);
 }
@@ -211,201 +197,51 @@ button.hub-link:focus-visible .hub-link-number {
   transition: max-height 350ms ease-out, padding 350ms ease-out;
 }
 
-.accordion-toggle[aria-expanded="true"] + .accordion-content {
-  max-height: 300px;
-  padding: 24px 28px;
+/* Ajustes espec√≠ficos do Cacau Cerimonial: Fonte maior e mais margem */
+.accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
+  max-height: 400px;
+  padding: 32px 40px;
 }
 
-.accordion-content p {
+.cacau-content p {
   margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.7;
+  font-size: clamp(0.88rem, 1.4vw, 0.98rem);
+  line-height: 1.75;
   color: var(--ink);
   text-align: left;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
 }
 
-/* Estilos de P·ginas Secund·rias (/loja) */
-.site-header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  min-height: 96px;
-  border-bottom: 1px solid var(--line);
-  text-transform: uppercase;
+/* Ajustes espec√≠ficos do eBook */
+.accordion-toggle[aria-expanded="true"] + .accordion-content.ebook-content {
+  max-height: 250px;
+  padding: 28px 36px;
+  text-align: left;
 }
 
-.brand {
-  width: fit-content;
-  font-family: var(--display);
-  font-size: clamp(1.45rem, 2vw, 2rem);
-  letter-spacing: -0.03em;
-  text-decoration: none;
-  text-transform: none;
-}
-
-.header-tag,
-.header-contact,
-.delivery-note,
-.eyebrow,
-.product-meta,
-.product-action a,
-.site-footer a {
-  font-size: 0.67rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.header-tag {
-  margin: 0;
-}
-
-.delivery-note {
-  justify-self: end;
-  margin: 0;
-  text-align: right;
-}
-
-.catalog {
-  padding: clamp(80px, 10vw, 148px) 0;
-}
-
-.section-heading {
-  display: grid;
-  grid-template-columns: 0.62fr 1.38fr;
-  align-items: end;
-  margin-bottom: 64px;
-}
-
-.section-heading .eyebrow {
-  align-self: start;
-  margin: 10px 0 0;
-}
-
-.section-heading h2 {
-  margin: 0;
-  font-family: var(--display);
-  font-size: clamp(3.5rem, 6.5vw, 7rem);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 48px 1px;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
-.product-card {
-  display: grid;
-  grid-template-rows: auto auto minmax(126px, auto) auto;
-  min-width: 0;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: rgba(242, 237, 223, 0.68);
-  transition: background-color 250ms ease;
-}
-
-.product-card:hover {
-  background: rgba(255, 253, 244, 0.78);
-}
-
-.product-image {
-  display: grid;
-  place-items: center;
-  min-height: 390px;
-  margin: clamp(16px, 2vw, 28px);
-  overflow: hidden;
-  border: 1px solid rgba(36, 39, 29, 0.15);
-}
-
-.product-meta {
-  display: flex;
-  justify-content: space-between;
-  padding: 2px 28px 20px;
-  color: rgba(36, 39, 29, 0.72);
-}
-
-.product-copy {
-  padding: 0 28px 30px;
-}
-
-.product-copy h3 {
-  max-width: 360px;
-  margin: 0 0 14px;
-  font-family: var(--display);
-  font-size: clamp(2rem, 3vw, 3.1rem);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-}
-
-.product-copy p {
-  margin: 0;
-  font-size: 0.74rem;
-  line-height: 1.5;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.product-action {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px;
-  min-height: 78px;
-  padding: 18px 28px;
-  border-top: 1px solid var(--line);
-}
-
-.product-action a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  min-height: 40px;
-  padding: 0 14px;
-  background: var(--ink);
-  color: var(--paper);
-  text-decoration: none;
-  transition: color 180ms ease, background-color 180ms ease;
-}
-
-.product-action a:hover,
-.product-action a:focus-visible {
-  background: var(--acid);
+.ebook-content p {
+  margin: 0 0 18px;
+  font-size: 0.88rem;
+  line-height: 1.65;
   color: var(--ink);
 }
 
-.site-footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 40px;
-  min-height: 170px;
-  border-top: 1px solid var(--line);
-}
-
-.site-footer p {
-  margin: 0;
-  font-family: var(--display);
-  font-size: clamp(1.45rem, 2.5vw, 2.6rem);
-}
-
-.site-footer a {
-  display: flex;
-  justify-self: end;
-  align-items: center;
-  gap: 18px;
-  min-height: 54px;
-  padding: 0 22px;
-  background: var(--acid);
+.ebook-buy-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.ebook-buy-btn:hover {
+  background: var(--acid);
+  color: var(--ink);
 }
 
 :focus-visible {
@@ -414,50 +250,19 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 @media (max-width: 720px) {
-  .page-shell, .hub-shell {
+  .hub-shell {
     width: min(100% - 28px, 1520px);
   }
 
   .link-hub {
-    padding: 48px 0 60px;
+    padding: 40px 0 60px;
   }
 
-  .hub-avatar {
-    width: 80px;
-    height: 80px;
+  .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
+    padding: 24px 20px;
   }
 
-  .hub-header h1 {
-    font-size: clamp(2.6rem, 13vw, 3.8rem);
-  }
-
-  .hub-bio {
-    max-width: 370px;
-    margin-top: 22px;
-    font-size: 0.61rem;
-    letter-spacing: 0.055em;
-  }
-
-  .hub-links {
-    margin-top: 36px;
-  }
-
-  .hub-link {
-    grid-template-columns: 34px 1fr auto;
-    min-height: 78px;
-    padding-right: 14px;
-    padding-left: 14px;
-  }
-
-  a.hub-link:hover,
-  a.hub-link:focus-visible,
-  button.hub-link:hover,
-  button.hub-link:focus-visible {
-    padding-right: 12px;
-    padding-left: 16px;
-  }
-
-  .accordion-toggle[aria-expanded="true"] + .accordion-content {
-    padding: 18px 20px;
+  .accordion-toggle[aria-expanded="true"] + .accordion-content.ebook-content {
+    padding: 22px 20px;
   }
 }
