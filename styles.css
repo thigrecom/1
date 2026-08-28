@@ -1,23 +1,15 @@
-/* ==========================================================================
-   VARIAVEIS DE COR E ESTILO
-   ========================================================================== */
 :root {
   --ink: #24271d;
   --paper: #f2eddf;
   --paper-deep: #e4dcc8;
   --acid: #d6df3c;
   --leaf: #697253;
-  /* Verde escuro ajustado para um tom Verde Folha / Botânico mais visível */
-  --dark-green: #2e5a39; 
-  --dark-green-hover: #23472c;
+  --dark-green: #2c3827; /* Verde Escuro Selecionado */
   --line: rgba(36, 39, 29, 0.22);
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "DM Serif Display", serif;
 }
 
-/* ==========================================================================
-   RESET E ESTRUTURA BASE
-   ========================================================================== */
 * {
   box-sizing: border-box;
 }
@@ -109,9 +101,6 @@ a {
   color: var(--leaf);
 }
 
-/* ==========================================================================
-   ACCORDION & HUBS DE NAVEGAÇÃO
-   ========================================================================== */
 .hub-links {
   display: grid;
   width: 100%;
@@ -181,7 +170,7 @@ button.hub-link:focus-visible .hub-link-number {
   transition: transform 220ms ease;
 }
 
-/* TRANSIÇÕES DO ACCORDION */
+/* Transições do Accordion */
 .accordion-toggle[aria-expanded="true"] .hub-link-arrow {
   transform: rotate(180deg);
 }
@@ -206,9 +195,7 @@ button.hub-link:focus-visible .hub-link-number {
   text-align: left;
 }
 
-/* ==========================================================================
-   1 & 2. BOTÕES DE NAVEGAÇÃO DAS ABAS (LINHAGEM & CACAU)
-   ========================================================================== */
+/* 2. Botões dentro do menu: design refinado com cantos arredondados e cor verde escuro quando selecionado */
 .sequence-nav {
   display: flex;
   gap: 12px;
@@ -230,7 +217,7 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .sub-toggle-btn:hover {
-  background: rgba(46, 90, 57, 0.12);
+  background: rgba(44, 56, 39, 0.1);
 }
 
 .sub-toggle-btn.active {
@@ -239,6 +226,7 @@ button.hub-link:focus-visible .hub-link-number {
   border-color: var(--dark-green);
 }
 
+/* 3. Título do próximo assunto levemente maior e em verde escuro */
 .sequence-box {
   display: none;
   margin-top: 20px;
@@ -254,19 +242,19 @@ button.hub-link:focus-visible .hub-link-number {
 .section-title {
   margin: 0 0 14px;
   font-family: var(--display);
-  font-size: 1.55rem;
+  font-size: 1.55rem; /* Aumentado levemente */
   font-weight: 400;
   color: var(--dark-green); /* Verde Escuro */
 }
 
-/* ACCORDION CACAU CERIMONIAL */
+/* Accordion Cacau Cerimonial */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
-  max-height: 800px;
+  max-height: 600px;
   padding: 28px 32px;
 }
 
 .cacau-content p {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: clamp(0.88rem, 1.4vw, 0.96rem);
   line-height: 1.7;
   color: var(--ink);
@@ -288,7 +276,7 @@ button.hub-link:focus-visible .hub-link-number {
   text-decoration: none;
   font-weight: 500;
   border: none;
-  border-radius: 20px;
+  border-radius: 20px; /* Cantos arredondados */
   cursor: pointer;
   transition: background 180ms ease;
 }
@@ -297,9 +285,7 @@ button.hub-link:focus-visible .hub-link-number {
   background: var(--dark-green);
 }
 
-/* ==========================================================================
-   3. PRODUTOS & SUGESTÃO DE USO
-   ========================================================================== */
+/* Accordion Loja */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
   max-height: 3500px;
   padding: 28px 20px;
@@ -307,7 +293,7 @@ button.hub-link:focus-visible .hub-link-number {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 16px;
   margin-bottom: 32px;
 }
@@ -350,32 +336,6 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 0 0 12px;
 }
 
-/* Caixa com a Sugestão de Uso (Item 3) */
-.usage-suggestion-box {
-  margin: 14px 0;
-  padding: 12px;
-  background: rgba(46, 90, 57, 0.05);
-  border-left: 3px solid var(--dark-green);
-  border-radius: 6px;
-  text-align: left;
-}
-
-.usage-suggestion-box h5 {
-  margin: 0 0 4px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--dark-green);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.usage-suggestion-box p {
-  margin: 0;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: var(--ink);
-}
-
 .open-modal-btn {
   padding: 8px 14px;
   background: transparent;
@@ -394,76 +354,42 @@ button.hub-link:focus-visible .hub-link-number {
   border-color: var(--dark-green);
 }
 
-/* ==========================================================================
-   4. CARRINHO & CHECKOUT (DESIGN REFINADO COM ESPAÇAMENTO E CEP)
-   ========================================================================== */
+/* Carrinho e Checkout na Loja */
 .cart-summary-box {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 28px 24px;
+  border-radius: 12px;
+  padding: 20px;
   text-align: left;
-  /* Espaçamento fora dos menus superiores para diferenciar o carrinho */
-  margin-top: 48px;
-  box-shadow: 0 6px 20px rgba(36, 39, 29, 0.05);
 }
 
 .cart-summary-box h4 {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   font-family: var(--display);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--dark-green);
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
-/* Estado: Carrinho Vazio */
-.empty-cart-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 16px;
-  text-align: center;
-}
-
-.empty-cart-icon {
-  width: 48px;
-  height: 48px;
-  color: var(--leaf);
-  margin-bottom: 12px;
-  opacity: 0.8;
-}
-
-.empty-cart-msg {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin: 0 0 4px;
-}
-
-.empty-cart-subtext {
-  font-size: 0.8rem;
-  color: var(--leaf);
-  margin: 0;
-}
-
-/* Estado: Carrinho com Itens */
 .cart-items-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.empty-cart-msg {
+  font-size: 0.8rem;
+  color: var(--leaf);
+  margin: 0;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 
 .cart-item button {
@@ -476,29 +402,24 @@ button.hub-link:focus-visible .hub-link-number {
   line-height: 1;
 }
 
-/* Campo para CEP */
-.cep-box {
-  margin: 18px 0;
-  padding-top: 14px;
-  border-top: 1px dashed var(--line);
-}
-
-.cep-box label {
-  display: block;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 6px;
-}
-
-.cep-input-group {
+.cart-total-row {
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
+  font-weight: 600;
+  margin: 12px 0 20px;
+  border-top: 1px solid var(--ink);
+  padding-top: 8px;
 }
 
-.cep-input-group input {
-  flex: 1;
-  padding: 9px 12px;
+.checkout-form h5 {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: transparent;
@@ -507,53 +428,24 @@ button.hub-link:focus-visible .hub-link-number {
   color: var(--ink);
 }
 
-.cep-calc-btn {
-  padding: 9px 16px;
-  background: transparent;
-  border: 1px solid var(--dark-green);
-  color: var(--dark-green);
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 180ms ease;
-}
-
-.cep-calc-btn:hover {
-  background: var(--dark-green);
-  color: #ffffff;
-}
-
-.cart-total-row {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin: 16px 0 20px;
-  border-top: 1px solid var(--ink);
-  padding-top: 12px;
-}
-
 .checkout-submit-btn {
   width: 100%;
-  padding: 14px;
+  padding: 12px;
   background: var(--dark-green);
   color: #ffffff;
   border: none;
   border-radius: 20px;
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   cursor: pointer;
-  transition: background 180ms ease, opacity 180ms ease;
+  transition: opacity 180ms ease;
 }
 
 .checkout-submit-btn:hover {
-  background: var(--dark-green-hover);
+  opacity: 0.9;
 }
 
-/* ==========================================================================
-   5. MODAL DE PRODUTO COM CARROSSEL 1:1
-   ========================================================================== */
+/* 5. Modal Layout com Carrossel 1:1 */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -600,7 +492,7 @@ button.hub-link:focus-visible .hub-link-number {
   align-items: start;
 }
 
-/* CARROSSEL 1:1 */
+/* Carrossel 1:1 */
 .modal-carousel-container {
   position: relative;
   width: 100%;
@@ -693,16 +585,14 @@ button.hub-link:focus-visible .hub-link-number {
   cursor: pointer;
   font-weight: 600;
   font-size: 0.8rem;
-  transition: background 180ms ease, opacity 180ms ease;
+  transition: opacity 180ms ease;
 }
 
 .add-to-cart-btn:hover {
-  background: var(--dark-green-hover);
+  opacity: 0.9;
 }
 
-/* ==========================================================================
-   FOOTER E ACESSIBILIDADE
-   ========================================================================== */
+/* 1. Footer sem Bugs e Ícones */
 .hub-footer {
   width: 100%;
   padding: 20px 0;
@@ -765,9 +655,7 @@ button.hub-link:focus-visible .hub-link-number {
   outline-offset: 4px;
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE MOBILE
-   ========================================================================== */
+/* Responsividade Mobile (Item 5: Imagem acima no mobile) */
 @media (max-width: 640px) {
   .product-modal-layout {
     grid-template-columns: 1fr;
