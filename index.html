@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
@@ -19,17 +19,22 @@
   <body class="hub-page">
     <div class="hub-shell">
       <main class="link-hub" aria-labelledby="hub-title">
-        <!-- Logo / Avatar Circular -->
+        <!-- Logo Transparente sem bordas -->
         <div class="hub-avatar">
-          <img src="/logo_realist.png" alt="Logo Casa Thigre" />
+          <img src="/logo.png" alt="Logo Casa Thigre" />
         </div>
 
         <header class="hub-header">
+          <!-- Nome com nova tipografia elegante em itálico -->
           <h1 id="hub-title">Casa Thigre</h1>
+          
+          <!-- Subtítulo e texto informativo dividido em 2 linhas -->
           <div class="hub-bio">
-            <p>Da semente ao fruto, do fruto à criação</p>
-            <p>CULTURA DO CACAU</p>
-            <p>Maraú, Bahia</p>
+            <p class="hub-subtitle">CULTURA DO CACAU</p>
+            <div class="hub-info-text">
+              <p>Cultivo, crio e compartilho cacau em sua forma mais pura,</p>
+              <p>chocolates com menos excesso e lotes especiais.</p>
+            </div>
           </div>
         </header>
 
@@ -80,7 +85,7 @@
               id="ebook-btn"
             >
               <span class="hub-link-number">03</span>
-              <span class="hub-link-copy"><strong>eBook Meu Ritual</strong></span>
+              <span class="hub-link-copy"><strong>eBook Cerimônia Individual (Autoaplicação)</strong></span>
               <span class="hub-link-arrow" aria-hidden="true">↓</span>
             </button>
             <div
@@ -132,7 +137,6 @@
       </main>
     </div>
 
-    <!-- Script interativo para expansão dos Accordions -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const toggleBtns = document.querySelectorAll('.accordion-toggle');
@@ -140,7 +144,6 @@
           btn.addEventListener('click', () => {
             const isExpanded = btn.getAttribute('aria-expanded') === 'true';
             
-            // Fecha outros abertos (opcional, para visual limpo)
             toggleBtns.forEach(otherBtn => {
               otherBtn.setAttribute('aria-expanded', 'false');
             });
