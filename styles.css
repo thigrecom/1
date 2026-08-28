@@ -47,7 +47,7 @@ a {
   justify-content: center;
   align-items: center;
   width: min(100% - 48px, 1520px);
-  min-height: calc(100svh - 80px);
+  min-height: calc(100vh - 80px);
   margin: 0 auto;
 }
 
@@ -169,6 +169,7 @@ button.hub-link:focus-visible .hub-link-number {
   transition: transform 220ms ease;
 }
 
+/* Transições do Accordion */
 .accordion-toggle[aria-expanded="true"] .hub-link-arrow {
   transform: rotate(180deg);
 }
@@ -180,9 +181,8 @@ button.hub-link:focus-visible .hub-link-number {
   transition: max-height 350ms ease-out, padding 350ms ease-out;
 }
 
-/* Linhagem Grega & Sequence Content */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.linhagem-content {
-  max-height: 2000px;
+  max-height: 2500px;
   padding: 28px 32px;
 }
 
@@ -202,7 +202,7 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .sub-toggle-btn {
-  padding: 8px 16px;
+  padding: 10px 18px;
   background: transparent;
   border: 1px solid var(--ink);
   color: var(--ink);
@@ -222,7 +222,7 @@ button.hub-link:focus-visible .hub-link-number {
   display: none;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px stroke var(--line);
+  border-top: 1px solid var(--line);
   text-align: left;
 }
 
@@ -237,9 +237,9 @@ button.hub-link:focus-visible .hub-link-number {
   font-weight: 400;
 }
 
-/* Cacau Cerimonial */
+/* Accordion Cacau Cerimonial */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
-  max-height: 500px;
+  max-height: 600px;
   padding: 28px 32px;
 }
 
@@ -259,12 +259,14 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .cacau-action-btn {
-  padding: 8px 14px;
+  padding: 10px 16px;
   background: var(--ink);
   color: var(--paper);
   font-size: 0.75rem;
   text-decoration: none;
   font-weight: 500;
+  border: none;
+  cursor: pointer;
   transition: background 180ms ease;
 }
 
@@ -272,9 +274,9 @@ button.hub-link:focus-visible .hub-link-number {
   background: var(--leaf);
 }
 
-/* Loja Content */
+/* Accordion Loja */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
-  max-height: 3000px;
+  max-height: 3500px;
   padding: 28px 20px;
 }
 
@@ -288,7 +290,7 @@ button.hub-link:focus-visible .hub-link-number {
 .product-card {
   background: var(--paper);
   border: 1px solid var(--line);
-  padding: 12px;
+  padding: 16px 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -296,14 +298,14 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .product-thumb {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   color: var(--ink);
   margin-bottom: 8px;
 }
 
 .product-card h3 {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   margin: 6px 0 4px;
   font-weight: 600;
 }
@@ -311,14 +313,15 @@ button.hub-link:focus-visible .hub-link-number {
 .product-card .price-range {
   font-size: 0.75rem;
   color: var(--leaf);
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .open-modal-btn {
-  padding: 6px 10px;
+  padding: 6px 12px;
   background: transparent;
   border: 1px solid var(--ink);
   font-size: 0.7rem;
+  font-weight: 600;
   cursor: pointer;
   margin-top: auto;
   transition: all 180ms ease;
@@ -329,7 +332,7 @@ button.hub-link:focus-visible .hub-link-number {
   color: var(--paper);
 }
 
-/* Mini Carrinho */
+/* Carrinho e Checkout na Loja */
 .cart-summary-box {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -350,21 +353,29 @@ button.hub-link:focus-visible .hub-link-number {
   margin-bottom: 12px;
 }
 
+.empty-cart-msg {
+  font-size: 0.8rem;
+  color: var(--leaf);
+  margin: 0;
+}
+
 .cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
-  border-bottom: 1px dashed var(--line);
-  padding-bottom: 4px;
+  border-bottom: 1px stroke var(--line);
+  padding-bottom: 6px;
 }
 
 .cart-item button {
   background: none;
   border: none;
-  color: red;
+  color: #c0392b;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  line-height: 1;
 }
 
 .cart-total-row {
@@ -383,17 +394,18 @@ button.hub-link:focus-visible .hub-link-number {
 
 .checkout-form input {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 8px;
   border: 1px solid var(--line);
   background: transparent;
   font-family: var(--sans);
   font-size: 0.8rem;
+  color: var(--ink);
 }
 
 .checkout-submit-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: var(--ink);
   color: var(--paper);
   border: none;
@@ -411,7 +423,7 @@ button.hub-link:focus-visible .hub-link-number {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.55);
   display: none;
   justify-content: center;
   align-items: center;
@@ -425,7 +437,7 @@ button.hub-link:focus-visible .hub-link-number {
 .modal-body {
   background: var(--paper);
   padding: 24px;
-  width: min(90%, 400px);
+  width: min(90%, 420px);
   position: relative;
   text-align: left;
   border: 1px solid var(--ink);
@@ -439,6 +451,7 @@ button.hub-link:focus-visible .hub-link-number {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--ink);
 }
 
 .variants-list {
@@ -451,27 +464,31 @@ button.hub-link:focus-visible .hub-link-number {
 .variant-opt {
   font-size: 0.85rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .variant-opt.disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
 }
 
 .add-to-cart-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: var(--ink);
   color: var(--paper);
   border: none;
   cursor: pointer;
   font-weight: 600;
+  font-size: 0.8rem;
 }
 
-/* Footer */
+/* Footer Fixado Estético */
 .hub-footer {
   width: 100%;
-  padding: 24px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   border-top: 1px solid var(--line);
@@ -480,21 +497,29 @@ button.hub-link:focus-visible .hub-link-number {
 
 .footer-icons {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   align-items: center;
 }
 
-.footer-icons a {
-  color: var(--ink);
+.footer-icons a,
+.footer-cart-link {
+  color: #000000;
   width: 22px;
   height: 22px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: opacity 180ms ease;
 }
 
-.footer-icons a:hover {
-  opacity: 0.7;
+.footer-icons a:hover,
+.footer-cart-link:hover {
+  opacity: 0.6;
 }
 
 .footer-icons svg {
@@ -506,11 +531,11 @@ button.hub-link:focus-visible .hub-link-number {
   position: absolute;
   top: -6px;
   right: -8px;
-  background: var(--ink);
-  color: var(--paper);
+  background: #000000;
+  color: #ffffff;
   font-size: 0.6rem;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   display: flex;
   align-items: center;
