@@ -18,7 +18,6 @@
   <div class="hub-shell">
     <main class="link-hub" aria-labelledby="hub-title">
 
-      <!-- Header -->
       <header class="hub-header">
         <h1 id="hub-title">thigre</h1>
         <div class="hub-bio">
@@ -27,10 +26,8 @@
         </div>
       </header>
 
-      <!-- Navegação / Links -->
       <nav class="hub-links" aria-label="Links principais">
 
-        <!-- Item 01: Linhagem Grega (Theobroma) -->
         <div class="hub-link-item">
           <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="linhagem-info" id="linhagem-btn">
             <span class="hub-link-number">#</span>
@@ -44,6 +41,7 @@
             
             <div class="sequence-nav">
               <button type="button" class="sub-toggle-btn active" data-target="seq-continuidade">A força da continuidade</button>
+              <button type="button" class="sub-toggle-btn" data-target="seq-travessia">A Coragem da Travessia</button>
               <button type="button" class="sub-toggle-btn" data-target="seq-alma-baiana">Alma baiana</button>
             </div>
 
@@ -51,9 +49,13 @@
               <h4 class="section-title">A força da continuidade</h4>
               <p>Entender de onde vem a força que nos sustenta é recusar o isolamento. Quando nos conectamos com as nossas raízes, deixamos de ser indivíduos fragmentados e nos tornamos continuidade.</p>
               <p><strong>Ancestralidade</strong> não é abstração; é memória física. É a percepção clara de que somos a linha de frente de uma longa sequência de escolhas, travessias e coragem. Olhar para a raiz é o que dá firmeza aos passos no presente.</p>
-              <p><strong>A Coragem da Travessia</strong><br>
-              Existimos porque outros tiveram a coragem de cruzar o desconhecido. Deixar para trás a terra natal e cruzar oceanos exigiu uma bravura silenciosa e visceral. Reaprender a ler a terra, entender novos climas e plantar no incerto é o mesmo fogo que fundamenta a Thigre.</p>
-              <p>Da Grécia ao Mediterrâneo, do solo paulista ao cultivo do café, e agora ao solo fértil de Maraú, na Bahia: não há ruptura, há evolução. Da oliveira ao cafeeiro, do cafeeiro ao cacaueiro. O trabalho com a terra permanece o mesmo — respeitar o tempo da maturação, honrar o fruto e extrair a sua máxima pureza.</p>
+            </div>
+
+            <div id="seq-travessia" class="sequence-box">
+              <h4 class="section-title">A Coragem da Travessia</h4>
+              <p>Existimos porque outros tiveram a coragem de cruzar o desconhecido. Deixar para trás a terra natal e cruzar oceanos exigiu uma bravura silenciosa e visceral. Reaprender a ler a terra, entender novos climas e plantar no incerto é o mesmo fogo que fundamenta a Thigre.</p>
+              <p>Da Grécia ao Mediterrâneo, do solo paulista ao cultivo do café, e agora ao solo fértil de Maraú, na Bahia: não há ruptura, há evolução.</p>
+              <p>Da oliveira ao cafeeiro, do cafeeiro ao cacaueiro. O trabalho com a terra permanece o mesmo — respeitar o tempo da maturação, honrar o fruto e extrair a sua máxima pureza.</p>
               <p><em>A Thigre é a síntese dessa travessia.</em></p>
             </div>
 
@@ -64,7 +66,6 @@
           </div>
         </div>
 
-        <!-- Item 02: Cacau Cerimonial -->
         <div class="hub-link-item">
           <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="cacau-cerimonial-info" id="cacau-btn">
             <span class="hub-link-number">#</span>
@@ -73,17 +74,32 @@
           </button>
           <div id="cacau-cerimonial-info" class="accordion-content cacau-content" role="region" aria-labelledby="cacau-btn">
             <p>
-              O Cacau Cerimonial é o cacau em sua forma mais pura, integra e ancestral. Diferente do chocolate convencional, ele passa por um processo artesanal de moagem lenta de amêndoas selecionadas de cacau 100%, preservando a manteiga natural de cacau e todos os seus compostos bioativos, antioxidantes e teobromina. É uma medicina de presença, calma e expansão do coração, ideal para momentos de pausa, meditação, criação e rituais diários de bem-estar.
+              O Cacau Cerimonial é o cacau em sua forma mais pura, íntegra e ancestral. Diferente do chocolate convencional, ele passa por um processo artesanal de moagem lenta de amêndoas selecionadas de cacau 100%, preservando a manteiga natural de cacau e todos os seus compostos bioativos, antioxidantes e teobromina. É uma medicina de presença, calma e expansão do coração, ideal para momentos de pausa, meditação, criação e rituais diários de bem-estar.
             </p>
+            
             <div class="cacau-actions">
+              <button type="button" class="cacau-action-btn active" data-cacau-target="cacau-cardiaco">Chakra Cardíaco</button>
+              <button type="button" class="cacau-action-btn" data-cacau-target="cacau-consumo">Como consumir</button>
               <button type="button" class="cacau-action-btn" id="btn-go-store">Compre seu Cacau</button>
-              <a href="#" class="cacau-action-btn">Vivência Cacau na Cachoeira</a>
-              <a href="#" class="cacau-action-btn">eBook</a>
             </div>
+
+            <div id="cacau-cardiaco" class="sequence-box active">
+              <h4 class="section-title">Chakra Cardíaco</h4>
+              <p>O cacau puro atua como um vasodilatador natural estimulado pela teobromina, aumentando o fluxo sanguíneo e promovendo a nutrição celular. Energeticamente, atua no Chakra Cardíaco (Anahata), abrindo espaço para a presença, o acolhimento, a escuta interna e a expansão da consciência pelo centro do peito.</p>
+            </div>
+
+            <div id="cacau-consumo" class="sequence-box">
+              <h4 class="section-title">Como consumir</h4>
+              <p><strong>Ritual Básico de Preparo:</strong></p>
+              <p>Aquela pausa consciente no dia pede intenção e presença no preparo:</p>
+              <p>• <strong>300ml de água quente</strong> (sem ferver, por volta de 70°C a 80°C).<br>
+              • <strong>15g de cacau 100%</strong> finamente picado ou ralado.</p>
+              <p>Misture com um espumador, mixer ou colher até obter uma bebida cremosa e homogênea. Se desejar, adicione pitadas de especiarias como canela, cardamomo ou pimenta cayenne.</p>
+            </div>
+
           </div>
         </div>
 
-        <!-- Item 03: Loja (Expansível) -->
         <div class="hub-link-item" id="loja-section">
           <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="loja-info" id="loja-btn">
             <span class="hub-link-number">#</span>
@@ -92,12 +108,10 @@
           </button>
           <div id="loja-info" class="accordion-content loja-content" role="region" aria-labelledby="loja-btn">
             
-            <!-- Produtos Grid -->
             <div class="products-grid">
               
               <div class="product-card">
                 <div class="product-thumb">
-                  <!-- Coração para Cacau 100% -->
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 82 C50 82 18 58 18 36 C18 24 27 16 38 16 C44 16 48 19 50 23 C52 19 56 16 62 16 C73 16 82 24 82 36 C82 58 50 82 50 82 Z"/></svg>
                 </div>
                 <h3>Cacau 100%</h3>
@@ -107,7 +121,6 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <!-- Barra de Chocolate / Quadrado com divisões -->
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="20" y="20" width="60" height="60" rx="4"/><line x1="50" y1="20" x2="50" y2="80"/><line x1="20" y1="50" x2="80" y2="50"/></svg>
                 </div>
                 <h3>Cacau 70%</h3>
@@ -144,7 +157,6 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <!-- Cabaça de Cacau (Formato Ovalado Alongado / Fruto) -->
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 12 C32 25 28 75 50 88 C72 75 68 25 50 12 Z M50 12 V88 M36 32 C42 45 42 55 36 68 M64 32 C58 45 58 55 64 68"/></svg>
                 </div>
                 <h3>Cabaça de Cacau</h3>
@@ -163,23 +175,10 @@
 
             </div>
 
-            <!-- Mini Carrinho / Checkout Resumido -->
             <div class="cart-summary-box">
               <h4>Seu Carrinho</h4>
-              <div id="cart-items-list" class="cart-items-list">
-                <p class="empty-cart-msg">Carrinho vazio.</p>
-              </div>
-              <div class="cart-total-row">
-                <span>Total:</span>
-                <strong id="cart-total-val">R$ 0,00</strong>
-              </div>
-              
-              <div class="checkout-form">
-                <h5>Finalizar Pedido via WhatsApp</h5>
-                <input type="text" id="cust-name" placeholder="Seu Nome" required />
-                <input type="tel" id="cust-phone" placeholder="Seu WhatsApp" required />
-                <button type="button" id="btn-checkout" class="checkout-submit-btn">Enviar Pedido para WhatsApp ↗</button>
-              </div>
+              <div id="cart-content-area">
+                </div>
             </div>
 
           </div>
@@ -191,18 +190,14 @@
 
   </div>
 
-  <!-- Footer Fixado com Estética Clean -->
   <footer class="hub-footer">
     <div class="footer-icons">
-      <!-- WhatsApp -->
       <a href="https://wa.me/5573999664477" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       </a>
-      <!-- Instagram -->
       <a href="https://instagram.com/thigre.c" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
-      <!-- Sacola de Compras Revisitada (Substituindo o carrinho antigo) -->
       <button type="button" id="footer-cart-btn" class="footer-cart-link" aria-label="Carrinho de compras">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span id="footer-cart-count" class="cart-badge">0</span>
@@ -210,25 +205,20 @@
     </div>
   </footer>
 
-  <!-- Modal Detalhes do Produto (Com Imagem/Carrossel 1:1) -->
   <div id="product-modal" class="modal-overlay">
     <div class="modal-body">
       <button type="button" class="close-modal-btn" aria-label="Fechar">&times;</button>
       
       <div class="product-modal-layout">
-        <!-- Lado Esquerdo (Web) / Topo (Mobile): Carrossel 1:1 -->
         <div class="modal-carousel-container">
           <div class="carousel-track" id="carousel-track">
-            <!-- Imagens via JS -->
           </div>
           <button type="button" class="carousel-nav prev" id="carousel-prev" aria-label="Imagem anterior">&#10094;</button>
           <button type="button" class="carousel-nav next" id="carousel-next" aria-label="Próxima imagem">&#10095;</button>
           <div class="carousel-dots" id="carousel-dots"></div>
         </div>
 
-        <!-- Lado Direito (Web) / Abaixo (Mobile): Informações e Opções -->
         <div id="modal-content" class="modal-details">
-          <!-- Conteúdo inserido dinamicamente -->
         </div>
       </div>
     </div>
@@ -247,7 +237,8 @@
           { name: "200g", price: 70.00, available: true },
           { name: "700g", price: 220.00, available: true }
         ],
-        desc: "Cacau cerimonial puro 100%, prensado artesanalmente preservando manteiga natural e teobromina."
+        desc: "Cacau cerimonial puro 100%, prensado artesanalmente preservando a manteiga natural de cacau e teobromina.",
+        usage: "Ideal para rituais matinais ou momentos de foco. Dilua 15g em 300ml de água quente e misture bem."
       },
       cacau70: {
         name: "Cacau 70%",
@@ -260,7 +251,8 @@
           { name: "60g", price: 0, available: false },
           { name: "220g", price: 77.00, available: true }
         ],
-        desc: "Equilíbrio perfeito entre a intensidade do cacau e o dulçor harmônico."
+        desc: "Equilíbrio perfeito entre a intensidade do cacau e o dulçor harmônico.",
+        usage: "Consumo direto em pequenos pedaços para degustação consciente durante a tarde."
       },
       nibs: {
         name: "Nibs de Cacau",
@@ -272,7 +264,8 @@
         variants: [
           { name: "70g", price: 11.00, available: true }
         ],
-        desc: "Nibs de cacau crocantes selecionados e tostados suavemente."
+        desc: "Nibs de cacau crocantes selecionados e tostados suavemente.",
+        usage: "Adicione a frutas, iogurtes, smoothies ou consuma como topping crocante."
       },
       cha: {
         name: "Chá de Casca de Cacau",
@@ -284,7 +277,8 @@
         variants: [
           { name: "Infusão natural", price: 5.00, available: true }
         ],
-        desc: "Infusão aromática e leve extraída diretamente da casca natural do cacau."
+        desc: "Infusão aromática e leve extraída diretamente da casca natural do cacau.",
+        usage: "Infusione 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
       },
       fenogrego: {
         name: "Feno Grego",
@@ -296,7 +290,8 @@
         variants: [
           { name: "60g", price: 5.00, available: true }
         ],
-        desc: "Sementes selecionadas de Feno Grego para vitalidade e infusão."
+        desc: "Sementes selecionadas de Feno Grego para vitalidade e infusão.",
+        usage: "Utilize em decocção para chás fortificantes ou como especiaria em preparos culinários."
       },
       cabaca: {
         name: "Cabaça de Cacau",
@@ -308,7 +303,8 @@
         variants: [
           { name: "O fruto", price: 6.00, available: true }
         ],
-        desc: "Fruto de cacau nativo e artesanal."
+        desc: "Fruto de cacau nativo e artesanal.",
+        usage: "Pode ser utilizado para consumo in natura das amêndoas ou uso decorativo e ritualístico."
       },
       babosa: {
         name: "Muda de Babosa",
@@ -320,7 +316,8 @@
         variants: [
           { name: "Unidade", price: 12.00, available: true }
         ],
-        desc: "Muda saudável e orgânica de Aloe Vera cultivada no sítio."
+        desc: "Muda saudável e orgânica de Aloe Vera cultivada no sítio.",
+        usage: "Plante em solo drenado e com boa exposição solar para cultivo doméstico."
       }
     };
 
@@ -348,21 +345,37 @@
           const targetId = btn.getAttribute('data-target');
           const targetBox = document.getElementById(targetId);
           
-          document.querySelectorAll('.sequence-box').forEach(box => {
+          document.querySelectorAll('.linhagem-content .sequence-box').forEach(box => {
             box.classList.remove('active');
           });
           
-          targetBox.classList.add('active');
+          if(targetBox) targetBox.classList.add('active');
         });
       });
 
-      // 3. Ação "Compre seu Cacau" -> Abre menu Loja
+      // 2b. Sub-toggles Cacau Cerimonial
+      const cacauActionBtns = document.querySelectorAll('.cacau-action-btn[data-cacau-target]');
+      cacauActionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          cacauActionBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const targetId = btn.getAttribute('data-cacau-target');
+          const targetBox = document.getElementById(targetId);
+          
+          document.querySelectorAll('.cacau-content .sequence-box').forEach(box => {
+            box.classList.remove('active');
+          });
+          
+          if(targetBox) targetBox.classList.add('active');
+        });
+      });
+
+      // 3. Ação "Compre seu Cacau" -> Abre Modal do Cacau 100%
       const btnGoStore = document.getElementById('btn-go-store');
-      const lojaBtn = document.getElementById('loja-btn');
-      if (btnGoStore && lojaBtn) {
+      if (btnGoStore) {
         btnGoStore.addEventListener('click', () => {
-          lojaBtn.setAttribute('aria-expanded', 'true');
-          document.getElementById('loja-section').scrollIntoView({ behavior: 'smooth' });
+          openProductModal('cacau100');
         });
       }
 
@@ -373,51 +386,60 @@
       const dotsContainer = document.getElementById('carousel-dots');
       const closeModalBtn = document.querySelector('.close-modal-btn');
 
+      function openProductModal(key) {
+        const prod = PRODUCTS_DATA[key];
+        if(!prod) return;
+        currentSlide = 0;
+
+        track.innerHTML = prod.images.map(imgSrc => `<img src="${imgSrc}" alt="${prod.name}" />`).join('');
+        dotsContainer.innerHTML = prod.images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join('');
+        updateCarousel();
+
+        let variantsHTML = prod.variants.map((v, i) => {
+          if (!v.available) {
+            return `<label class="variant-opt disabled"><input type="radio" name="p-var" disabled> ${v.name} - Indisponível</label>`;
+          }
+          return `<label class="variant-opt"><input type="radio" name="p-var" value="${i}" ${i === 0 || !prod.variants[0].available ? 'checked' : ''}> ${v.name} — R$ ${v.price.toFixed(2).replace('.', ',')}</label>`;
+        }).join('');
+
+        modalContent.innerHTML = `
+          <h3 style="margin-top:0; font-family: var(--display); font-size: 1.5rem;">${prod.name}</h3>
+          <p style="font-size:0.85rem; line-height: 1.6; color: var(--ink); margin: 12px 0 14px;">${prod.desc}</p>
+          
+          ${prod.usage ? `
+            <div class="product-usage-box">
+              <strong>Sugestão de uso</strong>
+              <p>${prod.usage}</p>
+            </div>
+          ` : ''}
+
+          <div class="variants-list">
+            <strong style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--leaf);">Opções disponíveis:</strong>
+            ${variantsHTML}
+          </div>
+          <button type="button" class="add-to-cart-btn" id="add-item-btn">Adicionar ao Carrinho</button>
+        `;
+
+        modal.classList.add('active');
+
+        document.getElementById('add-item-btn')?.addEventListener('click', () => {
+          const selectedVar = document.querySelector('input[name="p-var"]:checked');
+          if (selectedVar) {
+            const varIdx = parseInt(selectedVar.value);
+            const variant = prod.variants[varIdx];
+            addToCart(prod.name, variant.name, variant.price);
+            modal.classList.remove('active');
+          }
+        });
+      }
+
       document.querySelectorAll('.open-modal-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const key = btn.getAttribute('data-product');
-          const prod = PRODUCTS_DATA[key];
-          currentSlide = 0;
-
-          // Renderizar Carrossel 1:1 (3 Imagens)
-          track.innerHTML = prod.images.map(imgSrc => `<img src="${imgSrc}" alt="${prod.name}" />`).join('');
-          dotsContainer.innerHTML = prod.images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join('');
-          updateCarousel();
-
-          // Renderizar Variantes e Descrição
-          let variantsHTML = prod.variants.map((v, i) => {
-            if (!v.available) {
-              return `<label class="variant-opt disabled"><input type="radio" name="p-var" disabled> ${v.name} - Indisponível</label>`;
-            }
-            return `<label class="variant-opt"><input type="radio" name="p-var" value="${i}" ${i === 0 || !prod.variants[0].available ? 'checked' : ''}> ${v.name} — R$ ${v.price.toFixed(2).replace('.', ',')}</label>`;
-          }).join('');
-
-          modalContent.innerHTML = `
-            <h3 style="margin-top:0; font-family: var(--display); font-size: 1.5rem;">${prod.name}</h3>
-            <p style="font-size:0.85rem; line-height: 1.6; color: var(--ink); margin: 12px 0 20px;">${prod.desc}</p>
-            <div class="variants-list">
-              <strong style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--leaf);">Opções disponíveis:</strong>
-              ${variantsHTML}
-            </div>
-            <button type="button" class="add-to-cart-btn" id="add-item-btn">Adicionar ao Carrinho</button>
-          `;
-
-          modal.classList.add('active');
-
-          // Adicionar ao Carrinho
-          document.getElementById('add-item-btn')?.addEventListener('click', () => {
-            const selectedVar = document.querySelector('input[name="p-var"]:checked');
-            if (selectedVar) {
-              const varIdx = parseInt(selectedVar.value);
-              const variant = prod.variants[varIdx];
-              addToCart(prod.name, variant.name, variant.price);
-              modal.classList.remove('active');
-            }
-          });
+          openProductModal(key);
         });
       });
 
-      // Navegação do Carrossel
       function updateCarousel() {
         track.style.transform = `translateX(-${currentSlide * 100}%)`;
         document.querySelectorAll('.carousel-dots .dot').forEach((dot, idx) => {
@@ -447,7 +469,7 @@
         if (e.target === modal) modal.classList.remove('active');
       });
 
-      // 5. Carrinho e Atualização da UI
+      // 5. Gestão do Carrinho
       function addToCart(pName, vName, price) {
         const existing = cart.find(i => i.pName === pName && i.vName === vName);
         if (existing) {
@@ -459,17 +481,25 @@
       }
 
       function updateCartUI() {
-        const cartList = document.getElementById('cart-items-list');
-        const cartTotalVal = document.getElementById('cart-total-val');
+        const cartContentArea = document.getElementById('cart-content-area');
         const footerCount = document.getElementById('footer-cart-count');
 
         let total = 0;
         let count = 0;
 
         if (cart.length === 0) {
-          cartList.innerHTML = '<p class="empty-cart-msg">Carrinho vazio.</p>';
+          cartContentArea.innerHTML = `
+            <div class="cart-empty-state">
+              <svg class="cart-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              <p class="cart-empty-title">Seu carrinho está vazio</p>
+              <p class="cart-empty-sub">Adicione seus produtos acima</p>
+            </div>
+          `;
+          footerCount.innerText = "0";
         } else {
-          cartList.innerHTML = cart.map((item, idx) => {
+          let itemsHTML = cart.map((item, idx) => {
             total += item.price * item.qty;
             count += item.qty;
             return `
@@ -485,10 +515,48 @@
               </div>
             `;
           }).join('');
+
+          cartContentArea.innerHTML = `
+            <div class="cart-items-list">
+              ${itemsHTML}
+            </div>
+            <div class="cart-total-row">
+              <span>Total:</span>
+              <strong>R$ ${total.toFixed(2).replace('.', ',')}</strong>
+            </div>
+            
+            <div class="checkout-form">
+              <h5>Finalizar Pedido via WhatsApp</h5>
+              <input type="text" id="cust-name" placeholder="Seu Nome" required />
+              <input type="tel" id="cust-phone" placeholder="Seu WhatsApp" required />
+              <input type="text" id="cust-cep" placeholder="CEP para entrega" required />
+              <button type="button" id="btn-checkout" class="checkout-submit-btn">Enviar Pedido para WhatsApp ↗</button>
+            </div>
+          `;
+
+          footerCount.innerText = count;
+
+          document.getElementById('btn-checkout').addEventListener('click', handleCheckout);
+        }
+      }
+
+      function handleCheckout() {
+        const name = document.getElementById('cust-name').value.trim();
+        const phone = document.getElementById('cust-phone').value.trim();
+        const cep = document.getElementById('cust-cep').value.trim();
+
+        if (!name || !phone || !cep) {
+          alert('Por favor, preencha seu nome, WhatsApp e CEP.');
+          return;
         }
 
-        cartTotalVal.innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
-        footerCount.innerText = count;
+        let summary = cart.map(i => `- ${i.pName} (${i.vName}) x${i.qty}: R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}`).join('\n');
+        let totalVal = cart.reduce((acc, i) => acc + (i.price * i.qty), 0).toFixed(2).replace('.', ',');
+
+        let msg = `Olá Thiago!\n\nEstes são os itens que gostaria de adquirir:\n\n${summary}\n\nTotal: R$ ${totalVal}\n\nCliente: ${name}\nContato: ${phone}\nCEP: ${cep}`;
+
+        let waUrl = `https://wa.me/5573999664477?text=${encodeURIComponent(msg)}`;
+        window.open(waUrl, '_blank');
       }
 
       window.removeFromCart = function(index) {
@@ -497,33 +565,13 @@
       };
 
       document.getElementById('footer-cart-btn').addEventListener('click', () => {
+        const lojaBtn = document.getElementById('loja-btn');
         lojaBtn.setAttribute('aria-expanded', 'true');
         document.querySelector('.cart-summary-box').scrollIntoView({ behavior: 'smooth' });
       });
 
-      // 6. Checkout WhatsApp
-      document.getElementById('btn-checkout').addEventListener('click', () => {
-        const name = document.getElementById('cust-name').value.trim();
-        const phone = document.getElementById('cust-phone').value.trim();
-
-        if (!name || !phone) {
-          alert('Por favor, preencha seu nome e WhatsApp.');
-          return;
-        }
-
-        if (cart.length === 0) {
-          alert('Seu carrinho está vazio.');
-          return;
-        }
-
-        let summary = cart.map(i => `- ${i.pName} (${i.vName}) x${i.qty}: R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}`).join('\n');
-        let totalVal = document.getElementById('cart-total-val').innerText;
-
-        let msg = `Olá Thiago!\n\nEstes são os itens que gostaria de adquirir:\n\n${summary}\n\nTotal: ${totalVal}\n\nCliente: ${name}\nContato: ${phone}`;
-
-        let waUrl = `https://wa.me/5573999664477?text=${encodeURIComponent(msg)}`;
-        window.open(waUrl, '_blank');
-      });
+      // Inicializa o carrinho vazio
+      updateCartUI();
     });
   </script>
 
