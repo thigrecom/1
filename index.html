@@ -115,7 +115,7 @@
           </button>
           <div id="loja-info" class="accordion-content loja-content" role="region" aria-labelledby="loja-btn">
             
-            <!-- Produtos Grid (Com imagens atualizadas) -->
+            <!-- Produtos Grid -->
             <div class="products-grid">
               
               <div class="product-card">
@@ -523,11 +523,11 @@
             </div>
             
             <div class="checkout-form">
-              <h5>Finalizar Pedido via WhatsApp</h5>
+              <h5>Ao finalizar sua seleção, direcionamos seu pedido para um representante local concluir tudo com você pelo WhatsApp</h5>
               <input type="text" id="cust-name" placeholder="Seu Nome" required />
               <input type="tel" id="cust-phone" placeholder="Seu WhatsApp" required />
               <input type="text" id="cust-cep" placeholder="CEP para entrega" required />
-              <button type="button" id="btn-checkout" class="checkout-submit-btn">Enviar Pedido para o WhatsApp ↗</button>
+              <button type="button" id="btn-checkout" class="checkout-submit-btn">Consultar Estoque e Combinar Entrega no WhatsApp</button>
             </div>
           `;
 
@@ -550,7 +550,7 @@
         let summary = cart.map(i => `- ${i.pName} (${i.vName}) x${i.qty}: R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}`).join('\n');
         let totalVal = cart.reduce((acc, i) => acc + (i.price * i.qty), 0).toFixed(2).replace('.', ',');
 
-        let msg = `Olá Thiago!\n\nEstes são os itens que gostaria de adquirir:\n\n${summary}\n\nTotal: R$ ${totalVal}\n\nCliente: ${name}\nContato: ${phone}\nCEP: ${cep}`;
+        let msg = `Olá!\n\nGostaria de consultar o estoque e combinar a entrega dos seguintes itens:\n\n${summary}\n\nTotal: R$ ${totalVal}\n\nCliente: ${name}\nContato: ${phone}\nCEP: ${cep}`;
 
         let waUrl = `https://wa.me/5573999664477?text=${encodeURIComponent(msg)}`;
         window.open(waUrl, '_blank');
