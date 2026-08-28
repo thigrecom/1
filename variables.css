@@ -41,7 +41,7 @@
   --btn-sub-text: var(--color-ink);
   --btn-sub-border: var(--color-ink);
   --btn-sub-bg: transparent;
-  --btn-sub-hover-bg: rgba(173, 235, 179, var(--alpha-soft));
+  --btn-sub-hover-bg: rgba(232, 237, 217, var(--alpha-soft));
   --btn-sub-active-bg: var(--color-green);
   --btn-sub-active-text: var(--color-ink);
   --btn-sub-active-border: var(--color-ink);
