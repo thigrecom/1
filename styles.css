@@ -4,7 +4,7 @@
   --paper-deep: #e4dcc8;
   --acid: #d6df3c;
   --leaf: #697253;
-  --line: rgba(36, 39, 29, 0.3);
+  --line: rgba(36, 39, 29, 0.22);
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "Cormorant Garamond", serif;
 }
@@ -21,7 +21,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 72% 18%, rgba(214, 223, 60, 0.14), transparent 26rem),
+    radial-gradient(circle at 72% 18%, rgba(214, 223, 60, 0.12), transparent 26rem),
     var(--paper);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@ body::before {
   inset: 0;
   z-index: 10;
   pointer-events: none;
-  opacity: 0.22;
+  opacity: 0.18;
   content: "";
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.11'/%3E%3C/svg%3E");
 }
@@ -55,17 +55,17 @@ a {
   display: grid;
   align-content: center;
   justify-items: center;
-  width: min(100%, 680px);
+  width: min(100%, 640px);
   margin: 0 auto;
-  padding: 50px 0 80px;
+  padding: 48px 0 72px;
   text-align: center;
 }
 
-/* Logo: Sem borda e sem corte circular, com espaçamento reduzido em relação ao título */
+/* Ilustração / Logo */
 .hub-avatar {
-  width: 85px;
+  width: 72px;
   height: auto;
-  margin-bottom: 6px; /* Espaçamento bem curto até o título Casa Thigre */
+  margin-bottom: 12px;
 }
 
 .hub-avatar img {
@@ -79,49 +79,46 @@ a {
   width: 100%;
 }
 
-/* Casa Thigre: Tipografia serifada refinada e levemente inclinada */
+/* Casa Thigre — Serifada Encorpada (Peso 700) e Moderna */
 .hub-header h1 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(2.8rem, 5.2vw, 4.2rem);
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  font-size: clamp(3.2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
-/* Subtítulo & Texto Informativo com espaçamento aumentado */
+/* Subtítulos */
 .hub-bio {
-  margin: 28px auto 0; /* Espaçamento maior abaixo do título Casa Thigre */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px auto 0;
 }
 
-.hub-subtitle {
-  margin: 0 0 12px 0;
-  font-size: clamp(0.72rem, 1.3vw, 0.85rem);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.hub-tagline {
+  margin: 0;
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--ink);
+  opacity: 0.9;
+}
+
+.hub-origin {
+  margin: 0;
+  font-size: clamp(0.8rem, 1.3vw, 0.88rem);
+  font-weight: 500;
   color: var(--leaf);
 }
 
-.hub-info-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hub-info-text p {
-  margin: 0;
-  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
-  line-height: 1.5;
-  color: var(--ink);
-  opacity: 0.88;
-}
-
+/* Bloco de Links */
 .hub-links {
   display: grid;
   width: 100%;
-  margin-top: 48px; /* Espaçamento estendido antes da lista de botões */
+  margin-top: 40px;
   border-top: 1px solid var(--line);
 }
 
@@ -134,8 +131,8 @@ a {
   grid-template-columns: 42px 1fr auto;
   align-items: center;
   width: 100%;
-  min-height: 82px;
-  padding: 12px 20px;
+  min-height: 80px;
+  padding: 12px 16px;
   border: 0;
   color: var(--ink);
   background: transparent;
@@ -149,15 +146,15 @@ a.hub-link:hover,
 a.hub-link:focus-visible,
 button.hub-link:hover,
 button.hub-link:focus-visible {
-  padding-right: 16px;
-  padding-left: 24px;
+  padding-right: 14px;
+  padding-left: 22px;
   color: var(--paper);
   background: var(--ink);
 }
 
 .hub-link-number {
   align-self: start;
-  margin-top: 7px;
+  margin-top: 6px;
   color: var(--leaf);
   font-size: 0.6rem;
   font-weight: 600;
@@ -173,13 +170,13 @@ button.hub-link:focus-visible .hub-link-number {
 
 .hub-link-copy {
   display: grid;
-  gap: 3px;
+  gap: 2px;
 }
 
 .hub-link-copy strong {
   font-family: var(--display);
-  font-size: clamp(1.5rem, 3.8vw, 1.95rem);
-  font-weight: 500;
+  font-size: clamp(1.45rem, 3.6vw, 1.85rem);
+  font-weight: 600;
   line-height: 1.1;
 }
 
@@ -192,7 +189,7 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .hub-link-arrow {
-  font-size: 1.05rem;
+  font-size: 1rem;
   transition: transform 220ms ease;
 }
 
@@ -204,34 +201,33 @@ button.hub-link:focus-visible .hub-link-number {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  background: rgba(36, 39, 29, 0.04);
+  background: rgba(36, 39, 29, 0.035);
   transition: max-height 350ms ease-out, padding 350ms ease-out;
 }
 
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
   max-height: 400px;
-  padding: 32px 40px;
+  padding: 28px 32px;
 }
 
 .cacau-content p {
   margin: 0;
-  font-size: clamp(0.88rem, 1.4vw, 0.98rem);
-  line-height: 1.75;
+  font-size: clamp(0.88rem, 1.4vw, 0.96rem);
+  line-height: 1.7;
   color: var(--ink);
   text-align: left;
-  letter-spacing: 0.015em;
 }
 
 .accordion-toggle[aria-expanded="true"] + .accordion-content.ebook-content {
   max-height: 250px;
-  padding: 28px 36px;
+  padding: 24px 28px;
   text-align: left;
 }
 
 .ebook-content p {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   font-size: 0.88rem;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--ink);
 }
 
@@ -240,7 +236,7 @@ button.hub-link:focus-visible .hub-link-number {
   padding: 10px 18px;
   background: var(--ink);
   color: var(--paper);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -264,14 +260,14 @@ button.hub-link:focus-visible .hub-link-number {
   }
 
   .link-hub {
-    padding: 36px 0 60px;
+    padding: 36px 0 52px;
   }
 
   .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
-    padding: 24px 20px;
+    padding: 22px 20px;
   }
 
   .accordion-toggle[aria-expanded="true"] + .accordion-content.ebook-content {
-    padding: 22px 20px;
+    padding: 20px 18px;
   }
 }
