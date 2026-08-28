@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body class="hub-page">
@@ -43,12 +43,12 @@
             </p>
             
             <div class="sequence-nav">
-              <button type="button" class="sub-toggle-btn" data-target="seq-continuidade">A força da continuidade</button>
+              <button type="button" class="sub-toggle-btn active" data-target="seq-continuidade">A força da continuidade</button>
               <button type="button" class="sub-toggle-btn" data-target="seq-alma-baiana">Alma baiana</button>
             </div>
 
-            <div id="seq-continuidade" class="sequence-box">
-              <h4>A força da continuidade</h4>
+            <div id="seq-continuidade" class="sequence-box active">
+              <h4 class="section-title">A força da continuidade</h4>
               <p>Entender de onde vem a força que nos sustenta é recusar o isolamento. Quando nos conectamos com as nossas raízes, deixamos de ser indivíduos fragmentados e nos tornamos continuidade.</p>
               <p><strong>Ancestralidade</strong> não é abstração; é memória física. É a percepção clara de que somos a linha de frente de uma longa sequência de escolhas, travessias e coragem. Olhar para a raiz é o que dá firmeza aos passos no presente.</p>
               <p><strong>A Coragem da Travessia</strong><br>
@@ -58,7 +58,7 @@
             </div>
 
             <div id="seq-alma-baiana" class="sequence-box">
-              <h4>A força da continuidade</h4>
+              <h4 class="section-title">Alma baiana</h4>
               <p>Nosso cacau extrai sua força diretamente do solo fértil de Maraú, Bahia. O terroir tropical concede ao fruto notas sensoriais puras, raras e intensas, conectando o consumidor à sabedoria ancestral da terra brasileira.</p>
             </div>
           </div>
@@ -97,7 +97,8 @@
               
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 20 C25 20 20 50 20 65 C20 80 35 85 50 85 C65 85 80 80 80 65 C80 50 75 20 50 20 Z"/></svg>
+                  <!-- Coração para Cacau 100% -->
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 82 C50 82 18 58 18 36 C18 24 27 16 38 16 C44 16 48 19 50 23 C52 19 56 16 62 16 C73 16 82 24 82 36 C82 58 50 82 50 82 Z"/></svg>
                 </div>
                 <h3>Cacau 100%</h3>
                 <p class="price-range">A partir de R$ 70,00</p>
@@ -106,7 +107,8 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 20 C25 20 20 50 20 65 C20 80 35 85 50 85 C65 85 80 80 80 65 C80 50 75 20 50 20 Z"/></svg>
+                  <!-- Barra de Chocolate / Quadrado com divisões -->
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="20" y="20" width="60" height="60" rx="4"/><line x1="50" y1="20" x2="50" y2="80"/><line x1="20" y1="50" x2="80" y2="50"/></svg>
                 </div>
                 <h3>Cacau 70%</h3>
                 <p class="price-range">R$ 77,00</p>
@@ -115,7 +117,7 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="10"/><circle cx="60" cy="50" r="8"/><circle cx="45" cy="65" r="12"/></svg>
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="40" cy="40" r="10"/><circle cx="60" cy="50" r="8"/><circle cx="45" cy="65" r="12"/></svg>
                 </div>
                 <h3>Nibs de Cacau</h3>
                 <p class="price-range">R$ 11,00</p>
@@ -124,7 +126,7 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M25 40 H75 V70 C75 80 65 85 50 85 C35 85 25 80 25 70 Z M75 48 H85 C90 48 90 62 75 62"/></svg>
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M25 40 H75 V70 C75 80 65 85 50 85 C35 85 25 80 25 70 Z M75 48 H85 C90 48 90 62 75 62"/></svg>
                 </div>
                 <h3>Chá de Casca de Cacau</h3>
                 <p class="price-range">R$ 5,00</p>
@@ -133,7 +135,7 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 85 Q30 50 50 20 Q70 50 50 85 Z"/></svg>
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 85 Q30 50 50 20 Q70 50 50 85 Z"/></svg>
                 </div>
                 <h3>Feno Grego</h3>
                 <p class="price-range">R$ 5,00</p>
@@ -142,7 +144,8 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="50" cy="55" rx="25" ry="30"/><path d="M50 25 V15"/></svg>
+                  <!-- Cabaça de Cacau (Formato Ovalado Alongado / Fruto) -->
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 12 C32 25 28 75 50 88 C72 75 68 25 50 12 Z M50 12 V88 M36 32 C42 45 42 55 36 68 M64 32 C58 45 58 55 64 68"/></svg>
                 </div>
                 <h3>Cabaça de Cacau</h3>
                 <p class="price-range">R$ 6,00</p>
@@ -151,7 +154,7 @@
 
               <div class="product-card">
                 <div class="product-thumb">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 80 Q30 40 25 20 Q45 35 50 80 Z M50 80 Q70 40 75 20 Q55 35 50 80 Z"/></svg>
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 80 Q30 40 25 20 Q45 35 50 80 Z M50 80 Q70 40 75 20 Q55 35 50 80 Z"/></svg>
                 </div>
                 <h3>Muda de Babosa</h3>
                 <p class="price-range">R$ 12,00</p>
@@ -199,27 +202,47 @@
       <a href="https://instagram.com/thigre.c" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
-      <!-- Carrinho -->
+      <!-- Sacola de Compras Revisitada (Substituindo o carrinho antigo) -->
       <button type="button" id="footer-cart-btn" class="footer-cart-link" aria-label="Carrinho de compras">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z M3 6h18 M16 10a4 4 0 01-8 0"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span id="footer-cart-count" class="cart-badge">0</span>
       </button>
     </div>
   </footer>
 
-  <!-- Modal Detalhes do Produto -->
+  <!-- Modal Detalhes do Produto (Com Imagem/Carrossel 1:1) -->
   <div id="product-modal" class="modal-overlay">
     <div class="modal-body">
       <button type="button" class="close-modal-btn" aria-label="Fechar">&times;</button>
-      <div id="modal-content"></div>
+      
+      <div class="product-modal-layout">
+        <!-- Lado Esquerdo (Web) / Topo (Mobile): Carrossel 1:1 -->
+        <div class="modal-carousel-container">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Imagens via JS -->
+          </div>
+          <button type="button" class="carousel-nav prev" id="carousel-prev" aria-label="Imagem anterior">&#10094;</button>
+          <button type="button" class="carousel-nav next" id="carousel-next" aria-label="Próxima imagem">&#10095;</button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+
+        <!-- Lado Direito (Web) / Abaixo (Mobile): Informações e Opções -->
+        <div id="modal-content" class="modal-details">
+          <!-- Conteúdo inserido dinamicamente -->
+        </div>
+      </div>
     </div>
   </div>
 
   <script>
-    // Catálogo dos Produtos conforme especificação
     const PRODUCTS_DATA = {
       cacau100: {
         name: "Cacau 100%",
+        images: [
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "200g", price: 70.00, available: true },
           { name: "700g", price: 220.00, available: true }
@@ -228,50 +251,81 @@
       },
       cacau70: {
         name: "Cacau 70%",
+        images: [
+          "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "60g", price: 0, available: false },
           { name: "220g", price: 77.00, available: true }
         ],
-        desc: "Equilíbrio entre a densidade do cacau e dulçor harmônico."
+        desc: "Equilíbrio perfeito entre a intensidade do cacau e o dulçor harmônico."
       },
       nibs: {
         name: "Nibs de Cacau",
+        images: [
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "70g", price: 11.00, available: true }
         ],
-        desc: "Nibs de Cacau crocantes selecionados."
+        desc: "Nibs de cacau crocantes selecionados e tostados suavemente."
       },
       cha: {
         name: "Chá de Casca de Cacau",
+        images: [
+          "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "Infusão natural", price: 5.00, available: true }
         ],
-        desc: "Infusão aromática e leve extraída da casca do cacau."
+        desc: "Infusão aromática e leve extraída diretamente da casca natural do cacau."
       },
       fenogrego: {
         name: "Feno Grego",
+        images: [
+          "https://images.unsplash.com/photo-1509358271058-acd05cc93898?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "60g", price: 5.00, available: true }
         ],
-        desc: "Sementes selecionadas de Feno Grego."
+        desc: "Sementes selecionadas de Feno Grego para vitalidade e infusão."
       },
       cabaca: {
         name: "Cabaça de Cacau",
+        images: [
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "O fruto", price: 6.00, available: true }
         ],
-        desc: "Fruto de cacau nativo."
+        desc: "Fruto de cacau nativo e artesanal."
       },
       babosa: {
         name: "Muda de Babosa",
+        images: [
+          "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+        ],
         variants: [
           { name: "Unidade", price: 12.00, available: true }
         ],
-        desc: "Muda saudável e orgânica de Aloe Vera."
+        desc: "Muda saudável e orgânica de Aloe Vera cultivada no sítio."
       }
     };
 
     let cart = [];
+    let currentSlide = 0;
 
     document.addEventListener('DOMContentLoaded', () => {
       // 1. Accordion Principal
@@ -284,18 +338,21 @@
         });
       });
 
-      // 2. Sub-toggles Linhagem Grega (Expansão de Sequência)
+      // 2. Sub-toggles Linhagem Grega
       const subToggleBtns = document.querySelectorAll('.sub-toggle-btn');
       subToggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+          subToggleBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
           const targetId = btn.getAttribute('data-target');
           const targetBox = document.getElementById(targetId);
           
           document.querySelectorAll('.sequence-box').forEach(box => {
-            if (box !== targetBox) box.classList.remove('active');
+            box.classList.remove('active');
           });
           
-          targetBox.classList.toggle('active');
+          targetBox.classList.add('active');
         });
       });
 
@@ -309,16 +366,25 @@
         });
       }
 
-      // 4. Modal de Produtos (Detalhes, Variantes e Adicionar)
+      // 4. Modal de Produtos com Carrossel
       const modal = document.getElementById('product-modal');
       const modalContent = document.getElementById('modal-content');
+      const track = document.getElementById('carousel-track');
+      const dotsContainer = document.getElementById('carousel-dots');
       const closeModalBtn = document.querySelector('.close-modal-btn');
 
       document.querySelectorAll('.open-modal-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const key = btn.getAttribute('data-product');
           const prod = PRODUCTS_DATA[key];
-          
+          currentSlide = 0;
+
+          // Renderizar Carrossel 1:1 (3 Imagens)
+          track.innerHTML = prod.images.map(imgSrc => `<img src="${imgSrc}" alt="${prod.name}" />`).join('');
+          dotsContainer.innerHTML = prod.images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join('');
+          updateCarousel();
+
+          // Renderizar Variantes e Descrição
           let variantsHTML = prod.variants.map((v, i) => {
             if (!v.available) {
               return `<label class="variant-opt disabled"><input type="radio" name="p-var" disabled> ${v.name} - Indisponível</label>`;
@@ -327,10 +393,10 @@
           }).join('');
 
           modalContent.innerHTML = `
-            <h3 style="margin-top:0; font-family: var(--display); font-size: 1.4rem;">${prod.name}</h3>
-            <p style="font-size:0.85rem; line-height: 1.5; color: var(--ink);">${prod.desc}</p>
+            <h3 style="margin-top:0; font-family: var(--display); font-size: 1.5rem;">${prod.name}</h3>
+            <p style="font-size:0.85rem; line-height: 1.6; color: var(--ink); margin: 12px 0 20px;">${prod.desc}</p>
             <div class="variants-list">
-              <strong style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Opções:</strong>
+              <strong style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--leaf);">Opções disponíveis:</strong>
               ${variantsHTML}
             </div>
             <button type="button" class="add-to-cart-btn" id="add-item-btn">Adicionar ao Carrinho</button>
@@ -338,6 +404,7 @@
 
           modal.classList.add('active');
 
+          // Adicionar ao Carrinho
           document.getElementById('add-item-btn')?.addEventListener('click', () => {
             const selectedVar = document.querySelector('input[name="p-var"]:checked');
             if (selectedVar) {
@@ -348,6 +415,31 @@
             }
           });
         });
+      });
+
+      // Navegação do Carrossel
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        document.querySelectorAll('.carousel-dots .dot').forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentSlide);
+        });
+      }
+
+      document.getElementById('carousel-prev').addEventListener('click', () => {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : 2;
+        updateCarousel();
+      });
+
+      document.getElementById('carousel-next').addEventListener('click', () => {
+        currentSlide = (currentSlide < 2) ? currentSlide + 1 : 0;
+        updateCarousel();
+      });
+
+      dotsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('dot')) {
+          currentSlide = parseInt(e.target.getAttribute('data-index'));
+          updateCarousel();
+        }
       });
 
       closeModalBtn.addEventListener('click', () => modal.classList.remove('active'));
@@ -386,7 +478,7 @@
                   <strong>${item.pName}</strong><br>
                   <small>${item.vName} (x${item.qty})</small>
                 </div>
-                <div>
+                <div style="display:flex; align-items:center;">
                   <span>R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</span>
                   <button type="button" onclick="removeFromCart(${idx})" title="Remover item">&times;</button>
                 </div>
@@ -404,7 +496,6 @@
         updateCartUI();
       };
 
-      // Rolagem ao carrinho ao clicar no ícone do footer
       document.getElementById('footer-cart-btn').addEventListener('click', () => {
         lojaBtn.setAttribute('aria-expanded', 'true');
         document.querySelector('.cart-summary-box').scrollIntoView({ behavior: 'smooth' });
