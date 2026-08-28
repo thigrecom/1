@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="thigre — Cacau em sua forma mais pura, integra e ancestral." />
+  <meta name="description" content="thigre — Cacau em sua forma mais pura, íntegra e ancestral." />
   <title>thigre — Cultura do Cacau</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -76,7 +76,7 @@
               O Cacau Cerimonial é o cacau em sua forma mais pura, integra e ancestral. Diferente do chocolate convencional, ele passa por um processo artesanal de moagem lenta de amêndoas selecionadas de cacau 100%, preservando a manteiga natural de cacau e todos os seus compostos bioativos, antioxidantes e teobromina. É uma medicina de presença, calma e expansão do coração, ideal para momentos de pausa, meditação, criação e rituais diários de bem-estar.
             </p>
             <div class="cacau-actions">
-              <a href="#loja-section" class="cacau-action-btn">Compre seu Cacau</a>
+              <button type="button" class="cacau-action-btn" id="btn-go-store">Compre seu Cacau</button>
               <a href="#" class="cacau-action-btn">Vivência Cacau na Cachoeira</a>
               <a href="#" class="cacau-action-btn">eBook</a>
             </div>
@@ -95,7 +95,6 @@
             <!-- Produtos Grid -->
             <div class="products-grid">
               
-              <!-- Produto 1: Cacau 100% -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 20 C25 20 20 50 20 65 C20 80 35 85 50 85 C65 85 80 80 80 65 C80 50 75 20 50 20 Z"/></svg>
@@ -105,7 +104,6 @@
                 <button type="button" class="open-modal-btn" data-product="cacau100">Ver detalhes</button>
               </div>
 
-              <!-- Produto 2: Cacau 70% -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 20 C25 20 20 50 20 65 C20 80 35 85 50 85 C65 85 80 80 80 65 C80 50 75 20 50 20 Z"/></svg>
@@ -115,7 +113,6 @@
                 <button type="button" class="open-modal-btn" data-product="cacau70">Ver detalhes</button>
               </div>
 
-              <!-- Produto 3: Nibs -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="10"/><circle cx="60" cy="50" r="8"/><circle cx="45" cy="65" r="12"/></svg>
@@ -125,7 +122,6 @@
                 <button type="button" class="open-modal-btn" data-product="nibs">Ver detalhes</button>
               </div>
 
-              <!-- Produto 4: Chá de Casca -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M25 40 H75 V70 C75 80 65 85 50 85 C35 85 25 80 25 70 Z M75 48 H85 C90 48 90 62 75 62"/></svg>
@@ -135,7 +131,6 @@
                 <button type="button" class="open-modal-btn" data-product="cha">Ver detalhes</button>
               </div>
 
-              <!-- Produto 5: Feno Grego -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 85 Q30 50 50 20 Q70 50 50 85 Z"/></svg>
@@ -145,7 +140,6 @@
                 <button type="button" class="open-modal-btn" data-product="fenogrego">Ver detalhes</button>
               </div>
 
-              <!-- Produto 6: Cabaça de Cacau -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="50" cy="55" rx="25" ry="30"/><path d="M50 25 V15"/></svg>
@@ -155,7 +149,6 @@
                 <button type="button" class="open-modal-btn" data-product="cabaca">Ver detalhes</button>
               </div>
 
-              <!-- Produto 7: Muda de Babosa -->
               <div class="product-card">
                 <div class="product-thumb">
                   <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 80 Q30 40 25 20 Q45 35 50 80 Z M50 80 Q70 40 75 20 Q55 35 50 80 Z"/></svg>
@@ -167,7 +160,7 @@
 
             </div>
 
-            <!-- Mini Carrinho Resumo na Loja -->
+            <!-- Mini Carrinho / Checkout Resumido -->
             <div class="cart-summary-box">
               <h4>Seu Carrinho</h4>
               <div id="cart-items-list" class="cart-items-list">
@@ -178,7 +171,6 @@
                 <strong id="cart-total-val">R$ 0,00</strong>
               </div>
               
-              <!-- Formulário de Checkout -->
               <div class="checkout-form">
                 <h5>Finalizar Pedido via WhatsApp</h5>
                 <input type="text" id="cust-name" placeholder="Seu Nome" required />
@@ -196,7 +188,7 @@
 
   </div>
 
-  <!-- Footer -->
+  <!-- Footer Fixado com Estética Clean -->
   <footer class="hub-footer">
     <div class="footer-icons">
       <!-- WhatsApp -->
@@ -208,23 +200,23 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
       <!-- Carrinho -->
-      <a href="#loja-section" class="footer-cart-link" aria-label="Carrinho de compras">
+      <button type="button" id="footer-cart-btn" class="footer-cart-link" aria-label="Carrinho de compras">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z M3 6h18 M16 10a4 4 0 01-8 0"/></svg>
         <span id="footer-cart-count" class="cart-badge">0</span>
-      </a>
+      </button>
     </div>
   </footer>
 
   <!-- Modal Detalhes do Produto -->
   <div id="product-modal" class="modal-overlay">
     <div class="modal-body">
-      <button type="button" class="close-modal-btn">&times;</button>
+      <button type="button" class="close-modal-btn" aria-label="Fechar">&times;</button>
       <div id="modal-content"></div>
     </div>
   </div>
 
   <script>
-    // Dados dos Produtos
+    // Catálogo dos Produtos conforme especificação
     const PRODUCTS_DATA = {
       cacau100: {
         name: "Cacau 100%",
@@ -232,7 +224,7 @@
           { name: "200g", price: 70.00, available: true },
           { name: "700g", price: 220.00, available: true }
         ],
-        desc: "Cacau cerimonial puro, prensado artesanalmente preservando manteiga natural e teobromina."
+        desc: "Cacau cerimonial puro 100%, prensado artesanalmente preservando manteiga natural e teobromina."
       },
       cacau70: {
         name: "Cacau 70%",
@@ -240,21 +232,21 @@
           { name: "60g", price: 0, available: false },
           { name: "220g", price: 77.00, available: true }
         ],
-        desc: "Equilíbrio perfeito entre a intensidade do cacau e dulçor suave."
+        desc: "Equilíbrio entre a densidade do cacau e dulçor harmônico."
       },
       nibs: {
         name: "Nibs de Cacau",
         variants: [
           { name: "70g", price: 11.00, available: true }
         ],
-        desc: "Amêndoas de cacau fermentadas, secas e trituradas em pequenos pedaços crocantes."
+        desc: "Nibs de Cacau crocantes selecionados."
       },
       cha: {
         name: "Chá de Casca de Cacau",
         variants: [
           { name: "Infusão natural", price: 5.00, available: true }
         ],
-        desc: "Infusão leve e aromática com notas sutis de chocolate."
+        desc: "Infusão aromática e leve extraída da casca do cacau."
       },
       fenogrego: {
         name: "Feno Grego",
@@ -268,21 +260,21 @@
         variants: [
           { name: "O fruto", price: 6.00, available: true }
         ],
-        desc: "Fruto de cacau selecionado."
+        desc: "Fruto de cacau nativo."
       },
       babosa: {
         name: "Muda de Babosa",
         variants: [
           { name: "Unidade", price: 12.00, available: true }
         ],
-        desc: "Muda orgânica e saudável de Aloe Vera (Babosa)."
+        desc: "Muda saudável e orgânica de Aloe Vera."
       }
     };
 
     let cart = [];
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Accordions Principais
+      // 1. Accordion Principal
       const toggleBtns = document.querySelectorAll('.accordion-toggle');
       toggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -292,7 +284,7 @@
         });
       });
 
-      // Sub-toggles Linhagem Grega
+      // 2. Sub-toggles Linhagem Grega (Expansão de Sequência)
       const subToggleBtns = document.querySelectorAll('.sub-toggle-btn');
       subToggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -307,7 +299,17 @@
         });
       });
 
-      // Modais de Produtos
+      // 3. Ação "Compre seu Cacau" -> Abre menu Loja
+      const btnGoStore = document.getElementById('btn-go-store');
+      const lojaBtn = document.getElementById('loja-btn');
+      if (btnGoStore && lojaBtn) {
+        btnGoStore.addEventListener('click', () => {
+          lojaBtn.setAttribute('aria-expanded', 'true');
+          document.getElementById('loja-section').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // 4. Modal de Produtos (Detalhes, Variantes e Adicionar)
       const modal = document.getElementById('product-modal');
       const modalContent = document.getElementById('modal-content');
       const closeModalBtn = document.querySelector('.close-modal-btn');
@@ -318,17 +320,17 @@
           const prod = PRODUCTS_DATA[key];
           
           let variantsHTML = prod.variants.map((v, i) => {
-            if(!v.available) {
+            if (!v.available) {
               return `<label class="variant-opt disabled"><input type="radio" name="p-var" disabled> ${v.name} - Indisponível</label>`;
             }
-            return `<label class="variant-opt"><input type="radio" name="p-var" value="${i}" ${i===0 || !prod.variants[0].available ? 'checked':''}> ${v.name} — R$ ${v.price.toFixed(2).replace('.', ',')}</label>`;
+            return `<label class="variant-opt"><input type="radio" name="p-var" value="${i}" ${i === 0 || !prod.variants[0].available ? 'checked' : ''}> ${v.name} — R$ ${v.price.toFixed(2).replace('.', ',')}</label>`;
           }).join('');
 
           modalContent.innerHTML = `
-            <h3>${prod.name}</h3>
-            <p>${prod.desc}</p>
+            <h3 style="margin-top:0; font-family: var(--display); font-size: 1.4rem;">${prod.name}</h3>
+            <p style="font-size:0.85rem; line-height: 1.5; color: var(--ink);">${prod.desc}</p>
             <div class="variants-list">
-              <strong>Opções:</strong>
+              <strong style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em;">Opções:</strong>
               ${variantsHTML}
             </div>
             <button type="button" class="add-to-cart-btn" id="add-item-btn">Adicionar ao Carrinho</button>
@@ -338,7 +340,7 @@
 
           document.getElementById('add-item-btn')?.addEventListener('click', () => {
             const selectedVar = document.querySelector('input[name="p-var"]:checked');
-            if(selectedVar) {
+            if (selectedVar) {
               const varIdx = parseInt(selectedVar.value);
               const variant = prod.variants[varIdx];
               addToCart(prod.name, variant.name, variant.price);
@@ -350,13 +352,13 @@
 
       closeModalBtn.addEventListener('click', () => modal.classList.remove('active'));
       modal.addEventListener('click', (e) => {
-        if(e.target === modal) modal.classList.remove('active');
+        if (e.target === modal) modal.classList.remove('active');
       });
 
-      // Lógica do Carrinho
+      // 5. Carrinho e Atualização da UI
       function addToCart(pName, vName, price) {
         const existing = cart.find(i => i.pName === pName && i.vName === vName);
-        if(existing) {
+        if (existing) {
           existing.qty++;
         } else {
           cart.push({ pName, vName, price, qty: 1 });
@@ -372,7 +374,7 @@
         let total = 0;
         let count = 0;
 
-        if(cart.length === 0) {
+        if (cart.length === 0) {
           cartList.innerHTML = '<p class="empty-cart-msg">Carrinho vazio.</p>';
         } else {
           cartList.innerHTML = cart.map((item, idx) => {
@@ -381,11 +383,13 @@
             return `
               <div class="cart-item">
                 <div class="cart-item-info">
-                  <strong>${item.pName}</strong>
+                  <strong>${item.pName}</strong><br>
                   <small>${item.vName} (x${item.qty})</small>
                 </div>
-                <span>R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</span>
-                <button type="button" onclick="removeFromCart(${idx})">&times;</button>
+                <div>
+                  <span>R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</span>
+                  <button type="button" onclick="removeFromCart(${idx})" title="Remover item">&times;</button>
+                </div>
               </div>
             `;
           }).join('');
@@ -400,17 +404,23 @@
         updateCartUI();
       };
 
-      // Checkout WhatsApp
+      // Rolagem ao carrinho ao clicar no ícone do footer
+      document.getElementById('footer-cart-btn').addEventListener('click', () => {
+        lojaBtn.setAttribute('aria-expanded', 'true');
+        document.querySelector('.cart-summary-box').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // 6. Checkout WhatsApp
       document.getElementById('btn-checkout').addEventListener('click', () => {
         const name = document.getElementById('cust-name').value.trim();
         const phone = document.getElementById('cust-phone').value.trim();
 
-        if(!name || !phone) {
+        if (!name || !phone) {
           alert('Por favor, preencha seu nome e WhatsApp.');
           return;
         }
 
-        if(cart.length === 0) {
+        if (cart.length === 0) {
           alert('Seu carrinho está vazio.');
           return;
         }
@@ -418,7 +428,7 @@
         let summary = cart.map(i => `- ${i.pName} (${i.vName}) x${i.qty}: R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}`).join('\n');
         let totalVal = document.getElementById('cart-total-val').innerText;
 
-        let msg = `Olá Thiago!\n\nEstes são os itens que gostaria de adquirir:\n\n${summary}\n\n*Total:* ${totalVal}\n\n*Cliente:* ${name}\n*Contato:* ${phone}`;
+        let msg = `Olá Thiago!\n\nEstes são os itens que gostaria de adquirir:\n\n${summary}\n\nTotal: ${totalVal}\n\nCliente: ${name}\nContato: ${phone}`;
 
         let waUrl = `https://wa.me/5573999664477?text=${encodeURIComponent(msg)}`;
         window.open(waUrl, '_blank');
