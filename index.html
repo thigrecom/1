@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -18,6 +18,7 @@
   <div class="hub-shell">
     <main class="link-hub" aria-labelledby="hub-title">
 
+      <!-- Header -->
       <header class="hub-header">
         <h1 id="hub-title">thigre</h1>
         <div class="hub-bio">
@@ -26,8 +27,10 @@
         </div>
       </header>
 
+      <!-- Navegação / Links -->
       <nav class="hub-links" aria-label="Links principais">
 
+        <!-- Item 01: Linhagem Grega (Theobroma) -->
         <div class="hub-link-item">
           <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="linhagem-info" id="linhagem-btn">
             <span class="hub-link-number">#</span>
@@ -35,9 +38,13 @@
             <span class="hub-link-arrow" aria-hidden="true">↓</span>
           </button>
           <div id="linhagem-info" class="accordion-content linhagem-content" role="region" aria-labelledby="linhagem-btn">
-            <p>
-              A palavra Theobroma vem do grego e significa "Alimento dos Deuses". A herança grega traz a busca pela proporção, pela excelência e pelo respeito às leis naturais. Não como um mito distante, mas como uma arquitetura de vida: a busca pelo equilíbrio rigoroso entre o denso e o sutil, transformando um fruto da terra em uma experiência de vitalidade e sobriedade.
-            </p>
+            
+            <!-- 3.1 Box Grécia estilizado -->
+            <div class="theobroma-box">
+              <p>
+                A palavra <strong>Theobroma</strong> vem do grego e significa <em>"Alimento dos Deuses"</em>. A herança grega traz a busca pela proporção, pela excelência e pelo respeito às leis naturais. Não como um mito distante, mas como uma arquitetura de vida: a busca pelo equilíbrio rigoroso entre o denso e o sutil, transformando um fruto da terra em uma experiência de vitalidade e sobriedade.
+              </p>
+            </div>
             
             <div class="sequence-nav">
               <button type="button" class="sub-toggle-btn active" data-target="seq-continuidade">A força da continuidade</button>
@@ -66,6 +73,7 @@
           </div>
         </div>
 
+        <!-- Item 02: Cacau Cerimonial -->
         <div class="hub-link-item">
           <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="cacau-cerimonial-info" id="cacau-btn">
             <span class="hub-link-number">#</span>
@@ -80,7 +88,8 @@
             <div class="cacau-actions">
               <button type="button" class="cacau-action-btn active" data-cacau-target="cacau-cardiaco">Chakra Cardíaco</button>
               <button type="button" class="cacau-action-btn" data-cacau-target="cacau-consumo">Como consumir</button>
-              <button type="button" class="cacau-action-btn" id="btn-go-store">Compre seu Cacau</button>
+              <!-- 3.2 Botão com classe especial btn-highlight -->
+              <button type="button" class="cacau-action-btn btn-highlight" id="btn-go-store">Compre seu Cacau</button>
             </div>
 
             <div id="cacau-cardiaco" class="sequence-box active">
@@ -100,6 +109,7 @@
           </div>
         </div>
 
+        <!-- Item 03: Loja (Expansível) -->
         <div class="hub-link-item" id="loja-section">
           <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="loja-info" id="loja-btn">
             <span class="hub-link-number">#</span>
@@ -108,6 +118,7 @@
           </button>
           <div id="loja-info" class="accordion-content loja-content" role="region" aria-labelledby="loja-btn">
             
+            <!-- Produtos Grid -->
             <div class="products-grid">
               
               <div class="product-card">
@@ -175,10 +186,12 @@
 
             </div>
 
+            <!-- Mini Carrinho / Checkout Resumido (4. Estilizado com fundo Verde #018201) -->
             <div class="cart-summary-box">
               <h4>Seu Carrinho</h4>
               <div id="cart-content-area">
-                </div>
+                <!-- Renderizado via Javascript -->
+              </div>
             </div>
 
           </div>
@@ -190,6 +203,7 @@
 
   </div>
 
+  <!-- Footer Fixado com Estética Clean -->
   <footer class="hub-footer">
     <div class="footer-icons">
       <a href="https://wa.me/5573999664477" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -198,6 +212,7 @@
       <a href="https://instagram.com/thigre.c" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
+      <!-- 5. Ícone com badge vermelho cereja -->
       <button type="button" id="footer-cart-btn" class="footer-cart-link" aria-label="Carrinho de compras">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span id="footer-cart-count" class="cart-badge">0</span>
@@ -205,6 +220,7 @@
     </div>
   </footer>
 
+  <!-- Modal Detalhes do Produto -->
   <div id="product-modal" class="modal-overlay">
     <div class="modal-body">
       <button type="button" class="close-modal-btn" aria-label="Fechar">&times;</button>
@@ -335,41 +351,26 @@
         });
       });
 
-      // 2. Sub-toggles Linhagem Grega
-      const subToggleBtns = document.querySelectorAll('.sub-toggle-btn');
-      subToggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          subToggleBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+      // Função Otimizada para Sub-toggles (Menu Linhagem e Cacau)
+      function setupSubToggles(buttonsSelector, boxSelector) {
+        const btns = document.querySelectorAll(buttonsSelector);
+        btns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-target') || btn.getAttribute('data-cacau-target');
+            if(!targetId) return;
 
-          const targetId = btn.getAttribute('data-target');
-          const targetBox = document.getElementById(targetId);
-          
-          document.querySelectorAll('.linhagem-content .sequence-box').forEach(box => {
-            box.classList.remove('active');
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll(boxSelector).forEach(box => box.classList.remove('active'));
+            const targetBox = document.getElementById(targetId);
+            if(targetBox) targetBox.classList.add('active');
           });
-          
-          if(targetBox) targetBox.classList.add('active');
         });
-      });
+      }
 
-      // 2b. Sub-toggles Cacau Cerimonial
-      const cacauActionBtns = document.querySelectorAll('.cacau-action-btn[data-cacau-target]');
-      cacauActionBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          cacauActionBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          const targetId = btn.getAttribute('data-cacau-target');
-          const targetBox = document.getElementById(targetId);
-          
-          document.querySelectorAll('.cacau-content .sequence-box').forEach(box => {
-            box.classList.remove('active');
-          });
-          
-          if(targetBox) targetBox.classList.add('active');
-        });
-      });
+      setupSubToggles('.sub-toggle-btn', '.linhagem-content .sequence-box');
+      setupSubToggles('.cacau-action-btn[data-cacau-target]', '.cacau-content .sequence-box');
 
       // 3. Ação "Compre seu Cacau" -> Abre Modal do Cacau 100%
       const btnGoStore = document.getElementById('btn-go-store');
@@ -414,7 +415,7 @@
           ` : ''}
 
           <div class="variants-list">
-            <strong style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--leaf);">Opções disponíveis:</strong>
+            <strong style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--brand-green);">Opções disponíveis:</strong>
             ${variantsHTML}
           </div>
           <button type="button" class="add-to-cart-btn" id="add-item-btn">Adicionar ao Carrinho</button>
@@ -530,7 +531,7 @@
               <input type="text" id="cust-name" placeholder="Seu Nome" required />
               <input type="tel" id="cust-phone" placeholder="Seu WhatsApp" required />
               <input type="text" id="cust-cep" placeholder="CEP para entrega" required />
-              <button type="button" id="btn-checkout" class="checkout-submit-btn">Enviar Pedido para WhatsApp ↗</button>
+              <button type="button" id="btn-checkout" class="checkout-submit-btn">Enviar Pedido para o WhatsApp ↗</button>
             </div>
           `;
 
