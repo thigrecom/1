@@ -6,7 +6,7 @@
   --leaf: #697253;
   --line: rgba(36, 39, 29, 0.22);
   --sans: "Plus Jakarta Sans", sans-serif;
-  --display: "Cormorant Garamond", serif;
+  --display: "DM Serif Display", serif;
 }
 
 * {
@@ -79,14 +79,15 @@ a {
   width: 100%;
 }
 
-/* Casa Thigre — Serifada Encorpada (Peso 700) e Moderna */
+/* thigre — DM Serif Display em Minúsculo */
 .hub-header h1 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(3.2rem, 6vw, 4.5rem);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.02em;
+  font-size: clamp(3.5rem, 7vw, 5.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
   color: var(--ink);
 }
 
@@ -176,7 +177,7 @@ button.hub-link:focus-visible .hub-link-number {
 .hub-link-copy strong {
   font-family: var(--display);
   font-size: clamp(1.45rem, 3.6vw, 1.85rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.1;
 }
 
