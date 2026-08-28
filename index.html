@@ -1,171 +1,531 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thigre - Cacau & Sabedoria Ancestral</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="thigre — Cacau em sua forma mais pura, íntegra e ancestral." />
+  <title>thigre — Cultura do Cacau</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
 
-  <!-- NAVEGAÇÃO / HEADER -->
-  <header class="header">
-    <nav class="nav-container">
-      <div class="logo">THIGRE</div>
-      <ul class="nav-links">
-        <li><a href="#linhagem">Linhagem Grega</a></li>
-        <li><a href="#cacau">Cacau Cerimonial</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#carrinho-section">Carrinho</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="hub-page">
 
-  <main>
-    <!-- SEÇÃO 1: LINHAGEM GREGA -->
-    <section id="linhagem" class="section container">
-      <h2 class="section-title">Linhagem Grega (Theobroma)</h2>
-      
-      <div class="tab-buttons">
-        <button class="tab-btn active" onclick="openTab(event, 'linhagem-1')">A força da continuidade</button>
-        <button class="tab-btn" onclick="openTab(event, 'linhagem-2')">A Coragem da Travessia</button>
-        <button class="tab-btn" onclick="openTab(event, 'linhagem-3')">Alma baiana</button>
-      </div>
+  <div class="hub-shell">
+    <main class="link-hub" aria-labelledby="hub-title">
 
-      <div id="linhagem-1" class="tab-content active">
-        <p>Entender de onde vem a força que nos sustenta é recusar o isolamento. Quando nos conectamos com as nossas raízes, deixamos de ser indivíduos fragmentados e nos tornamos continuidade.</p>
-        <p>Ancestralidade não é abstração; é memória física. É a percepção clara de que somos a linha de frente de uma longa sequência de escolhas, travessias e coragem. Olhar para a raiz é o que dá firmeza aos passos no presente.</p>
-      </div>
-
-      <div id="linhagem-2" class="tab-content">
-        <p>Existimos porque outros tiveram a coragem de cruzar o desconhecido. Deixar para trás a terra natal e cruzar oceanos exigiu uma bravura silenciosa e visceral. Reaprender a ler a terra, entender novos climas e plantar no incerto é o mesmo fogo que fundamenta a Thigre.</p>
-        <p>Da Grécia ao Mediterrâneo, do solo paulista ao cultivo do café, e agora ao solo fértil de Maraú, na Bahia: não há ruptura, há evolução. Da oliveira ao cafeeiro, do cafeeiro ao cacaueiro. O trabalho com a terra permanece o mesmo — respeitar o tempo da maturação, honrar o fruto e extrair a sua máxima pureza.</p>
-        <p><strong>A Thigre é a síntese dessa travessia.</strong></p>
-      </div>
-
-      <div id="linhagem-3" class="tab-content">
-        <p>Nosso cacau extrai sua força diretamente do solo fértil de Maraú, Bahia. O terroir tropical concede ao fruto notas sensoriais puras, raras e intensas, conectando o consumidor à sabedoria ancestral da terra brasileira.</p>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 2: CACAU CERIMONIAL -->
-    <section id="cacau" class="section container">
-      <h2 class="section-title">Cacau Cerimonial</h2>
-      
-      <div class="tab-buttons">
-        <button class="tab-btn active" onclick="openTab(event, 'cacau-1')">Chakra Cardíaco</button>
-        <button class="tab-btn" onclick="openTab(event, 'cacau-2')">Como consumir</button>
-        <button class="tab-btn action-btn" onclick="scrollToProduct()">Compre seu Cacau</button>
-      </div>
-
-      <div id="cacau-1" class="tab-content active">
-        <p>O Cacau Cerimonial atua diretamente na abertura do chakra cardíaco (Anahata). Ele facilita a expansão da percepção afetuosa, integrando corpo e espírito através do estímulo suave do fluxo sanguíneo e da liberação de compostos bioativos que promovem a presença e a conexão interior.</p>
-      </div>
-
-      <div id="cacau-2" class="tab-content">
-        <div class="prep-box">
-          <h3>Modo de Preparo:</h3>
-          <p><strong>300ml de água quente</strong> + <strong>15g de cacau 100% picado</strong>.</p>
-          <p>Misture vigorosamente até obter uma emulsão cremosa e aveludada.</p>
+      <!-- Header -->
+      <header class="hub-header">
+        <h1 id="hub-title">thigre</h1>
+        <div class="hub-bio">
+          <p class="hub-tagline">Cacau em sua forma mais pura, integra e ancestral.</p>
+          <p class="hub-origin">Itacaré &amp; Maraú, Bahia</p>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <!-- SEÇÃO 3: DETALHES DO PRODUTO -->
-    <section id="produtos" class="section container">
-      <h2 class="section-title">Produto</h2>
-      
-      <div class="product-card">
-        <div class="product-info">
-          <h3>Cacau 100% Cerimonial (Maraú - BA)</h3>
-          <p class="price">R$ 89,00</p>
-          
-          <div class="usage-suggestion">
-            <h4>Sugestão de Uso</h4>
-            <p>Para o ritual diário ou momentos de pausa consciente, dissolva a porção recomendada em água ou leite vegetal aquecido (sem ferver). Misture bem até obter uma bebida aveludada e cremosa. Pode ser consumido puro ou adoçado levemente a gosto.</p>
-          </div>
+      <!-- Navegação / Links -->
+      <nav class="hub-links" aria-label="Links principais">
 
-          <button class="btn-primary" onclick="addItemToCart()">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO 4: SEU CARRINHO -->
-    <section id="carrinho-section" class="section container cart-wrapper">
-      <h2 class="section-title">Seu Carrinho</h2>
-
-      <!-- ESTADO 1: CARRINHO VAZIO -->
-      <div id="cart-empty" class="cart-box empty-state">
-        <div class="cart-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-        </div>
-        <p class="cart-title">Seu carrinho está vazio</p>
-        <p class="cart-subtitle">Adicione seus produtos acima</p>
-      </div>
-
-      <!-- ESTADO 2: CARRINHO COM ITENS -->
-      <div id="cart-full" class="cart-box full-state" style="display: none;">
-        <div class="cart-items">
-          <div class="cart-item">
-            <div class="item-details">
-              <span class="item-name">Cacau 100% Cerimonial</span>
-              <span class="item-qty">1x R$ 89,00</span>
+        <!-- Item 01: Linhagem Grega (Theobroma) -->
+        <div class="hub-link-item">
+          <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="linhagem-info" id="linhagem-btn">
+            <span class="hub-link-number">#</span>
+            <span class="hub-link-copy"><strong>Linhagem Grega (Theobroma)</strong></span>
+            <span class="hub-link-arrow" aria-hidden="true">↓</span>
+          </button>
+          <div id="linhagem-info" class="accordion-content linhagem-content" role="region" aria-labelledby="linhagem-btn">
+            <p>
+              A palavra Theobroma vem do grego e significa "Alimento dos Deuses". A herança grega traz a busca pela proporção, pela excelência e pelo respeito às leis naturais. Não como um mito distante, mas como uma arquitetura de vida: a busca pelo equilíbrio rigoroso entre o denso e o sutil, transformando um fruto da terra em uma experiência de vitalidade e sobriedade.
+            </p>
+            
+            <div class="sequence-nav">
+              <button type="button" class="sub-toggle-btn active" data-target="seq-continuidade">A força da continuidade</button>
+              <button type="button" class="sub-toggle-btn" data-target="seq-alma-baiana">Alma baiana</button>
             </div>
-            <button class="btn-remove" onclick="clearCart()">Remover</button>
+
+            <div id="seq-continuidade" class="sequence-box active">
+              <h4 class="section-title">A força da continuidade</h4>
+              <p>Entender de onde vem a força que nos sustenta é recusar o isolamento. Quando nos conectamos com as nossas raízes, deixamos de ser indivíduos fragmentados e nos tornamos continuidade.</p>
+              <p><strong>Ancestralidade</strong> não é abstração; é memória física. É a percepção clara de que somos a linha de frente de uma longa sequência de escolhas, travessias e coragem. Olhar para a raiz é o que dá firmeza aos passos no presente.</p>
+              <p><strong>A Coragem da Travessia</strong><br>
+              Existimos porque outros tiveram a coragem de cruzar o desconhecido. Deixar para trás a terra natal e cruzar oceanos exigiu uma bravura silenciosa e visceral. Reaprender a ler a terra, entender novos climas e plantar no incerto é o mesmo fogo que fundamenta a Thigre.</p>
+              <p>Da Grécia ao Mediterrâneo, do solo paulista ao cultivo do café, e agora ao solo fértil de Maraú, na Bahia: não há ruptura, há evolução. Da oliveira ao cafeeiro, do cafeeiro ao cacaueiro. O trabalho com a terra permanece o mesmo — respeitar o tempo da maturação, honrar o fruto e extrair a sua máxima pureza.</p>
+              <p><em>A Thigre é a síntese dessa travessia.</em></p>
+            </div>
+
+            <div id="seq-alma-baiana" class="sequence-box">
+              <h4 class="section-title">Alma baiana</h4>
+              <p>Nosso cacau extrai sua força diretamente do solo fértil de Maraú, Bahia. O terroir tropical concede ao fruto notas sensoriais puras, raras e intensas, conectando o consumidor à sabedoria ancestral da terra brasileira.</p>
+            </div>
           </div>
         </div>
 
-        <div class="cep-calculator">
-          <label for="cep">Calcular Frete e Prazo:</label>
-          <div class="cep-input-group">
-            <input type="text" id="cep" placeholder="00000-000" maxlength="9">
-            <button class="btn-secondary">Calcular</button>
+        <!-- Item 02: Cacau Cerimonial -->
+        <div class="hub-link-item">
+          <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="cacau-cerimonial-info" id="cacau-btn">
+            <span class="hub-link-number">#</span>
+            <span class="hub-link-copy"><strong>Cacau Cerimonial</strong></span>
+            <span class="hub-link-arrow" aria-hidden="true">↓</span>
+          </button>
+          <div id="cacau-cerimonial-info" class="accordion-content cacau-content" role="region" aria-labelledby="cacau-btn">
+            <p>
+              O Cacau Cerimonial é o cacau em sua forma mais pura, integra e ancestral. Diferente do chocolate convencional, ele passa por um processo artesanal de moagem lenta de amêndoas selecionadas de cacau 100%, preservando a manteiga natural de cacau e todos os seus compostos bioativos, antioxidantes e teobromina. É uma medicina de presença, calma e expansão do coração, ideal para momentos de pausa, meditação, criação e rituais diários de bem-estar.
+            </p>
+            <div class="cacau-actions">
+              <button type="button" class="cacau-action-btn" id="btn-go-store">Compre seu Cacau</button>
+              <a href="#" class="cacau-action-btn">Vivência Cacau na Cachoeira</a>
+              <a href="#" class="cacau-action-btn">eBook</a>
+            </div>
           </div>
         </div>
 
-        <div class="cart-total">
-          <span>Total:</span>
-          <strong>R$ 89,00</strong>
+        <!-- Item 03: Loja (Expansível) -->
+        <div class="hub-link-item" id="loja-section">
+          <button type="button" class="hub-link accordion-toggle" aria-expanded="false" aria-controls="loja-info" id="loja-btn">
+            <span class="hub-link-number">#</span>
+            <span class="hub-link-copy"><strong>Loja</strong></span>
+            <span class="hub-link-arrow" aria-hidden="true">↓</span>
+          </button>
+          <div id="loja-info" class="accordion-content loja-content" role="region" aria-labelledby="loja-btn">
+            
+            <!-- Produtos Grid -->
+            <div class="products-grid">
+              
+              <div class="product-card">
+                <div class="product-thumb">
+                  <!-- Coração para Cacau 100% -->
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 82 C50 82 18 58 18 36 C18 24 27 16 38 16 C44 16 48 19 50 23 C52 19 56 16 62 16 C73 16 82 24 82 36 C82 58 50 82 50 82 Z"/></svg>
+                </div>
+                <h3>Cacau 100%</h3>
+                <p class="price-range">A partir de R$ 70,00</p>
+                <button type="button" class="open-modal-btn" data-product="cacau100">Ver detalhes</button>
+              </div>
+
+              <div class="product-card">
+                <div class="product-thumb">
+                  <!-- Barra de Chocolate / Quadrado com divisões -->
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="20" y="20" width="60" height="60" rx="4"/><line x1="50" y1="20" x2="50" y2="80"/><line x1="20" y1="50" x2="80" y2="50"/></svg>
+                </div>
+                <h3>Cacau 70%</h3>
+                <p class="price-range">R$ 77,00</p>
+                <button type="button" class="open-modal-btn" data-product="cacau70">Ver detalhes</button>
+              </div>
+
+              <div class="product-card">
+                <div class="product-thumb">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="40" cy="40" r="10"/><circle cx="60" cy="50" r="8"/><circle cx="45" cy="65" r="12"/></svg>
+                </div>
+                <h3>Nibs de Cacau</h3>
+                <p class="price-range">R$ 11,00</p>
+                <button type="button" class="open-modal-btn" data-product="nibs">Ver detalhes</button>
+              </div>
+
+              <div class="product-card">
+                <div class="product-thumb">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M25 40 H75 V70 C75 80 65 85 50 85 C35 85 25 80 25 70 Z M75 48 H85 C90 48 90 62 75 62"/></svg>
+                </div>
+                <h3>Chá de Casca de Cacau</h3>
+                <p class="price-range">R$ 5,00</p>
+                <button type="button" class="open-modal-btn" data-product="cha">Ver detalhes</button>
+              </div>
+
+              <div class="product-card">
+                <div class="product-thumb">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 85 Q30 50 50 20 Q70 50 50 85 Z"/></svg>
+                </div>
+                <h3>Feno Grego</h3>
+                <p class="price-range">R$ 5,00</p>
+                <button type="button" class="open-modal-btn" data-product="fenogrego">Ver detalhes</button>
+              </div>
+
+              <div class="product-card">
+                <div class="product-thumb">
+                  <!-- Cabaça de Cacau (Formato Ovalado Alongado / Fruto) -->
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 12 C32 25 28 75 50 88 C72 75 68 25 50 12 Z M50 12 V88 M36 32 C42 45 42 55 36 68 M64 32 C58 45 58 55 64 68"/></svg>
+                </div>
+                <h3>Cabaça de Cacau</h3>
+                <p class="price-range">R$ 6,00</p>
+                <button type="button" class="open-modal-btn" data-product="cabaca">Ver detalhes</button>
+              </div>
+
+              <div class="product-card">
+                <div class="product-thumb">
+                  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M50 80 Q30 40 25 20 Q45 35 50 80 Z M50 80 Q70 40 75 20 Q55 35 50 80 Z"/></svg>
+                </div>
+                <h3>Muda de Babosa</h3>
+                <p class="price-range">R$ 12,00</p>
+                <button type="button" class="open-modal-btn" data-product="babosa">Ver detalhes</button>
+              </div>
+
+            </div>
+
+            <!-- Mini Carrinho / Checkout Resumido -->
+            <div class="cart-summary-box">
+              <h4>Seu Carrinho</h4>
+              <div id="cart-items-list" class="cart-items-list">
+                <p class="empty-cart-msg">Carrinho vazio.</p>
+              </div>
+              <div class="cart-total-row">
+                <span>Total:</span>
+                <strong id="cart-total-val">R$ 0,00</strong>
+              </div>
+              
+              <div class="checkout-form">
+                <h5>Finalizar Pedido via WhatsApp</h5>
+                <input type="text" id="cust-name" placeholder="Seu Nome" required />
+                <input type="tel" id="cust-phone" placeholder="Seu WhatsApp" required />
+                <button type="button" id="btn-checkout" class="checkout-submit-btn">Enviar Pedido para WhatsApp ↗</button>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <button class="btn-primary full-width">Finalizar Pedido</button>
+      </nav>
+
+    </main>
+
+  </div>
+
+  <!-- Footer Fixado com Estética Clean -->
+  <footer class="hub-footer">
+    <div class="footer-icons">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/5573999664477" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com/thigre.c" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- Sacola de Compras Revisitada (Substituindo o carrinho antigo) -->
+      <button type="button" id="footer-cart-btn" class="footer-cart-link" aria-label="Carrinho de compras">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span id="footer-cart-count" class="cart-badge">0</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Modal Detalhes do Produto (Com Imagem/Carrossel 1:1) -->
+  <div id="product-modal" class="modal-overlay">
+    <div class="modal-body">
+      <button type="button" class="close-modal-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="product-modal-layout">
+        <!-- Lado Esquerdo (Web) / Topo (Mobile): Carrossel 1:1 -->
+        <div class="modal-carousel-container">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Imagens via JS -->
+          </div>
+          <button type="button" class="carousel-nav prev" id="carousel-prev" aria-label="Imagem anterior">&#10094;</button>
+          <button type="button" class="carousel-nav next" id="carousel-next" aria-label="Próxima imagem">&#10095;</button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+
+        <!-- Lado Direito (Web) / Abaixo (Mobile): Informações e Opções -->
+        <div id="modal-content" class="modal-details">
+          <!-- Conteúdo inserido dinamicamente -->
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <script>
-    // Gerenciamento de Tabs
-    function openTab(evt, tabId) {
-      const section = evt.currentTarget.closest('.section');
-      const contents = section.querySelectorAll('.tab-content');
-      const buttons = section.querySelectorAll('.tab-btn');
+    const PRODUCTS_DATA = {
+      cacau100: {
+        name: "Cacau 100%",
+        images: [
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "200g", price: 70.00, available: true },
+          { name: "700g", price: 220.00, available: true }
+        ],
+        desc: "Cacau cerimonial puro 100%, prensado artesanalmente preservando manteiga natural e teobromina."
+      },
+      cacau70: {
+        name: "Cacau 70%",
+        images: [
+          "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "60g", price: 0, available: false },
+          { name: "220g", price: 77.00, available: true }
+        ],
+        desc: "Equilíbrio perfeito entre a intensidade do cacau e o dulçor harmônico."
+      },
+      nibs: {
+        name: "Nibs de Cacau",
+        images: [
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "70g", price: 11.00, available: true }
+        ],
+        desc: "Nibs de cacau crocantes selecionados e tostados suavemente."
+      },
+      cha: {
+        name: "Chá de Casca de Cacau",
+        images: [
+          "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "Infusão natural", price: 5.00, available: true }
+        ],
+        desc: "Infusão aromática e leve extraída diretamente da casca natural do cacau."
+      },
+      fenogrego: {
+        name: "Feno Grego",
+        images: [
+          "https://images.unsplash.com/photo-1509358271058-acd05cc93898?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "60g", price: 5.00, available: true }
+        ],
+        desc: "Sementes selecionadas de Feno Grego para vitalidade e infusão."
+      },
+      cabaca: {
+        name: "Cabaça de Cacau",
+        images: [
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "O fruto", price: 6.00, available: true }
+        ],
+        desc: "Fruto de cacau nativo e artesanal."
+      },
+      babosa: {
+        name: "Muda de Babosa",
+        images: [
+          "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+          "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+        ],
+        variants: [
+          { name: "Unidade", price: 12.00, available: true }
+        ],
+        desc: "Muda saudável e orgânica de Aloe Vera cultivada no sítio."
+      }
+    };
 
-      contents.forEach(content => content.classList.remove('active'));
-      buttons.forEach(btn => btn.classList.remove('active'));
+    let cart = [];
+    let currentSlide = 0;
 
-      document.getElementById(tabId).classList.add('active');
-      evt.currentTarget.classList.add('active');
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Accordion Principal
+      const toggleBtns = document.querySelectorAll('.accordion-toggle');
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          toggleBtns.forEach(otherBtn => otherBtn.setAttribute('aria-expanded', 'false'));
+          btn.setAttribute('aria-expanded', !isExpanded);
+        });
+      });
 
-    function scrollToProduct() {
-      document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
-    }
+      // 2. Sub-toggles Linhagem Grega
+      const subToggleBtns = document.querySelectorAll('.sub-toggle-btn');
+      subToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          subToggleBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
 
-    // Simulação do Carrinho
-    function addItemToCart() {
-      document.getElementById('cart-empty').style.display = 'none';
-      document.getElementById('cart-full').style.display = 'block';
-      document.getElementById('carrinho-section').scrollIntoView({ behavior: 'smooth' });
-    }
+          const targetId = btn.getAttribute('data-target');
+          const targetBox = document.getElementById(targetId);
+          
+          document.querySelectorAll('.sequence-box').forEach(box => {
+            box.classList.remove('active');
+          });
+          
+          targetBox.classList.add('active');
+        });
+      });
 
-    function clearCart() {
-      document.getElementById('cart-full').style.display = 'none';
-      document.getElementById('cart-empty').style.display = 'flex';
-    }
+      // 3. Ação "Compre seu Cacau" -> Abre menu Loja
+      const btnGoStore = document.getElementById('btn-go-store');
+      const lojaBtn = document.getElementById('loja-btn');
+      if (btnGoStore && lojaBtn) {
+        btnGoStore.addEventListener('click', () => {
+          lojaBtn.setAttribute('aria-expanded', 'true');
+          document.getElementById('loja-section').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // 4. Modal de Produtos com Carrossel
+      const modal = document.getElementById('product-modal');
+      const modalContent = document.getElementById('modal-content');
+      const track = document.getElementById('carousel-track');
+      const dotsContainer = document.getElementById('carousel-dots');
+      const closeModalBtn = document.querySelector('.close-modal-btn');
+
+      document.querySelectorAll('.open-modal-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-product');
+          const prod = PRODUCTS_DATA[key];
+          currentSlide = 0;
+
+          // Renderizar Carrossel 1:1 (3 Imagens)
+          track.innerHTML = prod.images.map(imgSrc => `<img src="${imgSrc}" alt="${prod.name}" />`).join('');
+          dotsContainer.innerHTML = prod.images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`).join('');
+          updateCarousel();
+
+          // Renderizar Variantes e Descrição
+          let variantsHTML = prod.variants.map((v, i) => {
+            if (!v.available) {
+              return `<label class="variant-opt disabled"><input type="radio" name="p-var" disabled> ${v.name} - Indisponível</label>`;
+            }
+            return `<label class="variant-opt"><input type="radio" name="p-var" value="${i}" ${i === 0 || !prod.variants[0].available ? 'checked' : ''}> ${v.name} — R$ ${v.price.toFixed(2).replace('.', ',')}</label>`;
+          }).join('');
+
+          modalContent.innerHTML = `
+            <h3 style="margin-top:0; font-family: var(--display); font-size: 1.5rem;">${prod.name}</h3>
+            <p style="font-size:0.85rem; line-height: 1.6; color: var(--ink); margin: 12px 0 20px;">${prod.desc}</p>
+            <div class="variants-list">
+              <strong style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--leaf);">Opções disponíveis:</strong>
+              ${variantsHTML}
+            </div>
+            <button type="button" class="add-to-cart-btn" id="add-item-btn">Adicionar ao Carrinho</button>
+          `;
+
+          modal.classList.add('active');
+
+          // Adicionar ao Carrinho
+          document.getElementById('add-item-btn')?.addEventListener('click', () => {
+            const selectedVar = document.querySelector('input[name="p-var"]:checked');
+            if (selectedVar) {
+              const varIdx = parseInt(selectedVar.value);
+              const variant = prod.variants[varIdx];
+              addToCart(prod.name, variant.name, variant.price);
+              modal.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // Navegação do Carrossel
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        document.querySelectorAll('.carousel-dots .dot').forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentSlide);
+        });
+      }
+
+      document.getElementById('carousel-prev').addEventListener('click', () => {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : 2;
+        updateCarousel();
+      });
+
+      document.getElementById('carousel-next').addEventListener('click', () => {
+        currentSlide = (currentSlide < 2) ? currentSlide + 1 : 0;
+        updateCarousel();
+      });
+
+      dotsContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('dot')) {
+          currentSlide = parseInt(e.target.getAttribute('data-index'));
+          updateCarousel();
+        }
+      });
+
+      closeModalBtn.addEventListener('click', () => modal.classList.remove('active'));
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+
+      // 5. Carrinho e Atualização da UI
+      function addToCart(pName, vName, price) {
+        const existing = cart.find(i => i.pName === pName && i.vName === vName);
+        if (existing) {
+          existing.qty++;
+        } else {
+          cart.push({ pName, vName, price, qty: 1 });
+        }
+        updateCartUI();
+      }
+
+      function updateCartUI() {
+        const cartList = document.getElementById('cart-items-list');
+        const cartTotalVal = document.getElementById('cart-total-val');
+        const footerCount = document.getElementById('footer-cart-count');
+
+        let total = 0;
+        let count = 0;
+
+        if (cart.length === 0) {
+          cartList.innerHTML = '<p class="empty-cart-msg">Carrinho vazio.</p>';
+        } else {
+          cartList.innerHTML = cart.map((item, idx) => {
+            total += item.price * item.qty;
+            count += item.qty;
+            return `
+              <div class="cart-item">
+                <div class="cart-item-info">
+                  <strong>${item.pName}</strong><br>
+                  <small>${item.vName} (x${item.qty})</small>
+                </div>
+                <div style="display:flex; align-items:center;">
+                  <span>R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</span>
+                  <button type="button" onclick="removeFromCart(${idx})" title="Remover item">&times;</button>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        cartTotalVal.innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        footerCount.innerText = count;
+      }
+
+      window.removeFromCart = function(index) {
+        cart.splice(index, 1);
+        updateCartUI();
+      };
+
+      document.getElementById('footer-cart-btn').addEventListener('click', () => {
+        lojaBtn.setAttribute('aria-expanded', 'true');
+        document.querySelector('.cart-summary-box').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // 6. Checkout WhatsApp
+      document.getElementById('btn-checkout').addEventListener('click', () => {
+        const name = document.getElementById('cust-name').value.trim();
+        const phone = document.getElementById('cust-phone').value.trim();
+
+        if (!name || !phone) {
+          alert('Por favor, preencha seu nome e WhatsApp.');
+          return;
+        }
+
+        if (cart.length === 0) {
+          alert('Seu carrinho está vazio.');
+          return;
+        }
+
+        let summary = cart.map(i => `- ${i.pName} (${i.vName}) x${i.qty}: R$ ${(i.price * i.qty).toFixed(2).replace('.', ',')}`).join('\n');
+        let totalVal = document.getElementById('cart-total-val').innerText;
+
+        let msg = `Olá Thiago!\n\nEstes são os itens que gostaria de adquirir:\n\n${summary}\n\nTotal: ${totalVal}\n\nCliente: ${name}\nContato: ${phone}`;
+
+        let waUrl = `https://wa.me/5573999664477?text=${encodeURIComponent(msg)}`;
+        window.open(waUrl, '_blank');
+      });
+    });
   </script>
+
 </body>
 </html>
