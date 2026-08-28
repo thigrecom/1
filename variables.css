@@ -1,33 +1,115 @@
 :root {
   /* ==========================================================================
-     CONFIGURAÇÃO DE CORES (PALETA PRINCIPAL)
+     1. PALETA BASE (Consolidação de Tons Próximos)
      ========================================================================== */
-  --ink: #24271D;          /* Cor do texto principal / escuro */
-  --paper: #F2EDDF;        /* Cor do fundo / claro */
-  --paper-deep: #E4DCC8;   /* Variação de fundo mais escuro */
+  --color-ink: #24271D;          /* Tom escuro principal (textos e elementos base) */
+  --color-paper: #F2EDDF;        /* Tom claro de fundo */
+  --color-green: #ADEBB3;        /* Verde padrão do site */
+  --color-cherry: #D32F2F;       /* Cor Cereja de destaque */
+  --color-white: #FFFFFF;        /* Branco puro */
+  --color-black: #000000;        /* Preto puro */
+  --color-card-bg: #E0D8C3;      /* Fundo neutro de imagens/cards */
+
+  /* ==========================================================================
+     2. TRANSPARÊNCIAS E OPACIDADES UNIFICADAS
+     ========================================================================== */
+  --alpha-subtle: 0.04;          /* 4% - Fundos ultra suaves (Accordions) */
+  --alpha-hover: 0.10;           /* 10% - Destaque leve ao passar o mouse */
+  --alpha-soft: 0.15;            /* 15% - Caixas de destaque e glows */
+  --alpha-line: 0.22;            /* 22% - Linhas de divisão e bordas suaves */
+  --alpha-overlay: 0.65;         /* 65% - Fundo escuro de modais */
+
+  /* ==========================================================================
+     3. CONFIGURAÇÕES DE COR POR COMPONENTE / SEÇÃO
+     ========================================================================== */
+
+  /* 3.1. CONFIGURAÇÕES GERAIS DA PÁGINA */
+  --page-bg: var(--color-paper);
+  --page-text-color: var(--color-ink);
+  --page-radial-glow: rgba(173, 235, 179, var(--alpha-soft));
+  --page-border-lines: rgba(36, 39, 29, var(--alpha-line));
+
+  /* 3.2. ACCORDION PRINCIPAL (MENU DE LINKS) */
+  --accordion-header-text: var(--color-ink);
+  --accordion-number-text: var(--color-ink);
+  --accordion-number-hover-text: var(--color-green);
+  --accordion-hover-bg: var(--color-ink);
+  --accordion-hover-text: var(--color-paper);
+  --accordion-content-bg: rgba(36, 39, 29, var(--alpha-subtle));
+
+  /* 3.3. BOTÕES DOS SUBMENUS (LINHAGEM & CACAU CERIMONIAL) */
+  --btn-sub-text: var(--color-ink);
+  --btn-sub-border: var(--color-ink);
+  --btn-sub-bg: transparent;
+  --btn-sub-hover-bg: rgba(173, 235, 179, var(--alpha-soft));
+  --btn-sub-active-bg: var(--color-green);
+  --btn-sub-active-text: var(--color-ink);
+  --btn-sub-active-border: var(--color-ink);
+
+  /* 3.4. BOTÃO DE DESTAQUE "COMPRE SEU CACAU" (COR CEREJA) */
+  --btn-cherry-text: var(--color-cherry);
+  --btn-cherry-border: var(--color-cherry);
+  --btn-cherry-bg: transparent;
+  --btn-cherry-hover-bg: rgba(211, 47, 47, var(--alpha-hover));
+
+  /* 3.5. CARD DE PRODUTO (VITRINE) */
+  --card-bg: var(--color-paper);
+  --card-border: var(--page-border-lines);
+  --card-title-text: var(--color-ink);
+  --card-price-text: var(--color-ink);
+  --card-icon-color: var(--color-ink);
   
-  --brand-green: #e8edd9;   /* Verde destaque */
-  --cherry-accent: #D32F2F; /* Cor cereja (botões de destaque e badges) */
-  --white: #FFFFFF;         /* Branco puro */
-  --black: #000000;         /* Preto puro */
+  --card-btn-text: var(--color-ink);
+  --card-btn-border: var(--color-ink);
+  --card-btn-bg: transparent;
+  --card-btn-hover-bg: var(--color-green);
+  --card-btn-hover-text: var(--color-ink);
+
+  /* 3.6. CAIXAS DE DESTAQUE ("SEU CARRINHO" & "SUGESTÃO DE USO") */
+  --box-highlight-bg: rgba(173, 235, 179, var(--alpha-soft));
+  --box-highlight-border-left: var(--color-green);
+  --box-highlight-title-text: var(--color-ink);
+  --box-highlight-body-text: var(--color-ink);
+
+  /* 3.7. CARRINHO DE COMPRAS E CHECKOUT */
+  --cart-item-border: var(--page-border-lines);
+  --cart-item-remove-btn: var(--color-cherry);
+  --cart-input-bg: var(--color-paper);
+  --cart-input-text: var(--color-ink);
+  --cart-input-border: var(--page-border-lines);
+  --cart-input-focus-border: var(--color-ink);
+  
+  --cart-submit-btn-bg: var(--color-green);
+  --cart-submit-btn-text: var(--color-ink);
+  --cart-submit-btn-border: var(--color-ink);
+  --cart-submit-btn-hover-bg: var(--color-ink);
+  --cart-submit-btn-hover-text: var(--color-paper);
+
+  /* 3.8. MODAL E CARROSSEL DE IMAGENS */
+  --modal-overlay-bg: rgba(0, 0, 0, var(--alpha-overlay));
+  --modal-body-bg: var(--color-paper);
+  --modal-body-border: var(--color-ink);
+  --modal-close-btn-text: var(--color-ink);
+  
+  --carousel-bg: var(--color-card-bg);
+  --carousel-nav-bg: rgba(0, 0, 0, 0.4);
+  --carousel-nav-text: var(--color-white);
+  --carousel-dot-inactive: rgba(255, 255, 255, 0.5);
+  --carousel-dot-active: var(--color-white);
+
+  --modal-add-btn-bg: var(--color-green);
+  --modal-add-btn-text: var(--color-ink);
+  --modal-add-btn-border: var(--color-ink);
+
+  /* 3.9. RODAPÉ E ÍCONES */
+  --footer-border: var(--page-border-lines);
+  --footer-icon-color: var(--color-black);
+  --badge-bg: var(--color-cherry);
+  --badge-text: var(--color-white);
+  --badge-shadow: rgba(0, 0, 0, 0.3);
 
   /* ==========================================================================
-     CORES DE OVERLAY, TRANSPARÊNCIAS E BORDAS (HEXADECIMAL)
-     ========================================================================== */
-  --line: #24271D38;                 /* Borda suave baseada no ink (22% opacity) */
-  --bg-radial: #ADEBB326;            /* Glow de fundo (15% opacity) */
-  --bg-accordion-content: #24271D09; /* Fundo do accordion aberto (3.5% opacity) */
-  --bg-button-hover: #ADEBB34D;      /* Hover em botões secundários (30% opacity) */
-  --bg-cherry-hover: #D32F2F14;      /* Hover no botão Cereja (8% opacity) */
-  --bg-box-highlight: #ADEBB326;     /* Fundo estilo "Sugestão de Uso" e Carrinho (15% opacity) */
-  --bg-modal-overlay: #000000A6;     /* Fundo do Modal (65% opacity) */
-  --bg-carousel-container: #E0D8C3;  /* Fundo da imagem do carrossel */
-  --bg-carousel-nav: #00000066;      /* Navegação do carrossel (40% opacity) */
-  --bg-dot-inactive: #FFFFFF80;     /* Indicador inativo do carrossel (50% opacity) */
-  --shadow-badge: #0000004D;         /* Sombra do contador do carrinho (30% opacity) */
-
-  /* ==========================================================================
-     TIPOGRAFIA
+     4. TIPOGRAFIA
      ========================================================================== */
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "DM Serif Display", serif;
