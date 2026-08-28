@@ -8,10 +8,10 @@ html {
 
 body {
   margin: 0;
-  color: var(--ink);
+  color: var(--page-text-color);
   background:
-    radial-gradient(circle at 72% 18%, var(--bg-radial), transparent 26rem),
-    var(--paper);
+    radial-gradient(circle at 72% 18%, var(--page-radial-glow), transparent 26rem),
+    var(--page-bg);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -63,7 +63,7 @@ a {
   line-height: 0.95;
   letter-spacing: -0.03em;
   text-transform: lowercase;
-  color: var(--ink);
+  color: var(--page-text-color);
 }
 
 .hub-bio {
@@ -78,7 +78,7 @@ a {
   font-size: clamp(0.92rem, 1.5vw, 1.05rem);
   font-weight: 400;
   line-height: 1.45;
-  color: var(--ink);
+  color: var(--page-text-color);
   opacity: 0.9;
 }
 
@@ -86,18 +86,18 @@ a {
   margin: 0;
   font-size: clamp(0.8rem, 1.3vw, 0.88rem);
   font-weight: 500;
-  color: var(--ink);
+  color: var(--page-text-color);
 }
 
 .hub-links {
   display: grid;
   width: 100%;
   margin-top: 40px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--page-border-lines);
 }
 
 .hub-link-item {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--page-border-lines);
 }
 
 .hub-link {
@@ -108,7 +108,7 @@ a {
   min-height: 80px;
   padding: 12px 16px;
   border: 0;
-  color: var(--ink);
+  color: var(--accordion-header-text);
   background: transparent;
   text-align: left;
   text-decoration: none;
@@ -122,14 +122,14 @@ button.hub-link:hover,
 button.hub-link:focus-visible {
   padding-right: 14px;
   padding-left: 22px;
-  color: var(--paper);
-  background: var(--ink);
+  color: var(--accordion-hover-text);
+  background: var(--accordion-hover-bg);
 }
 
 .hub-link-number {
   align-self: start;
   margin-top: 6px;
-  color: var(--ink);
+  color: var(--accordion-number-text);
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -138,7 +138,7 @@ a.hub-link:hover .hub-link-number,
 a.hub-link:focus-visible .hub-link-number,
 button.hub-link:hover .hub-link-number,
 button.hub-link:focus-visible .hub-link-number {
-  color: var(--brand-green);
+  color: var(--accordion-number-hover-text);
 }
 
 .hub-link-copy {
@@ -165,7 +165,7 @@ button.hub-link:focus-visible .hub-link-number {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  background: var(--bg-accordion-content);
+  background: var(--accordion-content-bg);
   transition: max-height 350ms ease-out, padding 350ms ease-out;
 }
 
@@ -178,7 +178,7 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 0 0 16px;
   font-size: clamp(0.88rem, 1.4vw, 0.96rem);
   line-height: 1.7;
-  color: var(--ink);
+  color: var(--page-text-color);
   text-align: left;
 }
 
@@ -189,11 +189,12 @@ button.hub-link:focus-visible .hub-link-number {
   flex-wrap: wrap;
 }
 
+/* Botões do Submenu */
 .sub-toggle-btn, .cacau-action-btn {
   padding: 10px 18px;
-  background: transparent;
-  border: 1px solid var(--ink);
-  color: var(--ink);
+  background: var(--btn-sub-bg);
+  border: 1px solid var(--btn-sub-border);
+  color: var(--btn-sub-text);
   font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 600;
@@ -204,30 +205,31 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .sub-toggle-btn:hover, .cacau-action-btn:hover {
-  background: var(--bg-button-hover);
+  background: var(--btn-sub-hover-bg);
 }
 
 .sub-toggle-btn.active, .cacau-action-btn.active {
-  background: var(--brand-green);
-  color: var(--ink);
-  border-color: var(--ink);
+  background: var(--btn-sub-active-bg);
+  color: var(--btn-sub-active-text);
+  border-color: var(--btn-sub-active-border);
 }
 
+/* Botão Cereja */
 .cacau-action-btn.btn-highlight {
-  background: transparent;
-  color: var(--cherry-accent);
-  border: 1px solid var(--cherry-accent);
+  background: var(--btn-cherry-bg);
+  color: var(--btn-cherry-text);
+  border: 1px solid var(--btn-cherry-border);
 }
 
 .cacau-action-btn.btn-highlight:hover {
-  background: var(--bg-cherry-hover);
+  background: var(--btn-cherry-hover-bg);
 }
 
 .sequence-box {
   display: none;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--page-border-lines);
   text-align: left;
 }
 
@@ -240,7 +242,7 @@ button.hub-link:focus-visible .hub-link-number {
   font-family: var(--display);
   font-size: 1.55rem;
   font-weight: 400;
-  color: var(--ink);
+  color: var(--page-text-color);
 }
 
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
@@ -252,7 +254,7 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 0;
   font-size: clamp(0.88rem, 1.4vw, 0.96rem);
   line-height: 1.7;
-  color: var(--ink);
+  color: var(--page-text-color);
   text-align: left;
 }
 
@@ -261,6 +263,7 @@ button.hub-link:focus-visible .hub-link-number {
   padding: 28px 20px;
 }
 
+/* Vitrine de Produtos */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -269,8 +272,8 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .product-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 16px 12px;
   text-align: center;
@@ -282,7 +285,7 @@ button.hub-link:focus-visible .hub-link-number {
 .product-thumb {
   width: 46px;
   height: 46px;
-  color: var(--ink);
+  color: var(--card-icon-color);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -298,19 +301,21 @@ button.hub-link:focus-visible .hub-link-number {
   font-size: 0.88rem;
   margin: 6px 0 4px;
   font-weight: 600;
+  color: var(--card-title-text);
 }
 
 .product-card .price-range {
   font-size: 0.75rem;
-  color: var(--ink);
+  color: var(--card-price-text);
   opacity: 0.8;
   margin: 0 0 12px;
 }
 
 .open-modal-btn {
   padding: 8px 14px;
-  background: transparent;
-  border: 1px solid var(--ink);
+  background: var(--card-btn-bg);
+  border: 1px solid var(--card-btn-border);
+  color: var(--card-btn-text);
   border-radius: 16px;
   font-size: 0.7rem;
   font-weight: 600;
@@ -320,15 +325,16 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .open-modal-btn:hover {
-  background: var(--brand-green);
-  color: var(--ink);
+  background: var(--card-btn-hover-bg);
+  color: var(--card-btn-hover-text);
 }
 
+/* Caixas de Destaque */
 .cart-summary-box {
   margin: 32px 0 16px;
   padding: 20px;
-  background: var(--bg-box-highlight);
-  border-left: 4px solid var(--brand-green);
+  background: var(--box-highlight-bg);
+  border-left: 4px solid var(--box-highlight-border-left);
   border-radius: 6px;
   text-align: left;
 }
@@ -337,7 +343,7 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 0 0 16px;
   font-family: var(--display);
   font-size: 1.35rem;
-  color: var(--ink);
+  color: var(--box-highlight-title-text);
   letter-spacing: -0.01em;
 }
 
@@ -353,7 +359,7 @@ button.hub-link:focus-visible .hub-link-number {
 .cart-empty-icon {
   width: 40px;
   height: 40px;
-  color: var(--ink);
+  color: var(--box-highlight-body-text);
   opacity: 0.6;
   margin-bottom: 10px;
 }
@@ -361,13 +367,13 @@ button.hub-link:focus-visible .hub-link-number {
 .cart-empty-title {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--box-highlight-body-text);
   margin: 0 0 4px;
 }
 
 .cart-empty-sub {
   font-size: 0.8rem;
-  color: var(--ink);
+  color: var(--box-highlight-body-text);
   opacity: 0.7;
   margin: 0;
 }
@@ -384,15 +390,15 @@ button.hub-link:focus-visible .hub-link-number {
   justify-content: space-between;
   align-items: center;
   font-size: 0.82rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--cart-item-border);
   padding-bottom: 8px;
-  color: var(--ink);
+  color: var(--box-highlight-body-text);
 }
 
 .cart-item button {
   background: none;
   border: none;
-  color: var(--cherry-accent);
+  color: var(--cart-item-remove-btn);
   cursor: pointer;
   font-size: 1.1rem;
   margin-left: 8px;
@@ -404,17 +410,17 @@ button.hub-link:focus-visible .hub-link-number {
   justify-content: space-between;
   font-weight: 600;
   margin: 16px 0 20px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--cart-item-border);
   padding-top: 12px;
   font-size: 0.95rem;
-  color: var(--ink);
+  color: var(--box-highlight-body-text);
 }
 
 .checkout-form h5 {
   margin: 0 0 12px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--box-highlight-body-text);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -423,25 +429,25 @@ button.hub-link:focus-visible .hub-link-number {
   width: 100%;
   padding: 10px 14px;
   margin-bottom: 10px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--cart-input-border);
   border-radius: 8px;
-  background: var(--paper);
+  background: var(--cart-input-bg);
   font-family: var(--sans);
   font-size: 0.8rem;
-  color: var(--ink);
+  color: var(--cart-input-text);
 }
 
 .checkout-form input:focus {
   outline: none;
-  border-color: var(--ink);
+  border-color: var(--cart-input-focus-border);
 }
 
 .checkout-submit-btn {
   width: 100%;
   padding: 12px;
-  background: var(--brand-green);
-  color: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--cart-submit-btn-bg);
+  color: var(--cart-submit-btn-text);
+  border: 1px solid var(--cart-submit-btn-border);
   border-radius: 20px;
   font-weight: 700;
   font-size: 0.85rem;
@@ -451,15 +457,15 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .checkout-submit-btn:hover {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--cart-submit-btn-hover-bg);
+  color: var(--cart-submit-btn-hover-text);
 }
 
 /* Modal e Carrossel */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: var(--bg-modal-overlay);
+  background: var(--modal-overlay-bg);
   display: none;
   justify-content: center;
   align-items: center;
@@ -472,12 +478,12 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .modal-body {
-  background: var(--paper);
+  background: var(--modal-body-bg);
   padding: 24px;
   width: min(100%, 720px);
   position: relative;
   text-align: left;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--modal-body-border);
   border-radius: 16px;
   max-height: 90vh;
   overflow-y: auto;
@@ -491,7 +497,7 @@ button.hub-link:focus-visible .hub-link-number {
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: var(--ink);
+  color: var(--modal-close-btn-text);
   z-index: 10;
 }
 
@@ -508,7 +514,7 @@ button.hub-link:focus-visible .hub-link-number {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
-  background: var(--bg-carousel-container);
+  background: var(--carousel-bg);
 }
 
 .carousel-track {
@@ -529,8 +535,8 @@ button.hub-link:focus-visible .hub-link-number {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--bg-carousel-nav);
-  color: var(--white);
+  background: var(--carousel-nav-bg);
+  color: var(--carousel-nav-text);
   border: none;
   padding: 6px 10px;
   cursor: pointer;
@@ -556,19 +562,19 @@ button.hub-link:focus-visible .hub-link-number {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--bg-dot-inactive);
+  background: var(--carousel-dot-inactive);
   cursor: pointer;
 }
 
 .carousel-dots .dot.active {
-  background: var(--white);
+  background: var(--carousel-dot-active);
 }
 
 .product-usage-box {
   margin: 16px 0;
   padding: 12px;
-  background: var(--bg-box-highlight);
-  border-left: 3px solid var(--brand-green);
+  background: var(--box-highlight-bg);
+  border-left: 3px solid var(--box-highlight-border-left);
   border-radius: 4px;
 }
 
@@ -577,7 +583,7 @@ button.hub-link:focus-visible .hub-link-number {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--ink);
+  color: var(--box-highlight-title-text);
   margin-bottom: 4px;
 }
 
@@ -585,6 +591,7 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 0 !important;
   font-size: 0.8rem !important;
   line-height: 1.5 !important;
+  color: var(--box-highlight-body-text) !important;
 }
 
 .variants-list {
@@ -600,6 +607,7 @@ button.hub-link:focus-visible .hub-link-number {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--page-text-color);
 }
 
 .variant-opt.disabled {
@@ -610,9 +618,9 @@ button.hub-link:focus-visible .hub-link-number {
 .add-to-cart-btn {
   width: 100%;
   padding: 12px;
-  background: var(--brand-green);
-  color: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--modal-add-btn-bg);
+  color: var(--modal-add-btn-text);
+  border: 1px solid var(--modal-add-btn-border);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
@@ -630,7 +638,7 @@ button.hub-link:focus-visible .hub-link-number {
   padding: 20px 0;
   display: flex;
   justify-content: center;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--footer-border);
   margin-top: auto;
 }
 
@@ -642,7 +650,7 @@ button.hub-link:focus-visible .hub-link-number {
 
 .footer-icons a,
 .footer-cart-link {
-  color: var(--black);
+  color: var(--footer-icon-color);
   width: 24px;
   height: 24px;
   display: inline-flex;
@@ -670,8 +678,8 @@ button.hub-link:focus-visible .hub-link-number {
   position: absolute;
   top: -6px;
   right: -8px;
-  background: var(--cherry-accent);
-  color: var(--white);
+  background: var(--badge-bg);
+  color: var(--badge-text);
   font-size: 0.65rem;
   width: 17px;
   height: 17px;
@@ -680,11 +688,11 @@ button.hub-link:focus-visible .hub-link-number {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  box-shadow: 0 1px 4px var(--shadow-badge);
+  box-shadow: 0 1px 4px var(--badge-shadow);
 }
 
 :focus-visible {
-  outline: 2px solid var(--ink);
+  outline: 2px solid var(--page-text-color);
   outline-offset: 4px;
 }
 
