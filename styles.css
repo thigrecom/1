@@ -1,15 +1,23 @@
+/* ==========================================================================
+   VARIAVEIS DE COR E ESTILO
+   ========================================================================== */
 :root {
   --ink: #24271d;
   --paper: #f2eddf;
   --paper-deep: #e4dcc8;
   --acid: #d6df3c;
   --leaf: #697253;
-  --dark-green: #2c3827; /* Verde Escuro Selecionado */
+  /* Verde escuro ajustado para um tom Verde Folha / Botânico mais visível */
+  --dark-green: #2e5a39; 
+  --dark-green-hover: #23472c;
   --line: rgba(36, 39, 29, 0.22);
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "DM Serif Display", serif;
 }
 
+/* ==========================================================================
+   RESET E ESTRUTURA BASE
+   ========================================================================== */
 * {
   box-sizing: border-box;
 }
@@ -101,6 +109,9 @@ a {
   color: var(--leaf);
 }
 
+/* ==========================================================================
+   ACCORDION & HUBS DE NAVEGAÇÃO
+   ========================================================================== */
 .hub-links {
   display: grid;
   width: 100%;
@@ -170,7 +181,7 @@ button.hub-link:focus-visible .hub-link-number {
   transition: transform 220ms ease;
 }
 
-/* Transições do Accordion */
+/* TRANSIÇÕES DO ACCORDION */
 .accordion-toggle[aria-expanded="true"] .hub-link-arrow {
   transform: rotate(180deg);
 }
@@ -195,7 +206,9 @@ button.hub-link:focus-visible .hub-link-number {
   text-align: left;
 }
 
-/* 2. Botões dentro do menu: design refinado com cantos arredondados e cor verde escuro quando selecionado */
+/* ==========================================================================
+   1 & 2. BOTÕES DE NAVEGAÇÃO DAS ABAS (LINHAGEM & CACAU)
+   ========================================================================== */
 .sequence-nav {
   display: flex;
   gap: 12px;
@@ -217,7 +230,7 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .sub-toggle-btn:hover {
-  background: rgba(44, 56, 39, 0.1);
+  background: rgba(46, 90, 57, 0.12);
 }
 
 .sub-toggle-btn.active {
@@ -226,7 +239,6 @@ button.hub-link:focus-visible .hub-link-number {
   border-color: var(--dark-green);
 }
 
-/* 3. Título do próximo assunto levemente maior e em verde escuro */
 .sequence-box {
   display: none;
   margin-top: 20px;
@@ -242,19 +254,19 @@ button.hub-link:focus-visible .hub-link-number {
 .section-title {
   margin: 0 0 14px;
   font-family: var(--display);
-  font-size: 1.55rem; /* Aumentado levemente */
+  font-size: 1.55rem;
   font-weight: 400;
   color: var(--dark-green); /* Verde Escuro */
 }
 
-/* Accordion Cacau Cerimonial */
+/* ACCORDION CACAU CERIMONIAL */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
-  max-height: 600px;
+  max-height: 800px;
   padding: 28px 32px;
 }
 
 .cacau-content p {
-  margin: 0;
+  margin: 0 0 12px;
   font-size: clamp(0.88rem, 1.4vw, 0.96rem);
   line-height: 1.7;
   color: var(--ink);
@@ -276,7 +288,7 @@ button.hub-link:focus-visible .hub-link-number {
   text-decoration: none;
   font-weight: 500;
   border: none;
-  border-radius: 20px; /* Cantos arredondados */
+  border-radius: 20px;
   cursor: pointer;
   transition: background 180ms ease;
 }
@@ -285,7 +297,9 @@ button.hub-link:focus-visible .hub-link-number {
   background: var(--dark-green);
 }
 
-/* Accordion Loja */
+/* ==========================================================================
+   3. PRODUTOS & SUGESTÃO DE USO
+   ========================================================================== */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
   max-height: 3500px;
   padding: 28px 20px;
@@ -293,7 +307,7 @@ button.hub-link:focus-visible .hub-link-number {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 16px;
   margin-bottom: 32px;
 }
@@ -336,6 +350,32 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 0 0 12px;
 }
 
+/* Caixa com a Sugestão de Uso (Item 3) */
+.usage-suggestion-box {
+  margin: 14px 0;
+  padding: 12px;
+  background: rgba(46, 90, 57, 0.05);
+  border-left: 3px solid var(--dark-green);
+  border-radius: 6px;
+  text-align: left;
+}
+
+.usage-suggestion-box h5 {
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--dark-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.usage-suggestion-box p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
 .open-modal-btn {
   padding: 8px 14px;
   background: transparent;
@@ -354,42 +394,76 @@ button.hub-link:focus-visible .hub-link-number {
   border-color: var(--dark-green);
 }
 
-/* Carrinho e Checkout na Loja */
+/* ==========================================================================
+   4. CARRINHO & CHECKOUT (DESIGN REFINADO COM ESPAÇAMENTO E CEP)
+   ========================================================================== */
 .cart-summary-box {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 28px 24px;
   text-align: left;
+  /* Espaçamento fora dos menus superiores para diferenciar o carrinho */
+  margin-top: 48px;
+  box-shadow: 0 6px 20px rgba(36, 39, 29, 0.05);
 }
 
 .cart-summary-box h4 {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   font-family: var(--display);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.cart-items-list {
+/* Estado: Carrinho Vazio */
+.empty-cart-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.empty-cart-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--leaf);
   margin-bottom: 12px;
+  opacity: 0.8;
 }
 
 .empty-cart-msg {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.empty-cart-subtext {
   font-size: 0.8rem;
   color: var(--leaf);
   margin: 0;
+}
+
+/* Estado: Carrinho com Itens */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 6px;
+  padding-bottom: 10px;
 }
 
 .cart-item button {
@@ -402,24 +476,29 @@ button.hub-link:focus-visible .hub-link-number {
   line-height: 1;
 }
 
-.cart-total-row {
-  display: flex;
-  justify-content: space-between;
+/* Campo para CEP */
+.cep-box {
+  margin: 18px 0;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.cep-box label {
+  display: block;
+  font-size: 0.78rem;
   font-weight: 600;
-  margin: 12px 0 20px;
-  border-top: 1px solid var(--ink);
-  padding-top: 8px;
+  color: var(--ink);
+  margin-bottom: 6px;
 }
 
-.checkout-form h5 {
-  margin: 0 0 8px;
-  font-size: 0.85rem;
+.cep-input-group {
+  display: flex;
+  gap: 8px;
 }
 
-.checkout-form input {
-  width: 100%;
-  padding: 10px 14px;
-  margin-bottom: 8px;
+.cep-input-group input {
+  flex: 1;
+  padding: 9px 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: transparent;
@@ -428,24 +507,53 @@ button.hub-link:focus-visible .hub-link-number {
   color: var(--ink);
 }
 
+.cep-calc-btn {
+  padding: 9px 16px;
+  background: transparent;
+  border: 1px solid var(--dark-green);
+  color: var(--dark-green);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.cep-calc-btn:hover {
+  background: var(--dark-green);
+  color: #ffffff;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 16px 0 20px;
+  border-top: 1px solid var(--ink);
+  padding-top: 12px;
+}
+
 .checkout-submit-btn {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: var(--dark-green);
   color: #ffffff;
   border: none;
   border-radius: 20px;
   font-weight: 600;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   cursor: pointer;
-  transition: opacity 180ms ease;
+  transition: background 180ms ease, opacity 180ms ease;
 }
 
 .checkout-submit-btn:hover {
-  opacity: 0.9;
+  background: var(--dark-green-hover);
 }
 
-/* 5. Modal Layout com Carrossel 1:1 */
+/* ==========================================================================
+   5. MODAL DE PRODUTO COM CARROSSEL 1:1
+   ========================================================================== */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -492,7 +600,7 @@ button.hub-link:focus-visible .hub-link-number {
   align-items: start;
 }
 
-/* Carrossel 1:1 */
+/* CARROSSEL 1:1 */
 .modal-carousel-container {
   position: relative;
   width: 100%;
@@ -585,14 +693,16 @@ button.hub-link:focus-visible .hub-link-number {
   cursor: pointer;
   font-weight: 600;
   font-size: 0.8rem;
-  transition: opacity 180ms ease;
+  transition: background 180ms ease, opacity 180ms ease;
 }
 
 .add-to-cart-btn:hover {
-  opacity: 0.9;
+  background: var(--dark-green-hover);
 }
 
-/* 1. Footer sem Bugs e Ícones */
+/* ==========================================================================
+   FOOTER E ACESSIBILIDADE
+   ========================================================================== */
 .hub-footer {
   width: 100%;
   padding: 20px 0;
@@ -655,7 +765,9 @@ button.hub-link:focus-visible .hub-link-number {
   outline-offset: 4px;
 }
 
-/* Responsividade Mobile (Item 5: Imagem acima no mobile) */
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE
+   ========================================================================== */
 @media (max-width: 640px) {
   .product-modal-layout {
     grid-template-columns: 1fr;
@@ -678,350 +790,4 @@ button.hub-link:focus-visible .hub-link-number {
   .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
     padding: 22px 20px;
   }
-}
-/* ==========================================================================
-   VARIAVEIS DE COR E ESTILO
-   ========================================================================== */
-:root {
-  /* Tom verde folha botânico ajustado para melhor contraste */
-  --color-green-leaf: #2e5a39; 
-  --color-green-leaf-hover: #23472c;
-  
-  --color-background: #fcfbf7;
-  --color-surface: #ffffff;
-  --color-text-main: #1c1c1c;
-  --color-text-muted: #666666;
-  --color-border: #e2e2dd;
-
-  --font-family: 'Helvetica Neue', Arial, sans-serif;
-  --border-radius: 8px;
-}
-
-/* ==========================================================================
-   RESET E BASE
-   ========================================================================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text-main);
-  font-family: var(--font-family);
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section {
-  padding: 60px 20px;
-}
-
-.section-title {
-  color: var(--color-green-leaf);
-  font-size: 1.8rem;
-  margin-bottom: 24px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-/* ==========================================================================
-   NAVEGAÇÃO
-   ========================================================================== */
-.header {
-  background-color: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--color-green-leaf);
-  letter-spacing: 2px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--color-text-main);
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: var(--color-green-leaf);
-}
-
-/* ==========================================================================
-   TABS E BOTÕES DAS SEÇÕES
-   ========================================================================== */
-.tab-buttons {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  background-color: transparent;
-  border: 1px solid var(--color-green-leaf);
-  color: var(--color-green-leaf);
-  padding: 10px 18px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.tab-btn:hover,
-.tab-btn.active {
-  background-color: var(--color-green-leaf);
-  color: #ffffff;
-}
-
-.tab-btn.action-btn {
-  border-style: dashed;
-}
-
-.tab-content {
-  display: none;
-  background-color: var(--color-surface);
-  padding: 24px;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-border);
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.tab-content p {
-  margin-bottom: 16px;
-}
-
-.tab-content p:last-child {
-  margin-bottom: 0;
-}
-
-.prep-box {
-  background-color: var(--color-background);
-  padding: 16px;
-  border-left: 4px solid var(--color-green-leaf);
-  border-radius: 4px;
-}
-
-/* ==========================================================================
-   DETALHES DO PRODUTO & SUGESTÃO DE USO
-   ========================================================================== */
-.product-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  padding: 32px;
-}
-
-.product-info h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-}
-
-.price {
-  font-size: 1.25rem;
-  color: var(--color-green-leaf);
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
-.usage-suggestion {
-  background-color: var(--color-background);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  margin-bottom: 24px;
-}
-
-.usage-suggestion h4 {
-  color: var(--color-green-leaf);
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.usage-suggestion p {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-}
-
-/* ==========================================================================
-   AJUSTES DO CARRINHO (ITEM 4)
-   ========================================================================== */
-.cart-wrapper {
-  margin-top: 60px; /* Espaçamento externo destacado para diferenciar dos menus */
-  padding-top: 40px;
-  border-top: 2px dashed var(--color-border);
-}
-
-.cart-box {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  padding: 40px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-}
-
-/* Estado 1: Carrinho Vazio */
-.cart-box.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 48px 20px;
-}
-
-.cart-icon {
-  color: var(--color-green-leaf);
-  margin-bottom: 16px;
-}
-
-.cart-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--color-text-main);
-  margin-bottom: 4px;
-}
-
-.cart-subtitle {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-}
-
-/* Estado 2: Carrinho Cheio */
-.cart-items {
-  margin-bottom: 24px;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.item-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.item-name {
-  font-weight: 600;
-}
-
-.item-qty {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-
-.btn-remove {
-  background: none;
-  border: none;
-  color: #c93b2b;
-  font-size: 0.85rem;
-  cursor: pointer;
-}
-
-.cep-calculator {
-  margin: 24px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.cep-calculator label {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-}
-
-.cep-input-group {
-  display: flex;
-  gap: 8px;
-  max-width: 300px;
-}
-
-.cep-input-group input {
-  padding: 10px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  font-size: 0.95rem;
-  flex: 1;
-}
-
-.cart-total {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  margin-bottom: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
-}
-
-/* ==========================================================================
-   BOTÕES GERAIS
-   ========================================================================== */
-.btn-primary {
-  background-color: var(--color-green-leaf);
-  color: #ffffff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-green-leaf-hover);
-}
-
-.btn-primary.full-width {
-  width: 100%;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border: 1px solid var(--color-green-leaf);
-  color: var(--color-green-leaf);
-  padding: 10px 16px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-green-leaf);
-  color: #ffffff;
 }
