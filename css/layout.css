@@ -1,0 +1,30 @@
+/* Layout Base */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.main-content {
+  min-height: 80vh;
+}
+
+/* Seções da Home */
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f4f4f4;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #666666;
+}
