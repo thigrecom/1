@@ -23,7 +23,7 @@
       <header class="hub-header">
         <h1 id="hub-title">thigre</h1>
         <div class="hub-bio">
-          <p class="hub-tagline">Cacau em sua forma mais pura, íntegra e ancestral.</p>
+          <p class="hub-tagline">Cacau em sua forma mais pura, integra e ancestral.</p>
           <p class="hub-origin">Itacaré &amp; Maraú · Bahia</p>
         </div>
       </header>
@@ -55,7 +55,7 @@
             <div id="seq-travessia" class="sequence-box">
               <h4 class="section-title">A Coragem da Travessia</h4>
               <p>Existimos porque outros tiveram a coragem de cruzar o desconhecido e deixar para trás a terra natal. Reaprender a ler a terra, entender novos climas e seguir a plantar.</p>
-              <p>Um roteiro que segue de Grécia à Itália, cruza o oceano e desembarca em solo paulista a cultivar café, e agora habita em solo fértil na Bahia.</p>
+              <p>Um roteiro que segue de Grécia à Itália, cruza o oceano e desmbarca em solo paulista a cultivar café, e agora habita em solo fértil na Bahia.</p>
               <p><em>Thigre é o sangue que não tem medo de mover-se e renovar-se.</em></p>
             </div>
 
@@ -358,8 +358,6 @@
       });
 
       function updateCarousel() {
-        const slidesCount = track.children.length;
-        if (slidesCount === 0) return;
         track.style.transform = `translateX(-${currentSlide * 100}%)`;
         document.querySelectorAll('.carousel-dots .dot').forEach((dot, idx) => {
           dot.classList.toggle('active', idx === currentSlide);
@@ -367,16 +365,12 @@
       }
 
       document.getElementById('carousel-prev').addEventListener('click', () => {
-        const slidesCount = track.children.length;
-        if (slidesCount === 0) return;
-        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slidesCount - 1;
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : 2;
         updateCarousel();
       });
 
       document.getElementById('carousel-next').addEventListener('click', () => {
-        const slidesCount = track.children.length;
-        if (slidesCount === 0) return;
-        currentSlide = (currentSlide < slidesCount - 1) ? currentSlide + 1 : 0;
+        currentSlide = (currentSlide < 2) ? currentSlide + 1 : 0;
         updateCarousel();
       });
 
