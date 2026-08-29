@@ -40,6 +40,32 @@ const PRODUCTS_DATA = {
     desc: "Nibs de cacau crocantes selecionados e tostados suavemente.",
     usage: "Adicione a frutas, iogurtes, smoothies ou consuma como topping crocante."
   },
+  kitcerimonial: {
+    name: "Kit Cacau Cerimonial",
+    images: [
+      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80"
+    ],
+    variants: [
+      { name: "Kit Completo (200g Cacau 100% + Cabaça Ritualística)", price: 120.00, available: true }
+    ],
+    desc: "Experiência ritualística guiada. Inclui porção de Cacau Cerimonial 100% selecionado e cabaça artesanal para o preparo e consagração da medicina.",
+    usage: "Acompanha guia explicativo de consagração e ritual de abertura do Chakra Cardíaco."
+  },
+  cabaca: {
+    name: "Cabaça de Cacau",
+    images: [
+      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+    ],
+    variants: [
+      { name: "O Fruto (Unidade artesanal)", price: 6.00, available: true }
+    ],
+    desc: "Fruto de cacau nativo e artesanal (# O Fruto).",
+    usage: "Pode ser utilizado para consumo in natura das amêndoas ou uso decorativo e ritualístico."
+  },
   cha: {
     name: "Chá de Casca de Cacau",
     images: [
@@ -48,7 +74,7 @@ const PRODUCTS_DATA = {
       "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
     ],
     variants: [
-      { name: "Infusão natural", price: 5.00, available: true }
+      { name: "Infusão natural (# energia sutil)", price: 5.00, available: true }
     ],
     desc: "Infusão aromática e leve extraída diretamente da casca natural do cacau.",
     usage: "Infusione 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
@@ -61,35 +87,26 @@ const PRODUCTS_DATA = {
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
     ],
     variants: [
-      { name: "60g", price: 5.00, available: true }
+      { name: "60g (# estimulante)", price: 5.00, available: true }
     ],
     desc: "Sementes selecionadas de Feno Grego para vitalidade e infusão.",
     usage: "Utilize em decocção para chás fortificantes ou como especiaria em preparos culinários."
   },
-  cabaca: {
-    name: "Cabaça de Cacau",
-    images: [
-      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
-    ],
-    variants: [
-      { name: "O fruto", price: 6.00, available: true }
-    ],
-    desc: "Fruto de cacau nativo e artesanal.",
-    usage: "Pode ser utilizado para consumo in natura das amêndoas ou uso decorativo e ritualístico."
-  },
-  babosa: {
-    name: "Muda de Babosa",
+  viveiro: {
+    name: "Viveiro e Mudas",
     images: [
       "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
     ],
     variants: [
-      { name: "Unidade", price: 12.00, available: true }
+      { name: "Muda de Babosa", price: 12.00, available: true },
+      { name: "Muda de Cacau", price: 18.00, available: true },
+      { name: "Muda de Pitaya", price: 15.00, available: true },
+      { name: "Muda de Arruda", price: 10.00, available: true },
+      { name: "Comigo Ninguém Pode (Vaso adulto - 90cm)", price: 45.00, available: true }
     ],
-    desc: "Muda saudável e orgânica de Aloe Vera cultivada no sítio.",
-    usage: "Plante em solo drenado e com boa exposição solar para cultivo doméstico."
+    desc: "Mudas saudáveis e adaptadas ao clima tropical, cultivadas de forma orgânica no sítio.",
+    usage: "Plante em solo drenado e com boa iluminação solar. Vaso adulto de Comigo Ninguém Pode requer retirada ou entrega combinada na região."
   }
 };
