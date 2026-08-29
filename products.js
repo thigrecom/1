@@ -1,6 +1,7 @@
 const PRODUCTS_DATA = {
   cacau100: {
     name: "Cacau 100%",
+    tag: "# intenso",
     images: [
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
@@ -13,35 +14,9 @@ const PRODUCTS_DATA = {
     desc: "Cacau cerimonial puro 100%, prensado artesanalmente preservando a manteiga natural de cacau e teobromina.",
     usage: "Ideal para rituais matinais ou momentos de foco. Dilua 15g em 300ml de água quente e misture bem."
   },
-  cacau70: {
-    name: "Cacau 70%",
-    images: [
-      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80"
-    ],
-    variants: [
-      { name: "60g", price: 0, available: false },
-      { name: "220g", price: 77.00, available: true }
-    ],
-    desc: "Equilíbrio perfeito entre a intensidade do cacau e o dulçor harmônico.",
-    usage: "Consumo direto em pequenos pedaços para degustação consciente durante a tarde."
-  },
-  nibs: {
-    name: "Nibs de Cacau",
-    images: [
-      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
-    ],
-    variants: [
-      { name: "70g", price: 11.00, available: true }
-    ],
-    desc: "Nibs de cacau crocantes selecionados e tostados suavemente.",
-    usage: "Adicione a frutas, iogurtes, smoothies ou consuma como topping crocante."
-  },
   kitcerimonial: {
     name: "Kit Cacau Cerimonial",
+    tag: "# consagre",
     images: [
       "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
@@ -53,8 +28,23 @@ const PRODUCTS_DATA = {
     desc: "Experiência ritualística guiada. Inclui porção de Cacau Cerimonial 100% selecionado e cabaça artesanal para o preparo e consagração da medicina.",
     usage: "Acompanha guia explicativo de consagração e ritual de abertura do Chakra Cardíaco."
   },
+  nibs: {
+    name: "Nibs de Cacau",
+    tag: "# crocante",
+    images: [
+      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+    ],
+    variants: [
+      { name: "70g", price: 11.00, available: true }
+    ],
+    desc: "Nibs de cacau crocantes selecionados e tostados suavemente.",
+    usage: "Adicione a frutas, iogurtes, smoothies ou consuma como topping crocante."
+  },
   cabaca: {
     name: "Cabaça de Cacau",
+    tag: "# O Fruto",
     images: [
       "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
@@ -68,6 +58,7 @@ const PRODUCTS_DATA = {
   },
   cha: {
     name: "Chá de Casca de Cacau",
+    tag: "# energia sutil",
     images: [
       "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
@@ -81,6 +72,7 @@ const PRODUCTS_DATA = {
   },
   fenogrego: {
     name: "Feno Grego",
+    tag: "# estimulante",
     images: [
       "https://images.unsplash.com/photo-1509358271058-acd05cc93898?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
@@ -94,6 +86,7 @@ const PRODUCTS_DATA = {
   },
   viveiro: {
     name: "Viveiro e Mudas",
+    tag: "# plante",
     images: [
       "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
