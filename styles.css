@@ -28,6 +28,7 @@ body::before {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 .hub-shell {
@@ -111,7 +112,6 @@ a {
   color: var(--accordion-header-text);
   background: transparent;
   text-align: left;
-  text-decoration: none;
   cursor: pointer;
   transition: color 220ms ease, background-color 220ms ease, padding 220ms ease;
 }
@@ -189,7 +189,6 @@ button.hub-link:focus-visible .hub-link-number {
   flex-wrap: wrap;
 }
 
-/* Sub-botões padrão */
 .sub-toggle-btn, .cacau-action-btn {
   padding: 10px 18px;
   background: var(--btn-sub-bg);
@@ -201,7 +200,7 @@ button.hub-link:focus-visible .hub-link-number {
   border-radius: 20px;
   cursor: pointer;
   transition: all 220ms ease;
-  text-decoration: none;
+
 }
 
 .sub-toggle-btn:hover, .cacau-action-btn:hover {
@@ -214,7 +213,6 @@ button.hub-link:focus-visible .hub-link-number {
   border-color: var(--btn-sub-active-border);
 }
 
-/* Botão "Compre seu Cacau" mantendo o padrão de cores original */
 .cacau-action-btn.btn-highlight {
   background: var(--btn-cherry-bg);
   color: var(--btn-cherry-text);
@@ -258,18 +256,36 @@ button.hub-link:focus-visible .hub-link-number {
   text-align: left;
 }
 
-/* Seção Loja */
+/* Seção Empório Thigre */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
-  max-height: 4000px;
+  max-height: 5000px;
   padding: 28px 20px;
   background: var(--loja-container-bg);
   border-radius: 0 0 12px 12px;
 }
 
-/* Cards da Loja com Imagem */
+.fixed-line-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ocean);
+  text-align: left;
+  margin: 0 0 10px 4px;
+}
+
+.fixed-line-group {
+  border: 1px dashed var(--color-ocean);
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(26, 95, 122, 0.02);
+  margin-bottom: 24px !important;
+}
+
+/* Configuração de Colunas da Grade: 2 colunas Web, 1 coluna Mobile */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -278,11 +294,12 @@ button.hub-link:focus-visible .hub-link-number {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 14px;
-  padding: 12px;
+  padding: 14px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   transition: transform 200ms ease, box-shadow 200ms ease;
@@ -293,9 +310,22 @@ button.hub-link:focus-visible .hub-link-number {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+.product-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
 .product-thumb {
   width: 100%;
-  height: 110px;
+  height: 120px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -314,8 +344,8 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .product-card h3 {
-  font-size: 0.9rem;
-  margin: 4px 0 2px;
+  font-size: 0.92rem;
+  margin: 6px 0 2px;
   font-weight: 600;
   color: var(--card-title-text);
 }
@@ -330,12 +360,12 @@ button.hub-link:focus-visible .hub-link-number {
 
 .open-modal-btn {
   width: 100%;
-  padding: 8px 12px;
+  padding: 9px 12px;
   background: var(--card-btn-bg);
   border: 1px solid var(--card-btn-border);
   color: var(--card-btn-text);
   border-radius: 18px;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: auto;
@@ -347,7 +377,7 @@ button.hub-link:focus-visible .hub-link-number {
   color: var(--card-btn-hover-text);
 }
 
-/* Caixas de Destaque */
+/* Carrinho */
 .cart-summary-box {
   margin: 32px 0 16px;
   padding: 22px;
@@ -434,7 +464,6 @@ button.hub-link:focus-visible .hub-link-number {
   color: var(--box-highlight-body-text);
 }
 
-/* Novo texto descritivo do Checkout */
 .checkout-form h5 {
   margin: 0 0 14px;
   font-size: 0.82rem;
@@ -463,7 +492,6 @@ button.hub-link:focus-visible .hub-link-number {
   border-color: var(--cart-input-focus-border);
 }
 
-/* Botão do Checkout (Verde WhatsApp) */
 .checkout-submit-btn {
   width: 100%;
   padding: 13px 16px;
@@ -657,14 +685,21 @@ button.hub-link:focus-visible .hub-link-number {
   opacity: 0.85;
 }
 
-/* Footer */
+/* Footer Estruturado */
 .hub-footer {
   width: 100%;
-  padding: 20px 0;
+  padding: 24px 0;
   display: flex;
   justify-content: center;
   border-top: 1px solid var(--footer-border);
   margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
 
 .footer-icons {
@@ -716,12 +751,47 @@ button.hub-link:focus-visible .hub-link-number {
   box-shadow: 0 1px 4px var(--badge-shadow);
 }
 
+/* Sub-navegação do Rodapé (Links Discretos) */
+.footer-subnav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  opacity: 0.75;
+}
+
+.footer-sublink {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--footer-icon-color);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: opacity 180ms ease;
+}
+
+.footer-sublink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.dot-separator {
+  font-size: 0.6rem;
+  color: var(--footer-icon-color);
+}
+
 :focus-visible {
   outline: 2px solid var(--page-text-color);
   outline-offset: 4px;
 }
 
+/* Ajuste Responsivo para Versão Mobile (1 Coluna) */
 @media (max-width: 640px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
   .product-modal-layout {
     grid-template-columns: 1fr;
     gap: 16px;
