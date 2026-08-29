@@ -1,0 +1,78 @@
+/* Container da Loja */
+.shop-container {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Ajuste item 2: Grade padrão de produtos (3 colunas Web / 2 colunas Mobile) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card de Produto Padrão */
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+/* Ajuste item 1: Design exclusivo para "Cacao Concept" */
+/* Fundo cinza claro, contorno branco, contorno azul e SEMPRE 2 colunas */
+.cacao-concept-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Força 2 colunas na Web e no Mobile */
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cacao-concept-grid .product-card {
+  background-color: #f0f0f0; /* Fundo cinza claro */
+  border: 2px solid #ffffff;  /* Contorno branco */
+  outline: 2px solid #0056b3; /* Contorno de cor azul */
+  box-shadow: 0 0 0 2px #0056b3; /* Suporte para renderização do contorno duplo */
+}
