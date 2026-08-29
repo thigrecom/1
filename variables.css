@@ -1,40 +1,28 @@
 :root {
-  /* ==========================================================================
-     1. PALETA BASE (Consolidação de Tons Próximos)
-     ========================================================================== */
-  --color-ink: #24271D;          /* Tom escuro principal */
-  --color-paper: #F2EDDF;        /* Tom claro de fundo (paper/off-white padrão) */
-  --color-paper-light: #F9F6EE;  /* Off-white mais claro para botões/cards */
-  --color-ocean: #1A5F7A;        /* Azul Oceano / Azul Mar */
-  --color-ocean-light: #2C88AD;  /* Azul Oceano claro (hover) */
-  --color-whatsapp: #25D366;     /* Verde padrão WhatsApp */
-  --color-whatsapp-hover: #1EBE5D;/* Verde WhatsApp hover */
-  --color-cherry: #D32F2F;       /* Cor Cereja de destaque */
-  --color-white: #FFFFFF;        /* Branco puro */
-  --color-black: #000000;        /* Preto puro */
-  --color-card-bg: #EAE4D3;      /* Fundo suavizado para os cards da loja */
-  --color-loja-bg: rgba(26, 95, 122, 0.04); /* Fundo sutil do container da loja */
+  --color-ink: #24271D;
+  --color-paper: #F2EDDF;
+  --color-paper-light: #F9F6EE;
+  --color-ocean: #1A5F7A;
+  --color-ocean-light: #2C88AD;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE5D;
+  --color-cherry: #D32F2F;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-card-bg: #EAE4D3;
+  --color-loja-bg: rgba(26, 95, 122, 0.04);
 
-  /* ==========================================================================
-     2. TRANSPARÊNCIAS E OPACIDADES UNIFICADAS
-     ========================================================================== */
-  --alpha-subtle: 0.04;          
-  --alpha-hover: 0.10;           
-  --alpha-soft: 0.15;            
-  --alpha-line: 0.22;            
-  --alpha-overlay: 0.65;         
+  --alpha-subtle: 0.04;
+  --alpha-hover: 0.10;
+  --alpha-soft: 0.15;
+  --alpha-line: 0.22;
+  --alpha-overlay: 0.65;
 
-  /* ==========================================================================
-     3. CONFIGURAÇÕES DE COR POR COMPONENTE / SEÇÃO
-     ========================================================================== */
-
-  /* 3.1. CONFIGURAÇÕES GERAIS DA PÁGINA */
   --page-bg: var(--color-paper);
   --page-text-color: var(--color-ink);
-  --page-radial-glow: rgba(26, 95, 122, 0.08); 
+  --page-radial-glow: rgba(26, 95, 122, 0.08);
   --page-border-lines: rgba(36, 39, 29, var(--alpha-line));
 
-  /* 3.2. ACCORDION PRINCIPAL (MENU DE LINKS) */
   --accordion-header-text: var(--color-ink);
   --accordion-number-text: var(--color-ink);
   --accordion-number-hover-text: var(--color-ocean-light);
@@ -42,7 +30,6 @@
   --accordion-hover-text: var(--color-paper);
   --accordion-content-bg: rgba(36, 39, 29, var(--alpha-subtle));
 
-  /* 3.3. BOTÕES DOS SUBMENUS (PADRÃO AZUL OCEANO) */
   --btn-sub-text: var(--color-ocean);
   --btn-sub-border: var(--color-ocean);
   --btn-sub-bg: transparent;
@@ -51,51 +38,46 @@
   --btn-sub-active-text: var(--color-white);
   --btn-sub-active-border: var(--color-ocean);
 
-  /* 3.4. BOTÃO DE DESTAQUE "COMPRE SEU CACAU" (MANTÉM DESIGN DE CORES NO MODO PADRÃO) */
   --btn-cherry-text: var(--color-ocean);
   --btn-cherry-border: var(--color-ocean);
   --btn-cherry-bg: transparent;
   --btn-cherry-hover-bg: rgba(26, 95, 122, 0.1);
 
-  /* 3.5. CARD DE PRODUTO (VITRINE) */
   --card-bg: var(--color-card-bg);
   --card-border: rgba(36, 39, 29, 0.12);
   --card-title-text: var(--color-ink);
   --card-price-text: var(--color-ink);
-  
+
   --card-btn-text: var(--color-white);
   --card-btn-border: var(--color-ocean);
   --card-btn-bg: var(--color-ocean);
   --card-btn-hover-bg: var(--color-ocean-light);
   --card-btn-hover-text: var(--color-white);
 
-  /* 3.6. CAIXAS DE DESTAQUE E CONTAINER DA LOJA */
   --loja-container-bg: var(--color-loja-bg);
   --box-highlight-bg: rgba(26, 95, 122, 0.06);
   --box-highlight-border-left: var(--color-ocean);
   --box-highlight-title-text: var(--color-ink);
   --box-highlight-body-text: var(--color-ink);
 
-  /* 3.7. CARRINHO DE COMPRAS E CHECKOUT (VERDE WHATSAPP) */
   --cart-item-border: var(--page-border-lines);
   --cart-item-remove-btn: var(--color-cherry);
   --cart-input-bg: var(--color-paper);
   --cart-input-text: var(--color-ink);
   --cart-input-border: var(--page-border-lines);
   --cart-input-focus-border: var(--color-ocean);
-  
+
   --cart-submit-btn-bg: var(--color-whatsapp);
   --cart-submit-btn-text: var(--color-white);
   --cart-submit-btn-border: var(--color-whatsapp);
   --cart-submit-btn-hover-bg: var(--color-whatsapp-hover);
   --cart-submit-btn-hover-text: var(--color-white);
 
-  /* 3.8. MODAL E CARROSSEL DE IMAGENS */
   --modal-overlay-bg: rgba(0, 0, 0, var(--alpha-overlay));
   --modal-body-bg: var(--color-paper);
   --modal-body-border: var(--color-ink);
   --modal-close-btn-text: var(--color-ink);
-  
+
   --carousel-bg: var(--color-card-bg);
   --carousel-nav-bg: rgba(0, 0, 0, 0.4);
   --carousel-nav-text: var(--color-white);
@@ -106,16 +88,12 @@
   --modal-add-btn-text: var(--color-white);
   --modal-add-btn-border: var(--color-ocean);
 
-  /* 3.9. RODAPÉ E ÍCONES */
   --footer-border: var(--page-border-lines);
   --footer-icon-color: var(--color-black);
   --badge-bg: var(--color-cherry);
   --badge-text: var(--color-white);
   --badge-shadow: rgba(0, 0, 0, 0.3);
 
-  /* ==========================================================================
-     4. TIPOGRAFIA
-     ========================================================================== */
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "DM Serif Display", serif;
 }
