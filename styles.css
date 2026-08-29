@@ -200,7 +200,6 @@ button.hub-link:focus-visible .hub-link-number {
   border-radius: 20px;
   cursor: pointer;
   transition: all 220ms ease;
-
 }
 
 .sub-toggle-btn:hover, .cacau-action-btn:hover {
@@ -259,7 +258,7 @@ button.hub-link:focus-visible .hub-link-number {
 /* Seção Empório Thigre */
 .accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
   max-height: 5000px;
-  padding: 28px 20px;
+  padding: 28px 16px;
   background: var(--loja-container-bg);
   border-radius: 0 0 12px 12px;
 }
@@ -276,17 +275,17 @@ button.hub-link:focus-visible .hub-link-number {
 
 .fixed-line-group {
   border: 1px dashed var(--color-ocean);
-  padding: 12px;
+  padding: 10px;
   border-radius: 16px;
   background: rgba(26, 95, 122, 0.02);
   margin-bottom: 24px !important;
 }
 
-/* Configuração de Colunas da Grade: 2 colunas Web, 1 coluna Mobile */
+/* Grade mantida em 2 Colunas (Mobile e Web) */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 24px;
 }
 
@@ -294,7 +293,7 @@ button.hub-link:focus-visible .hub-link-number {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 14px;
-  padding: 14px;
+  padding: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -310,25 +309,30 @@ button.hub-link:focus-visible .hub-link-number {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
+/* Tag com Contorno Off-White */
 .product-tag {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 6px;
+  right: 6px;
   background: var(--color-ink);
   color: var(--color-paper);
-  font-size: 0.62rem;
+  border: 1.5px solid var(--color-paper-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 0.6rem;
   font-weight: 700;
-  padding: 3px 8px;
+  padding: 2px 7px;
   border-radius: 10px;
   z-index: 2;
 }
 
+/* Formato de Imagem 1:1 */
 .product-thumb {
+  position: relative;
   width: 100%;
-  height: 120px;
+  aspect-ratio: 1 / 1;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   background: rgba(0,0,0,0.03);
 }
 
@@ -344,28 +348,31 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 .product-card h3 {
-  font-size: 0.92rem;
-  margin: 6px 0 2px;
+  font-size: 0.86rem;
+  margin: 4px 0 2px;
   font-weight: 600;
   color: var(--card-title-text);
+  line-height: 1.25;
 }
 
 .product-card .price-range {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--card-price-text);
   font-weight: 500;
   opacity: 0.85;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
+/* Botão menor no comprimento */
 .open-modal-btn {
-  width: 100%;
-  padding: 9px 12px;
+  width: auto;
+  min-width: 90px;
+  padding: 6px 12px;
   background: var(--card-btn-bg);
   border: 1px solid var(--card-btn-border);
   color: var(--card-btn-text);
-  border-radius: 18px;
-  font-size: 0.74rem;
+  border-radius: 16px;
+  font-size: 0.7rem;
   font-weight: 600;
   cursor: pointer;
   margin-top: auto;
@@ -751,7 +758,7 @@ button.hub-link:focus-visible .hub-link-number {
   box-shadow: 0 1px 4px var(--badge-shadow);
 }
 
-/* Sub-navegação do Rodapé (Links Discretos) */
+/* Sub-navegação do Rodapé */
 .footer-subnav {
   display: flex;
   align-items: center;
@@ -786,12 +793,8 @@ button.hub-link:focus-visible .hub-link-number {
   outline-offset: 4px;
 }
 
-/* Ajuste Responsivo para Versão Mobile (1 Coluna) */
+/* Ajuste Responsivo para Versão Mobile (Mantendo 2 Colunas) */
 @media (max-width: 640px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
   .product-modal-layout {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -802,7 +805,7 @@ button.hub-link:focus-visible .hub-link-number {
   }
 
   .hub-shell {
-    width: min(100% - 28px, 1520px);
+    width: min(100% - 20px, 1520px);
   }
 
   .link-hub {
@@ -811,6 +814,10 @@ button.hub-link:focus-visible .hub-link-number {
 
   .accordion-toggle[aria-expanded="true"] + .accordion-content.linhagem-content,
   .accordion-toggle[aria-expanded="true"] + .accordion-content.cacau-content {
-    padding: 22px 20px;
+    padding: 22px 16px;
+  }
+
+  .accordion-toggle[aria-expanded="true"] + .accordion-content.loja-content {
+    padding: 20px 10px;
   }
 }
