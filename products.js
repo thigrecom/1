@@ -72,7 +72,7 @@ const PRODUCTS_DATA = {
     name: "Feno Grego",
     tag: "# estimulante",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/feno-grego.jpeg"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/feno-grego.jpg"
     ],
     variants: [
       { name: "60g (em pó)", price: 5.00, available: true }
