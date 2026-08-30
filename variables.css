@@ -27,7 +27,7 @@
   --accordion-number-text: var(--color-ink);
   --accordion-number-hover-text: var(--color-ocean-light);
   --accordion-hover-bg: #72a8ce;
-  --accordion-hover-text: var(--color-ink);
+  --accordion-hover-text: #f1ecde;
   --accordion-active-bg: #26291f;
   --accordion-active-text: #f1edde;
   --accordion-content-bg: rgba(36, 39, 29, var(--alpha-subtle));
