@@ -4,8 +4,8 @@ const PRODUCTS_DATA = {
     tag: "# intenso",
     images: [
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/barras1.jpeg",
-      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/barras2.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial1.jpeg"
     ],
     variants: [
       { name: "200g", price: 70.00, available: true },
@@ -18,9 +18,9 @@ const PRODUCTS_DATA = {
     name: "Kit Cacau Cerimonial",
     tag: "# consagre",
     images: [
-      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial2.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial3.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial4.jpeg"
     ],
     variants: [
       { name: "Kit Completo (200g Cacau 100% + Cabaça Ritualística)", price: 120.00, available: true }
@@ -32,9 +32,9 @@ const PRODUCTS_DATA = {
     name: "Nibs de Cacau",
     tag: "# crocante",
     images: [
-      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs2.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs1.jpeg"
     ],
     variants: [
       { name: "70g", price: 11.00, available: true }
@@ -46,9 +46,9 @@ const PRODUCTS_DATA = {
     name: "Cabaça de Cacau",
     tag: "# O Fruto",
     images: [
-      "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos1.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos2.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos3.jpeg"
     ],
     variants: [
       { name: "O Fruto (Unidade artesanal)", price: 6.00, available: true }
@@ -60,9 +60,7 @@ const PRODUCTS_DATA = {
     name: "Chá de Casca de Cacau",
     tag: "# energia sutil",
     images: [
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/casca.jpeg"
     ],
     variants: [
       { name: "Infusão natural (# energia sutil)", price: 5.00, available: true }
@@ -74,8 +72,6 @@ const PRODUCTS_DATA = {
     name: "Feno Grego",
     tag: "# estimulante",
     images: [
-      "https://images.unsplash.com/photo-1509358271058-acd05cc93898?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
     ],
     variants: [
@@ -88,9 +84,10 @@ const PRODUCTS_DATA = {
     name: "Viveiro e Mudas",
     tag: "# plante",
     images: [
-      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas1.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas2.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas3.jpeg",
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas4.jpeg",
     ],
     variants: [
       { name: "Muda de Babosa", price: 12.00, available: true },
