@@ -821,3 +821,12 @@ button.hub-link:focus-visible .hub-link-number {
     padding: 20px 10px;
   }
 }
+
+.hub-link[aria-expanded="true"] {
+  background: var(--accordion-active-bg);
+  color: var(--accordion-active-text);
+}
+
+.hub-link[aria-expanded="true"] .hub-link-number {
+  color: var(--accordion-active-text);
+}
