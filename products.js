@@ -86,8 +86,7 @@ const PRODUCTS_DATA = {
     images: [
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas1.jpeg",
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas3.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas4.jpeg"
+      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas3.jpeg"
     ],
     variants: [
       { name: "Muda de Babosa", price: 12.00, available: true },
