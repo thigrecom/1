@@ -3,7 +3,7 @@ const PRODUCTS_DATA = {
     name: "Cacau 100%",
     tag: "# intenso",
     images: [
-      "./1/barras1.jpg",
+      "./img/barras1.jpeg",
       "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"
     ],
