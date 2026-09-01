@@ -10,7 +10,7 @@
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-card-bg: #EAE4D3;
-  --color-loja-bg: rgba(26, 95, 122, 0.04);
+  --color-loja-bg: var(--color-ocean);
 
   --alpha-subtle: 0.04;
   --alpha-hover: 0.10;
@@ -101,8 +101,8 @@
 
   /* Linha Fixa (Empório Thigre) */
   --fixed-line-badge-color: #FFF;
-  --fixed-line-border-color: #FFF;
-  --fixed-line-bg: var(--color-ocean);
+  --fixed-line-border-color: var(--color-ocean);
+  --fixed-line-bg: #FFF;
   --fixed-line-border-style: dashed;
   --fixed-line-border-width: 1px;
   --fixed-line-radius: 16px;
