@@ -102,7 +102,7 @@
   /* Linha Fixa (Empório Thigre) */
   --fixed-line-badge-color: var(--color-ocean);
   --fixed-line-border-color: var(--color-ocean);
-  --fixed-line-bg: #333;
+  --fixed-line-bg: #777;
   --fixed-line-border-style: dashed;
   --fixed-line-border-width: 1px;
   --fixed-line-radius: 16px;
