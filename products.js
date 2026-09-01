@@ -23,10 +23,10 @@ const PRODUCTS_DATA = {
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial4.jpeg"
     ],
     variants: [
-      { name: "Kit Cacau Cerimonial Completo (1kg de Cacau Cerimonial 100%)", price: 390.00, available: true }
+      { name: "Kit Cacau Cerimonial Completo (500g de Cacau Cerimonial 100% + elementos extras para o ritual)", price: 420.00, available: true }
     ],
-    desc: "Experiência guiada. Inclui 1kg de Cacau Cerimonial 100% e objetos selecionados de apoio a consagração da medicina.",
-    usage: "Acompanha guia explicativo de consagração, com opções de rituais pontuais e rituais de até 21 dias."
+    desc: "Ritual em Casa. Inclui 500g de Cacau Cerimonial 100% e objetos selecionados de apoio a consagração da medicina.",
+    usage: "Acompanha guia prático de consagração, com opções de rituais pontuais e rituais de até 21 dias."
   },
   nibs: {
     name: "Nibs de Cacau",
