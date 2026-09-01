@@ -113,7 +113,7 @@
      ========================================================================== */
   /* Container Principal do Carrinho */
   --cart-box-bg: rgba(26, 95, 122, 0.06);
-  --cart-box-border-left: 4px solid var(--color-ocean);
+  --cart-box-border-left: 4px solid #FFF;
   --cart-box-radius: 8px;
   --cart-box-padding: 22px;
   --cart-box-margin: 32px 0 16px;
@@ -138,7 +138,7 @@
   --cart-total-font-size: 0.95rem;
 
   /* Form de Checkout & Inputs */
-  --cart-input-bg: var(--color-paper);
+  --cart-input-bg: #F2EDDF;
   --cart-input-text: var(--color-ink);
   --cart-input-border: var(--page-border-lines);
   --cart-input-focus-border: var(--color-ocean);
