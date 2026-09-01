@@ -113,7 +113,7 @@
      ========================================================================== */
   /* Container Principal do Carrinho */
   --cart-box-bg: rgba(26, 95, 122, 0.06);
-  --cart-box-border-left: 4px solid var(--color-ocean);
+  --cart-box-border-left: 4px solid #FFF;
   --cart-box-radius: 8px;
   --cart-box-padding: 22px;
   --cart-box-margin: 32px 0 16px;
