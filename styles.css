@@ -393,20 +393,21 @@ button.hub-link:focus-visible .hub-link-number {
 }
 
 /* Carrinho */
+/* Carrinho */
 .cart-summary-box {
-  margin: 32px 0 16px;
-  padding: 22px;
-  background: var(--box-highlight-bg);
-  border-left: 4px solid var(--box-highlight-border-left);
-  border-radius: 8px;
+  margin: var(--cart-box-margin);
+  padding: var(--cart-box-padding);
+  background: var(--cart-box-bg);
+  border-left: var(--cart-box-border-left);
+  border-radius: var(--cart-box-radius);
   text-align: left;
 }
 
 .cart-summary-box h4 {
   margin: 0 0 16px;
-  font-family: var(--display);
-  font-size: 1.35rem;
-  color: var(--box-highlight-title-text);
+  font-family: var(--cart-title-font-family);
+  font-size: var(--cart-title-size);
+  color: var(--cart-title-color);
   letter-spacing: -0.01em;
 }
 
@@ -415,28 +416,28 @@ button.hub-link:focus-visible .hub-link-number {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 12px;
+  padding: var(--cart-empty-padding);
   text-align: center;
 }
 
 .cart-empty-icon {
-  width: 40px;
-  height: 40px;
-  color: var(--box-highlight-body-text);
-  opacity: 0.6;
+  width: var(--cart-empty-icon-size);
+  height: var(--cart-empty-icon-size);
+  color: var(--cart-text-color);
+  opacity: var(--cart-empty-icon-opacity);
   margin-bottom: 10px;
 }
 
 .cart-empty-title {
-  font-size: 0.9rem;
+  font-size: var(--cart-empty-title-size);
   font-weight: 600;
-  color: var(--box-highlight-body-text);
+  color: var(--cart-text-color);
   margin: 0 0 4px;
 }
 
 .cart-empty-sub {
-  font-size: 0.8rem;
-  color: var(--box-highlight-body-text);
+  font-size: var(--cart-empty-sub-size);
+  color: var(--cart-text-color);
   opacity: 0.7;
   margin: 0;
 }
@@ -452,16 +453,16 @@ button.hub-link:focus-visible .hub-link-number {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.82rem;
+  font-size: var(--cart-item-font-size);
   border-bottom: 1px solid var(--cart-item-border);
   padding-bottom: 8px;
-  color: var(--box-highlight-body-text);
+  color: var(--cart-text-color);
 }
 
 .cart-item button {
   background: none;
   border: none;
-  color: var(--cart-item-remove-btn);
+  color: var(--cart-item-remove-btn-color);
   cursor: pointer;
   font-size: 1.1rem;
   margin-left: 8px;
@@ -475,15 +476,15 @@ button.hub-link:focus-visible .hub-link-number {
   margin: 16px 0 20px;
   border-top: 1px solid var(--cart-item-border);
   padding-top: 12px;
-  font-size: 0.95rem;
-  color: var(--box-highlight-body-text);
+  font-size: var(--cart-total-font-size);
+  color: var(--cart-text-color);
 }
 
 .checkout-form h5 {
   margin: 0 0 14px;
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--box-highlight-body-text);
+  color: var(--cart-text-color);
   line-height: 1.5;
   text-transform: none;
   letter-spacing: normal;
@@ -492,10 +493,10 @@ button.hub-link:focus-visible .hub-link-number {
 
 .checkout-form input {
   width: 100%;
-  padding: 10px 14px;
+  padding: var(--cart-input-padding);
   margin-bottom: 10px;
   border: 1px solid var(--cart-input-border);
-  border-radius: 8px;
+  border-radius: var(--cart-input-radius);
   background: var(--cart-input-bg);
   font-family: var(--sans);
   font-size: 0.8rem;
@@ -509,24 +510,24 @@ button.hub-link:focus-visible .hub-link-number {
 
 .checkout-submit-btn {
   width: 100%;
-  padding: 13px 16px;
+  padding: var(--cart-submit-btn-padding);
   background: var(--cart-submit-btn-bg);
   color: var(--cart-submit-btn-text);
   border: 1px solid var(--cart-submit-btn-border);
-  border-radius: 20px;
+  border-radius: var(--cart-submit-btn-radius);
   font-weight: 700;
   font-size: 0.84rem;
   cursor: pointer;
   transition: all 180ms ease;
   margin-top: 6px;
-  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.25);
+  box-shadow: var(--cart-submit-btn-shadow);
   line-height: 1.35;
 }
 
 .checkout-submit-btn:hover {
   background: var(--cart-submit-btn-hover-bg);
   color: var(--cart-submit-btn-hover-text);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  box-shadow: var(--cart-submit-btn-hover-shadow);
 }
 
 /* Modal e Carrossel */
