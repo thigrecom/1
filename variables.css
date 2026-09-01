@@ -64,7 +64,7 @@
 
   --cart-item-border: var(--page-border-lines);
   --cart-item-remove-btn: var(--color-cherry);
-  --cart-input-bg: var(--color-paper);
+  --cart-input-bg: #dcded5;
   --cart-input-text: var(--color-ink);
   --cart-input-border: var(--page-border-lines);
   --cart-input-focus-border: var(--color-ocean);
