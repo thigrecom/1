@@ -100,9 +100,9 @@
   --display: "DM Serif Display", serif;
 
   /* Linha Fixa (Empório Thigre) */
-  --fixed-line-badge-color: var(--color-ocean);
-  --fixed-line-border-color: var(--color-ocean);
-  --fixed-line-bg: #444;
+  --fixed-line-badge-color: #FFF;
+  --fixed-line-border-color: #FFF;
+  --fixed-line-bg: var(--color-ocean);
   --fixed-line-border-style: dashed;
   --fixed-line-border-width: 1px;
   --fixed-line-radius: 16px;
