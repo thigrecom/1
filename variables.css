@@ -98,4 +98,15 @@
 
   --sans: "Plus Jakarta Sans", sans-serif;
   --display: "DM Serif Display", serif;
+
+  /* Linha Fixa (Empório Thigre) */
+  --fixed-line-badge-color: var(--color-ocean);
+  --fixed-line-border-color: var(--color-ocean);
+  --fixed-line-bg: #333;
+  --fixed-line-border-style: dashed;
+  --fixed-line-border-width: 1px;
+  --fixed-line-radius: 16px;
+  --fixed-line-padding: 10px;
+
+  
 }
