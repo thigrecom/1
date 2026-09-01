@@ -397,7 +397,7 @@ button.hub-link:focus-visible .hub-link-number {
 .cart-summary-box {
   margin: var(--cart-box-margin);
   padding: var(--cart-box-padding);
-  background: var(--cart-box-bg);
+  background: #dcded5;
   border-left: var(--cart-box-border-left);
   border-radius: var(--cart-box-radius);
   text-align: left;
