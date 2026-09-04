@@ -6,44 +6,23 @@
   
   <!-- SEO & Indexação -->
   <title>Nibs de Cacau — Puros, Crocantes e Ancestrais | thigre</title>
-  <meta name="description" content="Descubra a essência do cacau puro em forma de nibs crocantes. Origem baiana (Itacaré e Maraú), tabela nutricional completa, benefícios e sugestões de consumo." />
+  <meta name="description" content="O cacau em sua textura mais pura, viva e crocante. Informações nutricionais, benefícios e sugestões de consumo." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://thigre.com/nibs" />
 
-  <!-- Open Graph / Redes Sociais / WhatsApp (QR Code / Links) -->
+  <!-- Open Graph / Redes Sociais -->
   <meta property="og:type" content="product" />
   <meta property="og:title" content="Nibs de Cacau — thigre" />
-  <meta property="og:description" content="Amêndoa de cacau pura, fermentada e levemente tostada. Textura crocante e sabor intenso de cacau baiano." />
+  <meta property="og:description" content="O cacau em sua textura mais pura, viva e crocante." />
   <meta property="og:url" content="https://thigre.com/nibs" />
   <meta property="og:image" content="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg" />
   <meta property="og:site_name" content="thigre" />
-
-  <!-- Dados Estruturados Schema.org (SEO para Produtos) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Nibs de Cacau",
-    "image": [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs1.jpeg"
-    ],
-    "description": "Nibs de cacau puro obtidos a partir de amêndoas selecionadas, fermentadas e tostadas suavemente no terroir de Maraú e Itacaré, Bahia.",
-    "brand": {
-      "@type": "Brand",
-      "name": "thigre"
-    },
-    "category": "Alimentos & Bebidas > Cacau"
-  }
-  </script>
 
   <!-- Fontes & Estilos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
-  <!-- Importa as variáveis originais da raiz e os estilos da página interna -->
   <link rel="stylesheet" href="../variables.css" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -52,70 +31,54 @@
 
   <div class="page-shell">
 
-    <!-- Cabeçalho Institucional Simples -->
-    <header class="header-brand">
-      <a href="https://thigre.com" class="brand-logo" aria-label="Ir para a página inicial thigre">thigre</a>
-      <span class="brand-sub">origem · itacaré &amp; maraú · bahia</span>
-    </header>
-
     <main class="product-container" aria-labelledby="product-title">
 
-      <!-- Badge de Identificação do Produto -->
-      <div class="product-badge-wrapper">
-        <span class="product-tag"># crocante e ancestral</span>
-      </div>
-
+      <!-- Título Principal -->
       <h1 id="product-title" class="product-title">Nibs de Cacau</h1>
-      <p class="product-subtitle">O cacau em sua textura mais pura, viva e crocante.</p>
 
-      <!-- Galeria com 3 Ilustrações do Produto -->
-      <section class="gallery-section" aria-label="Galeria do produto">
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg" alt="Nibs de cacau em primeiro plano ressaltando a textura crocante" loading="eager" />
-            <figcaption>Amêndoas trituradas em pedaços puros</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs2.jpeg" alt="Detalhe dos nibs de cacau tostados levemente" loading="lazy" />
-            <figcaption>Torra suave que preserva nutrientes</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs1.jpeg" alt="Nibs de cacau servidos em apresentação rústica" loading="lazy" />
-            <figcaption>Terroir baiano de Maraú e Itacaré</figcaption>
-          </figure>
+      <!-- Carrossel de Imagens -->
+      <section class="carousel-section" aria-label="Galeria de fotos do produto">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <img src="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg" alt="Nibs de cacau em primeiro plano" loading="eager" />
+            </div>
+            <div class="carousel-slide">
+              <img src="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs2.jpeg" alt="Detalhe dos nibs de cacau tostados levemente" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs1.jpeg" alt="Nibs de cacau servidos em apresentação rústica" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Botões de Navegação -->
+          <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Imagem anterior">&#10094;</button>
+          <button class="carousel-btn next-btn" id="nextBtn" aria-label="Próxima imagem">&#10095;</button>
+
+          <!-- Indicadores (Pontos) -->
+          <div class="carousel-indicators" id="carouselIndicators">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
         </div>
       </section>
 
-      <!-- Bloco 1: O que é o Nibs de Cacau? -->
+      <!-- Subtítulo -->
+      <p class="product-subtitle">O cacau em sua textura mais pura, viva e crocante.</p>
+
+      <!-- Descrição do Produto -->
       <section class="info-block">
-        <h2 class="section-heading">O que são Nibs de Cacau?</h2>
-        <p>Os <strong>Nibs de Cacau</strong> são pequenos pedaços da própria amêndoa do cacau seco, fermentado e levemente tostado, após ter sua casca removida. Representam o chocolate em seu estágio mais elementar e sem refinamento.</p>
-        <p>Ao contrário dos chocolates processados, os nibs não recebem aditivos, açúcares ou gorduras hidrogenadas. É a essência bruta da fruta, entregando uma crocância intensa, amargor característico e um aroma profundo que remete diretamente à terra de onde o cacau germinou.</p>
+        <p>Os <strong>Nibs de Cacau</strong> são a amêndoa do cacau seco, fermentado e levemente tostado, após ter sua casca removida. Representam o chocolate em seu estágio mais bruto, elementar e sem refinamento.</p>
+        <p>Os nibs 100% cacau não recebem aditivos, açúcares ou gorduras hidrogenadas.</p>
+        <p>Crocância intensa, amargor característico e um aroma profundo que remete diretamente à terra de onde o cacau germinou.</p>
       </section>
 
-      <!-- Bloco 2: Curiosidades & Processo Ancestral -->
-      <section class="info-block highlight-block">
-        <h2 class="section-heading">Curiosidades &amp; Ancestralidade</h2>
-        <ul class="facts-list">
-          <li>
-            <strong>Alimento dos Deuses:</strong> O nome botânico do cacau, <em>Theobroma Cacao</em>, significa literalmente "Alimento dos Deuses". Os nibs mantém intactas as moléculas estimulantes e bioativas veneradas pelos povos nativos das Américas.
-          </li>
-          <li>
-            <strong>Rico em Teobromina:</strong> Diferente da cafeína, que gera picos rápidos de energia, a teobromina presente nos nibs proporciona estimulação cardiovascular suave, prolongada e contínua.
-          </li>
-          <li>
-            <strong>Fonte Natural de Flavonoides:</strong> Conserva elevados níveis de antioxidantes que protegem as células contra o estresse oxidativo.
-          </li>
-          <li>
-            <strong>Estimulante do Humor:</strong> Estimula a produção endógena de anandamida (conhecida como a "molécula da felicidade") e serotonina.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Bloco 3: Sugestões de Consumo -->
+      <!-- Sugestões de Consumo -->
       <section class="info-block">
         <h2 class="section-heading">Sugestões de Consumo</h2>
-        <p>Sua textura naturalmente crocante e o sabor marcante combinam perfeitamente com preparos doces ou salgados:</p>
+        <p>Sua textura naturally crocante e o sabor marcante combinam perfeitamente com preparos doces ou salgados:</p>
+        
         <div class="suggestions-grid">
           <div class="suggestion-card">
             <h3>Frutas &amp; Iogurtes</h3>
@@ -136,7 +99,14 @@
         </div>
       </section>
 
-      <!-- Bloco 4: Tabela Nutricional Completa -->
+      <!-- Alimento Limpo -->
+      <section class="info-block highlight-block">
+        <h2 class="section-heading">Alimento Limpo</h2>
+        <p>Os nibs mantém intactas as moléculas estimulantes e bioativas veneradas pelos povos nativos das Américas: <strong>Teobromina</strong>.</p>
+        <p><strong>Fonte Natural de Flavonoides:</strong> Conserva elevados níveis de antioxidantes que protegem as células contra o estresse oxidativo.</p>
+      </section>
+
+      <!-- Tabela Nutricional Expandida -->
       <section class="info-block">
         <h2 class="section-heading">Tabela Nutricional</h2>
         <p class="table-intro">Porção de 15g (Aproximadamente 1 colher de sopa)</p>
@@ -191,15 +161,38 @@
                 <td>0 mg</td>
                 <td>0%</td>
               </tr>
-              <tr>
-                <td>Magnésio</td>
-                <td>38 mg</td>
-                <td>15%</td>
+              <tr class="sub-header">
+                <td colspan="3"><strong>Micronutrientes &amp; Bioativos Destacados</strong></td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Magnésio</strong> (Saúde muscular e foco)</td>
+                <td><strong>38 mg</strong></td>
+                <td><strong>15%</strong></td>
               </tr>
               <tr>
-                <td>Ferro</td>
+                <td><strong>Ferro</strong> (Oxigenação celular)</td>
                 <td>0,9 mg</td>
                 <td>6%</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Manganês</strong> (Proteção antioxidante)</td>
+                <td>0,3 mg</td>
+                <td>13%</td>
+              </tr>
+              <tr>
+                <td><strong>Fósforo</strong> (Manutenção óssea)</td>
+                <td>42 mg</td>
+                <td>6%</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Teobromina</strong> (Energia contínua)</td>
+                <td>200 mg</td>
+                <td>**</td>
+              </tr>
+              <tr>
+                <td><strong>Flavonoides Totais</strong> (Antioxidante)</td>
+                <td>150 mg</td>
+                <td>**</td>
               </tr>
             </tbody>
           </table>
@@ -207,31 +200,70 @@
         <p class="table-footnote">* % Valores Diários com base em uma dieta de 2.000 kcal ou 8.400 kJ. Seus valores diários podem ser maiores ou menores dependendo de suas necessidades energéticas. ** VD não estabelecido.</p>
       </section>
 
-      <!-- Bloco 5: Ação / Direcionamento Sem Venda Direta -->
-      <section class="reorder-section">
-        <div class="reorder-card">
-          <h2>Gostou da experiência ou quer garantir mais?</h2>
-          <p>Esta página é um guia explicativo do lote físico em suas mãos. Para consultar a disponibilidade de novos lotes e ver a nossa linha completa de cacau, acesse nosso endereço principal.</p>
-          
-          <a href="https://thigre.com" class="btn-reorder">Compre novamente em thigre.com</a>
-        </div>
-      </section>
-
     </main>
 
-    <!-- Rodapé Minimalista -->
+    <!-- Rodapé -->
     <footer class="footer-simple">
-      <p class="footer-text">thigre · Cacau em sua forma mais pura, íntegra e ancestral.</p>
-      <div class="footer-links">
-        <a href="https://wa.me/5573999664477" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <span>·</span>
-        <a href="https://instagram.com/thigre.c" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <span>·</span>
-        <a href="https://thigre.com">Início</a>
+      <div class="footer-card">
+        <h2>Gostou da experiência ou quer garantir mais?</h2>
+        <p>Esta página é um guia explicativo do lote físico em suas mãos. Para consultar a disponibilidade de novos lotes e ver a nossa linha completa de cacau, acesse nosso endereço principal.</p>
+        <a href="https://thigre.com" class="btn-footer">Veja itens disponíveis: thigre.com</a>
       </div>
     </footer>
 
   </div>
+
+  <!-- Script do Carrossel de Imagens -->
+  <script>
+    const track = id('carouselTrack');
+    const slides = Array.from(track.children);
+    const prevBtn = id('prevBtn');
+    const nextBtn = id('nextBtn');
+    const dots = Array.from(id('carouselIndicators').children);
+    let currentIndex = 0;
+
+    function id(str) { return document.getElementById(str); }
+
+    function updateCarousel(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
+    nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', (e) => {
+        const index = parseInt(e.target.getAttribute('data-index'), 10);
+        updateCarousel(index);
+      });
+    });
+
+    // Suporte a Deslizar com o Dedo (Swipe Mobile)
+    let startX = 0;
+    let isDragging = false;
+
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      const endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) updateCarousel(currentIndex + 1);
+        else updateCarousel(currentIndex - 1);
+      }
+      isDragging = false;
+    });
+  </script>
 
 </body>
 </html>
