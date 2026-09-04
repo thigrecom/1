@@ -36,7 +36,7 @@
       <!-- Título Principal -->
       <h1 id="product-title" class="product-title">Nibs de Cacau</h1>
 
-      <!-- Carrossel de Imagens -->
+      <!-- Carrossel de Imagens Otimizado -->
       <section class="carousel-section" aria-label="Galeria de fotos do produto">
         <div class="carousel-container">
           <div class="carousel-track" id="carouselTrack">
@@ -55,7 +55,7 @@
           <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Imagem anterior">&#10094;</button>
           <button class="carousel-btn next-btn" id="nextBtn" aria-label="Próxima imagem">&#10095;</button>
 
-          <!-- Indicadores (Pontos) -->
+          <!-- Indicadores -->
           <div class="carousel-indicators" id="carouselIndicators">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
@@ -74,25 +74,29 @@
         <p>Crocância intensa, amargor característico e um aroma profundo que remete diretamente à terra de onde o cacau germinou.</p>
       </section>
 
-      <!-- Sugestões de Consumo -->
-      <section class="info-block">
+      <!-- Sugestões de Consumo (Com visual quente e apetitoso) -->
+      <section class="info-block food-experience-block">
         <h2 class="section-heading">Sugestões de Consumo</h2>
-        <p>Sua textura naturally crocante e o sabor marcante combinam perfeitamente com preparos doces ou salgados:</p>
+        <p class="experience-intro">Sua textura naturalmente crocante e o sabor marcante combinam perfeitamente com preparos doces ou salgados:</p>
         
         <div class="suggestions-grid">
-          <div class="suggestion-card">
+          <div class="suggestion-card card-fruit">
+            <div class="card-tag">Sabor &amp; Frescor</div>
             <h3>Frutas &amp; Iogurtes</h3>
             <p>Salpique uma colher de sopa sobre bananas fatiadas, mamão, tigelas de açaí ou iogurte natural para criar um contraste crocante.</p>
           </div>
-          <div class="suggestion-card">
+          <div class="suggestion-card card-smoothie">
+            <div class="card-tag">Textura &amp; Energia</div>
             <h3>Smoothies &amp; Purês</h3>
             <p>Bata junto com vitaminas para dar corpo ou finalize suas bebidas como um <em>topping</em> energizante.</p>
           </div>
-          <div class="suggestion-card">
+          <div class="suggestion-card card-salad">
+            <div class="card-tag">Toque Gastronômico</div>
             <h3>Saladas &amp; Pratos Quentes</h3>
             <p>Adicione a saladas de folhas verdes com molhos cítricos ou finalize risotos para uma experiência sensorial surpreendente.</p>
           </div>
-          <div class="suggestion-card">
+          <div class="suggestion-card card-direct">
+            <div class="card-tag">Ritual Pessoal</div>
             <h3>Consumo Direto</h3>
             <p>Aprecie puro, em pequenas porções, como um alimento de presença para momentos de foco ou pausas ao longo do dia.</p>
           </div>
@@ -202,12 +206,20 @@
 
     </main>
 
-    <!-- Rodapé -->
+    <!-- Rodapé com Botão Claro de Redirecionamento -->
     <footer class="footer-simple">
       <div class="footer-card">
         <h2>Gostou da experiência ou quer garantir mais?</h2>
         <p>Esta página é um guia explicativo do lote físico em suas mãos. Para consultar a disponibilidade de novos lotes e ver a nossa linha completa de cacau, acesse nosso endereço principal.</p>
-        <a href="https://thigre.com" class="btn-footer">Veja itens disponíveis: thigre.com</a>
+        
+        <a href="https://thigre.com" class="btn-external-link" target="_blank" rel="noopener">
+          <span>Veja itens disponíveis no site</span>
+          <strong class="domain-text">thigre.com</strong>
+          <svg class="external-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
       </div>
     </footer>
 
@@ -244,7 +256,7 @@
       });
     });
 
-    // Suporte a Deslizar com o Dedo (Swipe Mobile)
+    // Deslizar no Mobile (Touch Swipe)
     let startX = 0;
     let isDragging = false;
 
