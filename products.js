@@ -3,9 +3,9 @@ const PRODUCTS_DATA = {
     name: "Cacau 100%",
     tag: "# intenso",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/barras1.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/barras2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial1.jpeg"
+      "img/barras1.jpeg",
+      "img/barras2.jpeg",
+      "img/cerimonial1.jpeg"
     ],
     variants: [
       { name: "200g", price: 70.00, available: true },
@@ -18,9 +18,9 @@ const PRODUCTS_DATA = {
     name: "Kit - Experiência Ritualística",
     tag: "# conecte-se",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial3.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/cerimonial4.jpeg"
+      "img/cerimonial2.jpeg",
+      "img/cerimonial3.jpeg",
+      "img/cerimonial4.jpeg"
     ],
     variants: [
       { name: "Kit Cacau Cerimonial Completo (500g de Cacau Cerimonial 100% + elementos extras para o ritual)", price: 420.00, available: true }
@@ -32,9 +32,9 @@ const PRODUCTS_DATA = {
     name: "Nibs e Chá de Cacau",
     tag: "# 100%",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs1.jpeg"
+      "img/nibsthigre1.jpg",
+      "img/nibsthigre2.jpg",
+      "img/nibsthigre3.jpg",
     ],
     variants: [
       { name: "Nibs 100% Cacau - 50g", price: 12.00, available: true }
@@ -48,9 +48,9 @@ const PRODUCTS_DATA = {
     name: "Cabaça de Cacau",
     tag: "# O Fruto",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos1.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos3.jpeg"
+      "img/frutos1.jpeg",
+      "img/frutos2.jpeg",
+      "img/frutos3.jpeg"
     ],
     variants: [
       { name: "O Fruto (Unidade)", price: 7.00, available: true }
@@ -62,7 +62,9 @@ const PRODUCTS_DATA = {
     name: "Castanhas e Frutos Secos",
     tag: "",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/casca.jpeg"
+      "img/castanhas1.jpg"
+      "img/castanhas2.jpg"
+      "img/castanhas3.jpg"
     ],
     variants: [
       { name: "Uva Passa - 100g", price: 6.00, available: true }
