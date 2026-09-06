@@ -69,7 +69,7 @@ const PRODUCTS_DATA = {
     variants: [
       { name: "Uva Passa - 100g", price: 6.00, available: true },
       { name: "Castanha do Pará - 100g", price: 22.00, available: true },
-      { name: "Mix - Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa, Crawberry", price: 20.00, available: true }
+      { name: "Mix - Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa e Crawberry - 100g", price: 20.00, available: true }
     ],
     desc: "Alimentação natural e Snacks",
     usage: "Tenha sempre a mão ou na mochila um alimento saudável."
