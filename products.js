@@ -34,11 +34,11 @@ const PRODUCTS_DATA = {
     images: [
       "img/nibsthigre1.jpg",
       "img/nibsthigre2.jpg",
-      "img/nibsthigre3.jpg",
+      "img/nibsthigre3.jpg"
     ],
     variants: [
-      { name: "Nibs 100% Cacau - 50g", price: 12.00, available: true }
-      { name: "Nibs 100% Cacau - 100g", price: 20.00, available: true }
+      { name: "Nibs 100% Cacau - 50g", price: 12.00, available: true },
+      { name: "Nibs 100% Cacau - 100g", price: 20.00, available: true },
       { name: "Infusão natura # energia sutil - 30g", price: 11.00, available: true }
     ],
     desc: "Nibs de cacau crocantes selecionados, tostados suavemente e descascados a mão..",
@@ -62,14 +62,14 @@ const PRODUCTS_DATA = {
     name: "Castanhas e Frutos Secos",
     tag: "",
     images: [
-      "img/castanhas1.jpg"
-      "img/castanhas2.jpg"
+      "img/castanhas1.jpg",
+      "img/castanhas2.jpg",
       "img/castanhas3.jpg"
     ],
     variants: [
-      { name: "Uva Passa - 100g", price: 6.00, available: true }
-      { name: "Castanha do Pará - 100g", price: 22.00, available: true }
-      { name: "Mix - Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa, Crawberry, ", price: 20.00, available: true }
+      { name: "Uva Passa - 100g", price: 6.00, available: true },
+      { name: "Castanha do Pará - 100g", price: 22.00, available: true },
+      { name: "Mix - Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa, Crawberry", price: 20.00, available: true }
     ],
     desc: "Alimentação natural e Snacks",
     usage: "Tenha sempre a mão ou na mochila um alimento saudável."
