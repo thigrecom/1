@@ -39,10 +39,10 @@ const PRODUCTS_DATA = {
     variants: [
       { name: "Nibs 100% Cacau - 50g", price: 12.00, available: true },
       { name: "Nibs 100% Cacau - 100g", price: 20.00, available: true },
-      { name: "Infusão natura # energia sutil - 30g", price: 11.00, available: true }
+      { name: "Infusão de Cacau - 30g", price: 11.00, available: true }
     ],
     desc: "Nibs de cacau crocantes selecionados, tostados suavemente e descascados a mão..",
-    usage: "Nibs Natural, adicione a frutas, iogurtes, smoothies ou consuma como topping crocante. / Chás: 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
+    usage: "Nibs Natural, adicione a frutas, iogurtes, smoothies ou consuma como topping crocante. \n Chás: 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
   },
   cabaca: {
     name: "Cabaça de Cacau",
