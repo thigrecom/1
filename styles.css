@@ -838,3 +838,7 @@ button.hub-link:focus-visible .hub-link-number {
 .hub-link[aria-expanded="true"] .hub-link-number {
   color: var(--accordion-active-text);
 }
+
+#modal-usage {
+  white-space: pre-line;
+}
