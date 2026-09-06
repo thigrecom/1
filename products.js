@@ -29,18 +29,20 @@ const PRODUCTS_DATA = {
     usage: "Acompanha guia prático de consagração, com opções de rituais pontuais e rituais de até 21 dias."
   },
   nibs: {
-    name: "Nibs de Cacau",
-    tag: "# crocante",
+    name: "Nibs e Chá de Cacau",
+    tag: "# 100%",
     images: [
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs3.jpeg",
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs2.jpeg",
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/nibs1.jpeg"
     ],
     variants: [
-      { name: "70g", price: 11.00, available: true }
+      { name: "Nibs 100% Cacau - 50g", price: 12.00, available: true }
+      { name: "Nibs 100% Cacau - 100g", price: 20.00, available: true }
+      { name: "Infusão natura # energia sutil - 30g", price: 11.00, available: true }
     ],
-    desc: "Nibs de cacau crocantes selecionados e tostados suavemente.",
-    usage: "Adicione a frutas, iogurtes, smoothies ou consuma como topping crocante."
+    desc: "Nibs de cacau crocantes selecionados, tostados suavemente e descascados a mão..",
+    usage: "Nibs Natural, adicione a frutas, iogurtes, smoothies ou consuma como topping crocante. / Chás: 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
   },
   cabaca: {
     name: "Cabaça de Cacau",
@@ -51,22 +53,24 @@ const PRODUCTS_DATA = {
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/frutos3.jpeg"
     ],
     variants: [
-      { name: "O Fruto (Unidade artesanal)", price: 6.00, available: true }
+      { name: "O Fruto (Unidade)", price: 7.00, available: true }
     ],
     desc: "Fruto de cacau nativo e artesanal (unidade).",
     usage: "Pode ser utilizado para consumo in natura das amêndoas, uso ritualístico, decorativo e drinks"
   },
-  cha: {
-    name: "Chá de Casca de Cacau",
-    tag: "# energia sutil",
+  castanhas: {
+    name: "Castanhas e Frutos Secos",
+    tag: "",
     images: [
       "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/casca.jpeg"
     ],
     variants: [
-      { name: "Infusão natural (# energia sutil)", price: 5.00, available: true }
+      { name: "Uva Passa - 100g", price: 6.00, available: true }
+      { name: "Castanha do Pará - 100g", price: 22.00, available: true }
+      { name: "Mix - Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa, Crawberry, ", price: 20.00, available: true }
     ],
-    desc: "Infusão aromática e leve extraída diretamente da casca natural do cacau.",
-    usage: "Infusione 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
+    desc: "Alimentação natural e Snacks",
+    usage: "Tenha sempre a mão ou na mochila um alimento saudável."
   },
   fenogrego: {
     name: "Feno Grego",
