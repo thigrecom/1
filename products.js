@@ -39,7 +39,7 @@ const PRODUCTS_DATA = {
     variants: [
       { name: "Nibs 100% Cacau - 50g", price: 12.00, available: true },
       { name: "Nibs 100% Cacau - 100g", price: 20.00, available: true },
-      { name: "Infusão de Cacau - 30g", price: 11.00, available: true }
+      { name: "Infusão de Cacau - 30g", price: 6.00, available: true }
     ],
     desc: "Nibs de cacau crocantes selecionados, tostados suavemente e descascados a mão..",
     usage: "Nibs Natural, adicione a frutas, iogurtes, smoothies ou consuma como topping crocante. \n Chás: 1 colher de sopa em água fervente por 5 a 8 minutos. Sirva quente ou gelado."
@@ -69,7 +69,7 @@ const PRODUCTS_DATA = {
     variants: [
       { name: "Uva Passa - 100g", price: 6.00, available: true },
       { name: "Castanha do Pará - 100g", price: 22.00, available: true },
-      { name: "Mix - Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa e Crawberry - 100g", price: 20.00, available: true }
+      { name: "Mix - 100g (Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa e Crawberry)", price: 20.00, available: true }
     ],
     desc: "Alimentação natural e Snacks",
     usage: "Tenha sempre a mão ou na mochila um alimento saudável."
@@ -97,8 +97,8 @@ const PRODUCTS_DATA = {
     variants: [
       { name: "Muda de Babosa", price: 12.00, available: true },
       { name: "Muda de Cacau", price: 19.00, available: true },
-      { name: "Muda de Arruda", price: 20.00, available: true },
-      { name: "Comigo Ninguém Pode (Vaso adulto - 90cm)", price: 95.00, available: true }
+      { name: "Muda de Arruda", price: 18.00, available: true },
+      { name: "Comigo Ninguém Pode (Vaso grande, planta 90cm)", price: 95.00, available: true }
     ],
     desc: "Mudas saudáveis e adaptadas ao clima tropical.",
     usage: "Plante em solo drenado e com boa iluminação solar."
