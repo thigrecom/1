@@ -85,7 +85,7 @@ a {
 
 .hub-origin {
   margin: 0;
-  font-size: clamp(0.8rem, 1.3vw, 0.88rem);
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
   font-weight: 500;
   color: var(--page-text-color);
 }
