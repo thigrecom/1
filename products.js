@@ -90,9 +90,9 @@ const PRODUCTS_DATA = {
     name: "Viveiro e Mudas",
     tag: "# plante",
     images: [
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas1.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas2.jpeg",
-      "https://raw.githubusercontent.com/thigrecom/1/refs/heads/main/img/mudas3.jpeg"
+      "img/mudas1.jpeg",
+      "img/mudas2.jpeg",
+      "img/mudas3.jpeg"
     ],
     variants: [
       { name: "Muda de Babosa", price: 12.00, available: true },
