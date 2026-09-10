@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Don Drakh - Cozinha Fechada</title>
+  <!-- Google Fonts: Creepster/Cinzel para tom místico/divertido e Montserrat para texto limpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #2a140e 0%, #0d0605 100%);
+      color: #ebdcd0;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Elementos decorativos */
+    .bat {
+      position: absolute;
+      font-size: 1.8rem;
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite alternate;
+      user-select: none;
+    }
+    .bat-1 { top: 10%; left: 8%; animation-delay: 0s; }
+    .bat-2 { top: 15%; right: 10%; animation-delay: 2s; }
+    .bat-3 { bottom: 12%; left: 12%; animation-delay: 4s; }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-20px) rotate(8deg); }
+    }
+
+    /* Container Principal */
+    .container {
+      background: rgba(22, 10, 8, 0.85);
+      border: 2px solid #5a2618;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(186, 45, 45, 0.2);
+      max-width: 600px;
+      width: 100%;
+      padding: 40px 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    /* Logo Don Drakh */
+    .logo-box {
+      width: 140px;
+      height: 140px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      margin: 0 auto 25px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      border: 3px solid #160a08;
+    }
+
+    .logo-box h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: #000;
+      line-height: 0.9;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .logo-box span {
+      font-size: 0.65rem;
+      color: #000;
+      letter-spacing: 2px;
+      margin-top: 2px;
+      position: relative;
+    }
+
+    /* Detalhe divertido das presas */
+    .fangs {
+      font-size: 0.8rem;
+      line-height: 0;
+      margin-top: 4px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background-color: #8b0000;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: #f1a953;
+      margin-bottom: 15px;
+    }
+
+    p.description {
+      font-size: 1.05rem;
+      color: #c9b09a;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn-main {
+      background: linear-gradient(135deg, #a82415 0%, #610d04 100%);
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(168, 36, 21, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
+      background: linear-gradient(135deg, #c52d1c 0%, #7c1207 100%);
+    }
+
+    /* Modal / Pop-up Box */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 100;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #1b0c09;
+      border: 2px solid #8b0000;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 450px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.9);
+      text-align: left;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: #a88a78;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-btn:hover { color: #fff; }
+
+    .modal-card h3 {
+      font-family: 'Cinzel', serif;
+      color: #f1a953;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .modal-card p {
+      font-size: 0.9rem;
+      color: #a88a78;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 5px;
+      color: #ebdcd0;
+      font-weight: 600;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      background: #0d0504;
+      border: 1px solid #4a2218;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus {
+      border-color: #a82415;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0;
+      font-size: 0.8rem;
+      color: #a88a78;
+    }
+
+    .checkbox-group input {
+      margin-top: 3px;
+      accent-color: #a82415;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: #8b0000;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #b30000;
+    }
+
+    /* Mensagem de Confirmação */
+    .success-box {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #4efa7b;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .success-box p {
+      color: #ebdcd0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: #634f43;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bat bat-1">🦇</div>
+  <div class="bat bat-2">🦇</div>
+  <div class="bat bat-3">🦇</div>
+
+  <div class="container">
+    <!-- Logotipo idêntico ao Instagram -->
+    <div class="logo-box">
+      <h1>DON<br>DRAKH</h1>
+      <span>CHOCOLATE</span>
+      <div class="fangs">🦇</div>
+    </div>
+
+    <div class="status-badge">🌙 Cozinha Fechada</div>
+
+    <h2>A noite virou chocolate... mas ainda está no forno!</h2>
+    
+    <p class="description">
+      Nossos morcegos e mestres do cacau estão trabalhando nas sombras preparando receitas lendárias. 
+      <br><br>
+      <strong>Gostaria de ser convocado assim que a Aldeia abrir as portas?</strong>
+    </p>
+
+    <button class="btn-main" onclick="openModal()">Quero ser avisado nas sombras 🦇</button>
+  </div>
+
+  <!-- Modal / Box Flutuante -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      
+      <!-- Formulário -->
+      <form id="notifyForm" onsubmit="handleFormSubmit(event)">
+        <h3>Convocações da Aldeia</h3>
+        <p>Preencha os dados para ser o primeiro a saborear nossos chocolates misteriosos.</p>
+
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" required placeholder="Ex: Don Drakh" />
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp (com DDD)</label>
+          <input type="tel" id="whatsapp" required placeholder="(11) 99999-9999" />
+        </div>
+
+        <div class="form-group">
+          <label for="cep">CEP (para cálculo de entregas místicas)</label>
+          <input type="text" id="cep" required placeholder="00000-000" maxlength="9" />
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="lgpd" required />
+          <label for="lgpd">
+            Autorizo o processamento e armazenamento seguro dos meus dados para receber avisos exclusivos da Aldeia Drakh.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">Entrar na Lista Secreta 🍫</button>
+      </form>
+
+      <!-- Mensagem de Confirmação -->
+      <div class="success-box" id="successBox">
+        <h4>🦇 Pacto Confirmado!</h4>
+        <p>Seus dados foram guardados com sucesso nos arquivos secretos da Aldeia Drakh.</p>
+        <p style="margin-top: 15px; color: #a88a78; font-size: 0.85rem;">
+          Assim que a cozinha abrir as portas no meio da noite, você receberá uma mensagem via WhatsApp.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Don Drakh Chocolates. Todos os direitos reservados. don.thigre.com
+  </footer>
+
+  <script>
+    function openModal() {
+      document.getElementById('modalOverlay').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('active');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const cep = document.getElementById('cep').value;
+
+      // Objeto com os dados
+      const leadData = {
+        nome: nome,
+        whatsapp: whatsapp,
+        cep: cep,
+        dataRegistro: new Date().toISOString()
+      };
+
+      // Processamento e Armazenamento Local (localStorage)
+      let leads = JSON.parse(localStorage.getItem('dondrakh_leads') || '[]');
+      leads.push(leadData);
+      localStorage.setItem('dondrakh_leads', JSON.stringify(leads));
+
+      // Transição para Mensagem de Confirmação
+      document.getElementById('notifyForm').style.display = 'none';
+      document.getElementById('successBox').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
