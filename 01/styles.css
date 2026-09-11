@@ -1,29 +1,33 @@
 /* ==========================================================================
    PÁGINA EDITORIAL WEB PREMIUM: "O que você faz?"
-   Estética: Editorial, minimalista, natural, contemporânea.
    ========================================================================== */
 
-/* 1. VARIÁVEIS & CONFIGURAÇÃO RAIZ */
+/* 1. VARIÁVEIS & CORES DISTINTAS POR SEÇÃO */
 :root {
-  /* Paleta de Cores (Muted, Earthy, Refined) */
-  --color-bg: #11100f;           /* Preto quase absoluto, aquecido */
-  --color-bg-alt: #161513;       /* Variação sutil de fundo */
-  --color-paper: #e8e4de;        /* Branco quente / Papel natural */
-  --color-paper-muted: #b5b0a8;  /* Texto secundário */
-  --color-sand: #c2b8a3;         /* Areia */
-  --color-earth: #4a3b32;        /* Marrom terra */
-  --color-green-dark: #19241d;   /* Verde muito escuro */
-  --color-terracotta: #ab5738;   /* Acento em terracota desaturado */
-  --color-border: rgba(232, 228, 222, 0.12);
-  --color-border-subtle: rgba(232, 228, 222, 0.06);
+  /* Paleta Geral de Suporte */
+  --color-paper: #e9e5de;          /* Branco quente editorial */
+  --color-paper-muted: #bcaba0;    /* Texto de corpo refinado */
+  --color-sand: #c7bcab;           /* Tom areia */
+  --color-terracotta: #b85d3b;     /* Terracota para destaques */
+  --color-border: rgba(233, 229, 222, 0.14);
+  --color-border-subtle: rgba(233, 229, 222, 0.07);
 
-  /* Tipografia */
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  /* Backgrounds Exclusivos para Cada Seção */
+  --bg-cap-01: #0f0e0d;  /* Preto terra profundo (Abertura) */
+  --bg-cap-02: #141714;  /* Verde floresta muito escuro (Cacau) */
+  --bg-cap-03: #181412;  /* Marrom solo fértil (Produtos da Terra) */
+  --bg-cap-04: #181816;  /* Cinza carvão quente (Cacau e o Sagrado) */
+  --bg-cap-05: #161514;  /* Grafite ateliê (Inspirado a Criar - Arte) */
+  --bg-cap-06: #111418;  /* Azul digital noturno (Mente no Futuro - Tecnologia) */
+  --bg-cap-07: #0b0b0a;  /* Preto absoluto (Síntese) */
+  --bg-footer: #080807;  /* Footer integrado */
+
+  /* Tipografia Serifada para o Corpo de Texto (Playfair Display) */
+  --font-serif-text: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Espaçamento & Ritmo Visual */
-  --space-unit: 8px;
+  /* Layout */
   --container-max: 1140px;
   --chapter-padding-y: 120px;
 }
@@ -37,28 +41,26 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-bg);
+  background-color: var(--bg-cap-01);
   color: var(--color-paper);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   overflow-x: hidden;
   position: relative;
-  background-color: var(--color-bg);
+  background-color: var(--bg-cap-01);
 }
 
-/* Text Selection */
 ::selection {
   background-color: var(--color-terracotta);
   color: var(--color-paper);
 }
 
-/* Grain Overlay Fino (Textura Editorial) */
+/* Textura Editorial de Grão */
 .grain-overlay {
   position: fixed;
   top: 0;
@@ -71,27 +73,28 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* 3. TIPOGRAFIA REUTILIZÁVEL */
+/* 3. TIPOGRAFIA REFINADA */
 .mono-tag {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-sand);
   opacity: 0.85;
 }
 
+/* Blocos de Texto em Fonte Serifada (Playfair Display) com tamanho levemente maior */
 .prose {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 300;
-  line-height: 1.7;
+  font-family: var(--font-serif-text);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.75;
   color: var(--color-paper-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 
 .prose.lead-prose {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: var(--color-paper);
 }
 
@@ -99,40 +102,56 @@ body {
   color: var(--color-paper);
   border-left: 2px solid var(--color-terracotta);
   padding-left: 1.5rem;
-  margin: 2rem 0;
+  margin: 2.2rem 0;
 }
 
 .prose.italic-note {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--color-sand);
 }
 
-/* 4. LAYOUT EDITORIAL E CAPÍTULOS */
+/* 4. SEÇÕES COM BACKGROUNDS INDIVIDUAIS */
 .editorial-container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 24px;
+  width: 100%;
 }
 
 .chapter {
+  width: 100%;
   min-height: 90vh;
   padding: var(--chapter-padding-y) 0;
-  border-bottom: 1px solid var(--color-border-subtle);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background-color 0.6s ease;
 }
+
+.chapter-content {
+  width: 100%;
+  max-width: var(--container-max);
+  padding: 0 24px;
+}
+
+/* Atribuição de cores únicas de background para separar as 7 seções */
+.chapter-opening  { background-color: var(--bg-cap-01); }
+.chapter-cacao    { background-color: var(--bg-cap-02); }
+.chapter-products { background-color: var(--bg-cap-03); }
+.chapter-sacred   { background-color: var(--bg-cap-04); }
+.chapter-art      { background-color: var(--bg-cap-05); } /* Cap 5: Arte */
+.chapter-tech     { background-color: var(--bg-cap-06); } /* Cap 6: Tecnologia */
+.chapter-synthesis { background-color: var(--bg-cap-07); border-bottom: none; }
 
 .chapter-header {
   margin-bottom: 4rem;
 }
 
 .chapter-title {
-  font-family: var(--font-serif);
-  font-size: 3.8rem;
-  font-weight: 300;
+  font-family: var(--font-serif-text);
+  font-size: clamp(3.2rem, 6vw, 4.2rem);
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--color-paper);
@@ -142,16 +161,16 @@ body {
 .chapter-subtitle {
   display: block;
   font-family: var(--font-sans);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 300;
   color: var(--color-sand);
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   letter-spacing: 0.05em;
 }
 
-/* PLACEHOLDERS DE IMAGEM ESTRUTURADOS */
+/* PLACEHOLDERS DE IMAGEM */
 .image-placeholder {
-  background-color: #1a1917;
+  background-color: rgba(0, 0, 0, 0.25);
   border: 1px solid var(--color-border);
   position: relative;
   overflow: hidden;
@@ -159,56 +178,26 @@ body {
   align-items: flex-end;
   padding: 1.5rem;
   min-height: 380px;
-  transition: border-color 0.4s ease;
 }
 
 .image-placeholder::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(171, 87, 56, 0.08), transparent 70%),
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(184, 93, 59, 0.08), transparent 70%),
               linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
   pointer-events: none;
 }
 
-.image-forest {
-  background-color: #121814; /* Tom sutil verde escuro */
-}
-
-.image-cacao {
-  background-color: #1b1411; /* Tom sutil terra */
-}
-
-.image-hand {
-  background-color: #1a1714;
-}
-
-.image-fruit {
-  background-color: #171614;
-}
-
-.image-harvest {
-  background-color: #151815;
-}
-
-.image-drawing {
-  background-color: #181716;
-  min-height: 480px;
-}
-
-.image-technology {
-  background-color: #131518;
-  min-height: 400px;
-}
+.image-forest { min-height: 420px; }
+.image-drawing { min-height: 480px; }
+.image-technology { min-height: 400px; }
 
 .placeholder-tag {
   position: relative;
   z-index: 2;
   font-size: 0.7rem;
-  background: rgba(17, 16, 15, 0.75);
+  background: rgba(15, 14, 13, 0.85);
   padding: 6px 12px;
   border: 1px solid var(--color-border);
 }
@@ -216,25 +205,14 @@ body {
 /* CAPÍTULO 01: ABERTURA */
 .chapter-opening {
   min-height: 100vh;
-  justify-content: space-between;
   padding-top: 80px;
   padding-bottom: 60px;
 }
 
-.chapter-label {
-  align-self: flex-start;
-}
-
-.hero-content {
-  max-width: 850px;
-  margin: auto 0;
-  z-index: 2;
-}
-
 .hero-question {
-  font-family: var(--font-serif);
-  font-size: clamp(3.2rem, 8vw, 6.5rem);
-  font-weight: 300;
+  font-family: var(--font-serif-text);
+  font-size: clamp(3.5rem, 8vw, 6.8rem);
+  font-weight: 400;
   line-height: 1.05;
   color: var(--color-paper);
   margin-bottom: 2.5rem;
@@ -242,13 +220,13 @@ body {
 }
 
 .hero-statement {
-  max-width: 620px;
+  max-width: 650px;
 }
 
 .editorial-lead {
-  font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
-  font-weight: 300;
+  font-family: var(--font-serif-text);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 400;
   font-style: italic;
   line-height: 1.4;
   color: var(--color-sand);
@@ -268,15 +246,15 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(74, 59, 50, 0.25) 0%, rgba(25, 36, 29, 0.15) 50%, transparent 70%);
-  filter: blur(40px);
+  background: radial-gradient(circle, rgba(184, 93, 59, 0.18) 0%, rgba(20, 23, 20, 0.1) 60%, transparent 75%);
+  filter: blur(45px);
 }
 
 .scroll-indicator {
   display: flex;
   align-items: center;
   gap: 12px;
-  align-self: flex-start;
+  margin-top: 40px;
   opacity: 0.7;
 }
 
@@ -294,7 +272,6 @@ body {
   align-items: start;
 }
 
-/* Linha de Percurso Orgânica */
 .process-journey {
   margin-top: 100px;
   padding-top: 60px;
@@ -311,7 +288,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 24px;
-  position: relative;
 }
 
 .journey-step {
@@ -328,22 +304,22 @@ body {
 }
 
 .step-name {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
+  font-family: var(--font-serif-text);
+  font-size: 1.3rem;
+  letter-spacing: 0.03em;
   color: var(--color-paper);
   margin-bottom: 4px;
 }
 
 .step-desc {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--color-paper-muted);
   line-height: 1.4;
 }
 
 /* CAPÍTULO 03: PRODUTOS DA TERRA */
 .section-intro {
-  max-width: 680px;
+  max-width: 720px;
   margin-bottom: 80px;
 }
 
@@ -375,28 +351,20 @@ body {
 }
 
 .product-name {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-family: var(--font-serif-text);
+  font-size: 1.9rem;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--color-paper);
 }
 
 .product-desc {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--color-paper-muted);
   font-weight: 300;
 }
 
 /* CAPÍTULO 04: CACAU E O SAGRADO */
-.chapter-sacred {
-  background-color: var(--color-bg-alt);
-  padding: 120px 40px;
-  margin: 0 -40px;
-  border-top: 1px solid var(--color-border-subtle);
-  border-bottom: 1px solid var(--color-border-subtle);
-}
-
 .sacred-content {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -405,10 +373,9 @@ body {
 }
 
 .essay-callout {
-  background: rgba(25, 36, 29, 0.3);
+  background: rgba(0, 0, 0, 0.25);
   border: 1px solid var(--color-border);
   padding: 40px;
-  position: relative;
 }
 
 .callout-inner {
@@ -418,15 +385,15 @@ body {
 }
 
 .essay-title {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 300;
+  font-family: var(--font-serif-text);
+  font-size: 2.1rem;
+  font-weight: 400;
   color: var(--color-paper);
   line-height: 1.2;
 }
 
 .essay-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--color-paper-muted);
   font-weight: 300;
   line-height: 1.5;
@@ -450,18 +417,38 @@ body {
 
 .editorial-btn:hover, .editorial-btn:focus {
   background-color: var(--color-paper);
-  color: var(--color-bg);
+  color: var(--bg-cap-04);
   border-color: var(--color-paper);
 }
 
-.editorial-btn:focus-visible {
-  outline: 2px solid var(--color-terracotta);
-  outline-offset: 4px;
+/* CAPÍTULO 05: ARTE */
+.art-intro {
+  max-width: 680px;
+  margin-bottom: 60px;
 }
 
-/* CAPÍTULO 05: TECNOLOGIA */
+.art-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.art-frame {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.art-caption {
+  font-size: 0.72rem;
+  color: var(--color-sand);
+  opacity: 0.75;
+}
+
+/* CAPÍTULO 06: TECNOLOGIA */
 .tech-intro {
-  max-width: 640px;
+  max-width: 680px;
   margin-bottom: 60px;
 }
 
@@ -475,7 +462,7 @@ body {
 .tech-pillar {
   border: 1px solid var(--color-border-subtle);
   padding: 36px 28px;
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.015);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -497,48 +484,19 @@ body {
 }
 
 .pillar-text {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   color: var(--color-paper-muted);
   font-weight: 300;
   line-height: 1.65;
 }
 
-/* CAPÍTULO 06: ARTE */
-.art-intro {
-  max-width: 640px;
-  margin-bottom: 60px;
-}
-
-.art-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.art-frame {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.art-caption {
-  font-size: 0.7rem;
-  color: var(--color-sand);
-  opacity: 0.7;
-}
-
 /* CAPÍTULO 07: SÍNTESE */
 .chapter-synthesis {
-  min-height: 85vh;
+  min-height: 70vh;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-bottom: none;
 }
 
 .synthesis-container {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -549,9 +507,9 @@ body {
 }
 
 .synthesis-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 300;
+  font-family: var(--font-serif-text);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 400;
   line-height: 1.25;
   color: var(--color-paper);
   margin-bottom: 24px;
@@ -559,70 +517,82 @@ body {
 }
 
 .synthesis-subtext {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-family: var(--font-serif-text);
+  font-size: 1.35rem;
   font-style: italic;
   color: var(--color-sand);
-  margin-bottom: 60px;
 }
 
-.editorial-links-nav {
+/* FOOTER DA PÁGINA */
+.site-footer {
+  background-color: var(--bg-footer);
+  padding: 80px 24px;
+  border-top: 1px solid var(--color-border);
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 80px;
-  width: 100%;
-}
-
-.synthesis-link {
-  display: flex;
   align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.15em;
-  color: var(--color-paper);
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--color-border);
-  transition: all 0.3s ease;
 }
 
-.synthesis-link:hover, .synthesis-link:focus {
-  border-color: var(--color-terracotta);
-  color: var(--color-terracotta);
-  transform: translateY(-2px);
-}
-
-.synthesis-link:focus-visible {
-  outline: 2px solid var(--color-terracotta);
-}
-
-.synthesis-footer {
-  margin-top: 40px;
+.footer-inner {
+  max-width: var(--container-max);
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: center;
+  gap: 40px;
+  text-align: center;
 }
 
-.footer-prompt {
-  font-size: 0.95rem;
-  color: var(--color-paper-muted);
-  font-weight: 300;
+/* Botão de Destaque Clicável no Footer */
+.cta-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 38px;
+  border: 1px solid var(--color-sand);
+  background-color: rgba(233, 229, 222, 0.03);
+  color: var(--color-paper);
+  text-decoration: none;
+  font-family: var(--font-serif-text);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-footer-link:hover, .cta-footer-link:focus {
+  background-color: var(--color-paper);
+  color: var(--bg-cap-01);
+  border-color: var(--color-paper);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cta-footer-link:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 6px;
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-footer-link:hover .cta-arrow {
+  transform: translateX(6px);
 }
 
 .footer-meta {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
   color: var(--color-sand);
   opacity: 0.5;
 }
 
-/* 5. ANIMAÇÕES DISCRETAS (REVEAL ON SCROLL) */
+/* 5. ANIMAÇÕES DISCRETAS DE SCROLL */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(20px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
@@ -632,35 +602,19 @@ body {
   transform: translateY(0);
 }
 
-/* PREFERS REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  
-  .reveal-on-scroll {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .synthesis-link:hover {
-    transform: none;
-  }
+  html { scroll-behavior: auto; }
+  .reveal-on-scroll { opacity: 1; transform: none; transition: none; }
+  .cta-footer-link:hover { transform: none; }
 }
 
-/* 6. RESPONSIVIDADE E ADAPTAÇÃO MOBILE */
+/* 6. RESPONSIVIDADE E OTIMIZAÇÃO MOBILE */
 @media (max-width: 900px) {
   :root {
     --chapter-padding-y: 80px;
   }
 
-  .cacao-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .products-editorial-grid {
+  .cacao-grid, .products-editorial-grid, .sacred-content, .art-gallery, .tech-pillars-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -669,53 +623,37 @@ body {
     margin-top: 0;
   }
 
-  .sacred-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .chapter-sacred {
-    padding: 80px 20px;
-    margin: 0 -24px;
-  }
-
-  .tech-pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .art-gallery {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .editorial-links-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .synthesis-link {
+  .cta-footer-link {
     width: 100%;
-    max-width: 280px;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 18px 24px;
   }
 }
 
+/* Otimização Específica para Leitura Mobile */
 @media (max-width: 600px) {
+  .prose {
+    font-size: 1.35rem; /* Tamanho levemente maior no mobile para visibilidade ideal */
+    line-height: 1.7;
+  }
+
+  .prose.lead-prose {
+    font-size: 1.5rem;
+  }
+
+  .hero-question {
+    font-size: 3.2rem;
+  }
+
   .chapter-title {
     font-size: 2.8rem;
   }
 
-  .prose {
-    font-size: 1.2rem;
-  }
-
-  .prose.lead-prose {
-    font-size: 1.35rem;
-  }
-
   .journey-timeline {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer {
+    padding: 60px 20px;
   }
 }
