@@ -23,10 +23,11 @@ const PRODUCTS_DATA = {
       "img/cerimonial4.jpeg"
     ],
     variants: [
-      { name: "Kit Cacau Cerimonial Completo (500g de Cacau Cerimonial 100% + elementos extras para o ritual)", price: 420.00, available: true }
+      { name: "Kit Ritual da Terra (inclui Nibs e Sementes Cruas de Cacau + elementos extras para o seu ritual)", price: 420.00, available: true },
+      { name: "Kit Oferenda do Mar (inclui Cacau para infusão + oferenda e firmeza ao mar em seu nome + elementos extras para o seu ritual)", price: 440.00, available: true }
     ],
     desc: "Ritual em Casa. Inclui 500g de Cacau Cerimonial 100% e objetos selecionados de apoio a consagração da medicina.",
-    usage: "Acompanha guia prático de consagração, com opções de rituais pontuais e rituais de até 21 dias."
+    usage: "Acompanha guia prático de consagração, com opções de ritual de dia a dia, ritual pontual e ritual de até 21 dias."
   },
   nibs: {
     name: "Nibs e Chá de Cacau",
