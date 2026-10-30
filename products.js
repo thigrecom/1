@@ -8,10 +8,10 @@ const PRODUCTS_DATA = {
       "img/cerimonial1.jpeg"
     ],
     variants: [
-      { name: "200g", price: 70.00, available: true },
+      { name: "300g", price: 89.50, available: true },
       { name: "700g", price: 220.00, available: true }
     ],
-    desc: "Cacau cerimonial puro 100%, prensado artesanalmente preservando a manteiga natural de cacau e teobromina.",
+    desc: "Cacau cerimonial puro 100%, preservando a manteiga natural de cacau e teobromina.",
     usage: "Ideal para rituais matinais ou momentos de foco. Dilua 15g em 300ml de água quente e misture bem."
   },
   kitcerimonial: {
@@ -68,7 +68,6 @@ const PRODUCTS_DATA = {
       "img/castanhas3.jpg"
     ],
     variants: [
-      { name: "Uva Passa - 100g", price: 6.00, available: true },
       { name: "Castanha do Pará - 100g", price: 22.00, available: true },
       { name: "Mix - 100g (Nibs de Cacau, Castanha do Pará e Cajú, Amêndoa defumada, Uva Passa e Crawberry)", price: 20.00, available: true }
     ],
