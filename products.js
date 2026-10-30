@@ -54,7 +54,7 @@ const PRODUCTS_DATA = {
       "img/frutos3.jpeg"
     ],
     variants: [
-      { name: "O Fruto (Unidade)", price: 7.00, available: true }
+      { name: "O Fruto (Unidade)", price: 7.50, available: true }
     ],
     desc: "Fruto de cacau nativo e artesanal (unidade).",
     usage: "Pode ser utilizado para consumo in natura das amêndoas, uso ritualístico, decorativo e drinks"
