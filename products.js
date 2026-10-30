@@ -9,7 +9,7 @@ const PRODUCTS_DATA = {
     ],
     variants: [
       { name: "300g", price: 89.50, available: true },
-      { name: "700g", price: 220.00, available: true }
+      { name: "800g", price: 230.40, available: true }
     ],
     desc: "Cacau cerimonial puro 100%, preservando a manteiga natural de cacau e teobromina.",
     usage: "Ideal para rituais matinais ou momentos de foco. Dilua 15g em 300ml de água quente e misture bem."
